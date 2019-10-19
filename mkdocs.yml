@@ -1,0 +1,36 @@
+site_name: 暴走的二进制
+site_author: Xavier
+pages:
+  - Introduction: index.md
+  - Open edX:
+    - openedx/openedx-1-click-installed.md
+    - openedx/openedx-app.md
+    - openedx/openedx-develop.md
+    - openedx/openedx-studio.md
+    - openedx/openedx-lms.md
+    - openedx/openedx-ecommerce.md
+    - openedx/openedx-discovery.md
+    - openedx/openedx-config.md
+    - openedx/openedx-saml.md
+    - openedx/openedx-insights.md
+    - openedx/theme.md
+    - openedx/micro-frontend.md
+  - 网络协议:
+    - protocol/http.md
+  - 编程语言:
+    - pl/Python.md
+    - pl/C++.md
+    - pl/nodejs.md
+  - 架构:
+    - archi/micro-frontend.md
+  - 容器技术:
+    - container/docker.md
+    - container/docker-mysql.md
+    - container/docker-machine.md
+  - 工具:
+    - tools/certbot.md
+  - About: about.md
+
+theme:
+  name: 'material'
+#google_analytics: ['UA-36723568-3', 'mkdocs.org']
