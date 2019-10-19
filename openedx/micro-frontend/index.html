@@ -1,0 +1,897 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Open edX 微前端进度</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1-openedx-2019" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="暴走的二进制" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              暴走的二进制
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Open edX 微前端进度
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="暴走的二进制" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    暴走的二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Open edX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-1-click-installed/" title="一键安装 - Tutor" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-app/" title="独立app" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-develop/" title="openedx-develop" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-lms/" title="LMS" class="md-nav__link">
+      LMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-config/" title="openedx-config" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-saml/" title="开启SAML功能" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Open edX 微前端进度" class="md-nav__link md-nav__link--active">
+      Open edX 微前端进度
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      网络协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        网络协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../protocol/http/" title="HTTP协议" class="md-nav__link">
+      HTTP协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      编程语言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        编程语言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/Python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/C++/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/nodejs/" title="NodeJS" class="md-nav__link">
+      NodeJS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      架构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        架构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../archi/micro-frontend/" title="micro-frontend" class="md-nav__link">
+      micro-frontend
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      容器技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-mysql/" title="docker常用容器配置" class="md-nav__link">
+      docker常用容器配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-machine/" title="docker-machine" class="md-nav__link">
+      docker-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/certbot/" title="certbot" class="md-nav__link">
+      certbot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h3 id="1-openedx-2019">1. Openedx 2019年会前端进展与规划</h3>
+<p>https://openedx2019.sched.com/event/Ktnn/state-of-open-edx-front-end</p>
+<ul>
+<li>
+<p>重构200个页面</p>
+</li>
+<li>
+<p>从风险低的页面开始: profile(已经完成), account, order history</p>
+</li>
+<li>
+<p>有25-75 micro-frontends(可复用的组件25+, 如edx/frontend-auth)</p>
+</li>
+<li>
+<p>重构范围，包括学生，老师接触到的页面</p>
+</li>
+<li>
+<p>第一个micro-frontend在J版本发布</p>
+</li>
+<li>
+<p>优点：开发效率提高，更少资源加载，API接口，速度快可扩展。更好的体验，加载时间更短，渐进式加载，更多功能</p>
+</li>
+<li>
+<p>前端技术： es2015, webpack, babel, react, redux, bootstrap, Jest, Enzyme, cypress</p>
+</li>
+<li>
+<p>核心npm包</p>
+</li>
+</ul>
+<p>【授权登录】npm module (@edx/frontend-auth); JSON Web Token-based; built on axios</p>
+<p>【翻译】npm module(@edx/frontend-i18n); react-intl实现多语言; english defaults; message descriptions for translators</p>
+<p>【数据分析】npm module(@edx/frontend-logging); Analytics; error logging; performance logging</p>
+<h3 id="2">2. 官方组件仓库</h3>
+<h4 id="21-edxfronend-auth">2.1 edx/fronend-auth</h4>
+<p>使用axios.interceptors确保在发出API请求前，用户的浏览器中存在有效的token(JWT)。 如果不存在有效的token，它将尝试用refresh token(如果存在)来获取一个新的token。 如果refresh token不存在或无效，则用户将被注销并重定向到您选择的页面。</p>
+<p>import { getAuthenticatedAPIClient } from '@edx/frontend-auth';
+const apiClient = getAuthenticatedAPIClient({
+appBaseUrl: process.env.BASE_URL,
+loginUrl: process.env.LOGIN_URL,
+logoutUrl: process.env.LOGOUT_URL,
+refreshAccessTokenEndpoint: process.env.REFRESH_ACCESS_TOKEN_ENDPOINT,
+accessTokenCookieName: process.env.ACCESS_TOKEN_COOKIE_NAME,
+});</p>
+<p>提供了一个PrivateRoute组件，你可以使用这个组件，自定义你的登录验证流程。</p>
+<p><ConnectedRouter history={history}>
+<Switch>
+<Route exact path="/unauthenticated" component={UnauthenticatedComponent} />
+<PrivateRoute
+path="/authenticated"
+component={AuthenticatedComponent}
+authenticatedAPIClient={apiClient}
+redirect={process.env.BASE_URL}  // This should be the base URL of your app.
+/>
+</Switch>
+</ConnectedRouter></p>
+<p>edx/frontend-auth还提供了Redux actions and a reducer， 来登录后的profile信息注入你的react-app store里。</p>
+<h4 id="22-edxfrontend-i18n">2.2 edx/frontend-i18n</h4>
+<p>因为没有了模板渲染的概念，edx-react-app使用rect-intl完成多语言翻译工作。首先需要了解<a href="https://github.com/formatjs/react-intl/wiki">rect-intl</a>。 edx/frontend-i18n在react-intl上封装了一层，使得可以根据key为openedx-language-preference的cookie, 显示不同语言。</p>
+<p>core functionality: </p>
+<p>configure, getPrimaryLanguageSubtag, isRtl, handleRtl, localeSortFunction</p>
+<p>getLocale     // 获取当前语言</p>
+<p>getMessages   // 获取中英文语句的json</p>
+<p>react-intl function:</p>
+<p>intlShape, FormattedMessage, defineMessages, IntlProvider, injectIntl</p>
+<p>Actions:</p>
+<p>setLocale</p>
+<p>获取当前语言，获取包含所有中英文语句的object。</p>
+<p>import { getLocale, getMessages } from '@edx/frontend-i18n';
+<IntlProvider locale={getLocale()} messages={getMessages()}>
+</IntlProvider></p>
+<h4 id="23-edxfront-end-cookie-cutter-application">2.3 edx/front-end-cookie-cutter-application</h4>
+<p>edx micro-fronend脚手架，当需要新建项目时，clone这个项目并初始化，我们会得到固定的目录结构，打包流程，然后就可以直接开发业务代码。</p>
+<h1 id="set-up-the-openedx-devstack">set up the openedx devstack</h1>
+<p>git clone https://github.com/edx/frontend-cookie-cutter-application.git
+cd frontend-cookie-cutter</p>
+<h1 id="connection-with-the-openedx-platform-authentication">Connection with the openedx platform authentication</h1>
+<h1 id="this-will-build-and-start-the-frontend-cookie-cutter-web-application-in-a-docker-container">this will build and start the frontend-cookie-cutter web application in a docker container</h1>
+<p>make up-detached
+make logs</p>
+<p><em>通用项目目录</em></p>
+<p>├── config # Directory for webpack configurations
+├── public # Entry point for the single-page application - frontend-cookie-cutter has a single index.html file
+├── src
+    ├── components # Directory for presentational React components
+    ├── containers # Directory for container React components
+├── data
+    ├──actions # Directory for Redux action creators
+    ├──constants
+    ├──reducers # Directory for Redux reducers
+├── .babelrc
+├── .dockerignore
+├── .eslintignore
+├── .eslintrc.js
+├── .gitignore
+├── npmignore
+├── .travis.yml
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── package-lock.json
+├── package.json</p>
+<h4 id="24-gradebook">2.4 gradebook</h4>
+<p>i版本上已完成。成绩本对应的API在文件 https://github.com/edx/edx-platform/blob/master/lms/djangoapps/grades/api/v1/gradebook_views.py，API将学员的成绩信息用统一的接口返回。</p>
+<pre><code>
+Request
+
+GET /api/grades/v1/gradebook/{course_id}/                       - Get gradebook entries for all users in course
+
+GET /api/grades/v1/gradebook/{course_id}/?username={username}   - Get grades for specific user in course
+
+GET /api/grades/v1/gradebook/{course_id}/?username_contains={username_contains}
+
+GET /api/grades/v1/gradebook/{course_id}/?cohort_id={cohort_id}
+
+GET /api/grades/v1/gradebook/{course_id}/?enrollment_mode={enrollment_mode}
+
+
+
+Response
+
+* course_id
+
+* email
+
+* user_id
+
+* username
+
+* full_name
+
+* passed: 课程有没有及格
+
+* percent: 成绩排名
+
+* letter_grade: 成绩 (e.g. 'A' 'B' 'C' for 6.002x) or None
+
+* progress_page_url: 用户progress页的链接
+
+* section_breakdown: 课程各个模块的得分详情
+
+</code></pre>
+
+<h4 id="25-ui">2.5 共用UI组件</h4>
+<p>frontend-component-footer</p>
+<p>frontend-component-site-header</p>
+<h4 id="26-frontend-app-account">2.6 frontend-app-account 账号设置页</h4>
+<p>功能不可用，持续更新中(143commits)</p>
+<h4 id="27-frontend-app-profile">2.7 frontend-app-profile 用户资料页</h4>
+<p>功能已完成，但还在一直更新。</p>
+<h4 id="28-frontend-app-learner-portal">2.8 frontend-app-learner-portal 课程面板</h4>
+<p>UI完成，未对接接口，数据为静态数据。</p>
+<h4 id="29-journals-frontend">2.9 journals-frontend</h4>
+<p>【journals-frontend】</p>
+<p>一个专门对接https://github.com/edx/journals的前端app。启动报错。</p>
+<p>journals-frontend is a single page application written in React/Redux to be used with the Journals Service backend.It communciates with Journals Service via Rest API's, and authenticates through the edx LMS.</p>
+<p>journals-frontend main features include:</p>
+<ul>
+<li>
+<p>Marketing Pages: About and Index pages to display and highlight information about your collection of Journals</p>
+</li>
+<li>
+<p>Journal Content Viewing: rendering of Journal pages with html, images, inline pdf's and videos</p>
+</li>
+<li>
+<p>Table of Contents: navigable heirarchical content overview</p>
+</li>
+<li>
+<p>Full-text search: search and filtering of journal content</p>
+</li>
+</ul>
+<h4 id="210-publisher-frontend">2.10 publisher-frontend</h4>
+<p>作用不详，只有三个页面，持续更新中</p>
+<h4 id="211-frontend-app-ecommerce">2.11 frontend-app-ecommerce</h4>
+<p>ecommerce相关页面，订单信息，购物车。持续更新中</p>
+<p><Switch>
+    <Route path="/orders" component={ConnectedOrderHistoryPage} />
+    <Route path="/wip-payments" component={ConnectedPaymentsPage} />
+    <Route path="/notfound" component={NotFoundPage} />
+    <Route path="*" component={NotFoundPage} />
+</Switch></p>
+<h4 id="212-fronend-app-program-manager">2.12 fronend-app-program-manager</h4>
+<p>什么都没有，只是建了个仓库</p>
+<h3 id="_1">参考资料</h3>
+<ul>
+<li>
+<p><a href="https://openedx2019.sched.com/event/Ktnn/state-of-open-edx-front-end">State of open edx front end</a></p>
+</li>
+<li>
+<p><a href="https://github.com/appsembler/react-lms">Appsembelr react-lms</a></p>
+</li>
+<li>
+<p><a href="https://openedx2019.sched.com/event/L6bV/building-open-edx-frontend-applications-with-create-edx-react-app-part-1">create-edx-react-app</a></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../theme/" title="主题切换" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                主题切换
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../protocol/http/" title="HTTP协议" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                HTTP协议
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

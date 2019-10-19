@@ -1,0 +1,2964 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>python-lib</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="暴走的二进制" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              暴走的二进制
+            </span>
+            <span class="md-header-nav__topic">
+              
+                python-lib
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="暴走的二进制" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    暴走的二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Open edX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-1-click-installed/" title="一键安装 - Tutor" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-app/" title="独立app" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-develop/" title="openedx-develop" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-lms/" title="LMS" class="md-nav__link">
+      LMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-config/" title="openedx-config" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-saml/" title="开启SAML功能" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      网络协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        网络协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protocol/http/" title="HTTP协议" class="md-nav__link">
+      HTTP协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      编程语言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        编程语言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/Python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/C++/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/nodejs/" title="NodeJS" class="md-nav__link">
+      NodeJS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      架构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        架构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../archi/micro-frontend/" title="micro-frontend" class="md-nav__link">
+      micro-frontend
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      容器技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker-mysql/" title="docker常用容器配置" class="md-nav__link">
+      docker常用容器配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker-machine/" title="docker-machine" class="md-nav__link">
+      docker-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/certbot/" title="certbot" class="md-nav__link">
+      certbot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    常用库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    文件处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    图像处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    游戏和多媒体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    大数据与科学计算
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    人工智能与机器学习
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    系统与命令行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>python-lib</h1>
+                
+                <h3 id="_1">常用库</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Chardet</td>
+<td align="center">字符编码探测器，可以自动检测文本、网页、xml的编码。</td>
+</tr>
+<tr>
+<td align="center">colorama</td>
+<td align="center">主要用来给文本添加各种颜色，并且非常简单易用。</td>
+</tr>
+<tr>
+<td align="center">Prettytable</td>
+<td align="center">主要用于在终端或浏览器端构建格式化的输出。</td>
+</tr>
+<tr>
+<td align="center">difflib</td>
+<td align="center">[Python]标准库，计算文本差异</td>
+</tr>
+<tr>
+<td align="center">Levenshtein</td>
+<td align="center">快速计算字符串相似度。</td>
+</tr>
+<tr>
+<td align="center">fuzzywuzzy</td>
+<td align="center">字符串模糊匹配。</td>
+</tr>
+<tr>
+<td align="center">esmre</td>
+<td align="center">正则表达式的加速器。</td>
+</tr>
+<tr>
+<td align="center">shortuuid</td>
+<td align="center">一组简洁URL/UUID函数库。</td>
+</tr>
+<tr>
+<td align="center">ftfy</td>
+<td align="center">Unicode文本工具7</td>
+</tr>
+<tr>
+<td align="center">unidecode</td>
+<td align="center">ascii和Unicode文本转换函数。</td>
+</tr>
+<tr>
+<td align="center">xpinyin</td>
+<td align="center">将汉字转换为拼音的函数库</td>
+</tr>
+<tr>
+<td align="center">pangu.py</td>
+<td align="center">调整对中日韩文字当中的字母、数字间距。</td>
+</tr>
+<tr>
+<td align="center">pyfiglet</td>
+<td align="center">Python写的figlet程序，使用字符组成ASCII艺术图片</td>
+</tr>
+<tr>
+<td align="center">uniout</td>
+<td align="center">提取字符串中可读写的字符</td>
+</tr>
+<tr>
+<td align="center">awesome slugify</td>
+<td align="center">一个Python slugify库，用于处理Unicode。</td>
+</tr>
+<tr>
+<td align="center">python-slugify</td>
+<td align="center">转换Unicode为ASCII内码的slugify函数库。</td>
+</tr>
+<tr>
+<td align="center">unicode-slugify</td>
+<td align="center">生成unicode内码，Django的依赖包。</td>
+</tr>
+<tr>
+<td align="center">ply</td>
+<td align="center">Python版的lex和yacc的解析工具</td>
+</tr>
+<tr>
+<td align="center">phonenumbers</td>
+<td align="center">解析电话号码，格式，存储和验证的国际电话号码。</td>
+</tr>
+<tr>
+<td align="center">python-user-agents</td>
+<td align="center">浏览器的用户代理（user-agents）的解析器。</td>
+</tr>
+<tr>
+<td align="center">sqlparse</td>
+<td align="center">SQL解析器。</td>
+</tr>
+<tr>
+<td align="center">pygments</td>
+<td align="center">一个通用的语法高亮工具。</td>
+</tr>
+<tr>
+<td align="center">python-nameparser</td>
+<td align="center">解析人名，分解为单独的成分。</td>
+</tr>
+<tr>
+<td align="center">pyparsing</td>
+<td align="center">通用解析器生成框架。</td>
+</tr>
+<tr>
+<td align="center">tablib</td>
+<td align="center">表格数据格式，包括，XLS、CSV，JSON，YAML。</td>
+</tr>
+<tr>
+<td align="center">python-docx</td>
+<td align="center">docx文档读取，查询和修改，微软Word 2007 / 2008的docx文件。</td>
+</tr>
+<tr>
+<td align="center">xlwt/xlrd</td>
+<td align="center">读写Excel格式的数据文件。</td>
+</tr>
+<tr>
+<td align="center">xlsxwriter</td>
+<td align="center">创建Excel格式的xlsx文件。</td>
+</tr>
+<tr>
+<td align="center">xlwings</td>
+<td align="center">利用Python调用Excel</td>
+</tr>
+<tr>
+<td align="center">csvkit</td>
+<td align="center">CSV文件工具包。</td>
+</tr>
+<tr>
+<td align="center">marmir</td>
+<td align="center">把Python[数据结构]，转化为电子表格。</td>
+</tr>
+<tr>
+<td align="center">pdfminer</td>
+<td align="center">从PDF文件中提取信息。</td>
+</tr>
+<tr>
+<td align="center">pypdf2</td>
+<td align="center">合并和转换PDF页面的函数库。</td>
+</tr>
+<tr>
+<td align="center">Python-Markdown</td>
+<td align="center">轻量级标记语言Markdown的Python实现。</td>
+</tr>
+<tr>
+<td align="center">Mistune</td>
+<td align="center">快速、全功能的纯Python编写的Markdown解释器。</td>
+</tr>
+<tr>
+<td align="center">dateutil</td>
+<td align="center">标准的Python官方datetime模块的扩展包，字符串日期工具，其中parser是根据字符串解析成datetime，而rrule是则是根据定义的规则来生成datetime。</td>
+</tr>
+<tr>
+<td align="center">arrow</td>
+<td align="center">更好的日期和时间处理Python库</td>
+</tr>
+<tr>
+<td align="center">chronyk</td>
+<td align="center">一个Python 3版函数库，用于解析人写的时间和日期。</td>
+</tr>
+<tr>
+<td align="center">delorean</td>
+<td align="center">清理期时间的函数库。</td>
+</tr>
+<tr>
+<td align="center">when.py</td>
+<td align="center">为见的日期和时间，提供人性化的功能。</td>
+</tr>
+<tr>
+<td align="center">moment</td>
+<td align="center">类似Moment.js的日期/时间Python库</td>
+</tr>
+<tr>
+<td align="center">pytz</td>
+<td align="center">世界时区，使用tz database时区信息[数据库]</td>
+</tr>
+<tr>
+<td align="center">BeautifulSoup</td>
+<td align="center">基于Python的HTML/XML解析器，简单易用, 功能很强大,即使是有bug，有问题的html代码，也可以解析</td>
+</tr>
+<tr>
+<td align="center">lxml</td>
+<td align="center">快速，易用、灵活的HTML和XML处理库，功能超强，在遇到有缺陷、不规范的xml时，Python自带的xml处理器可能无法解析。报错时，程序会尝试再用lxml的修复模式解析。</td>
+</tr>
+<tr>
+<td align="center">htmlparser</td>
+<td align="center">官方版解析HTML DOM树，偶尔搞搞命令行自动表单提交用得上。</td>
+</tr>
+<tr>
+<td align="center">pyyaml</td>
+<td align="center">Python版本的YAML解释器。</td>
+</tr>
+<tr>
+<td align="center">html5lib</td>
+<td align="center">标准库，解析和序列化HTML文档和片段。</td>
+</tr>
+<tr>
+<td align="center">pyquery</td>
+<td align="center">类似[jQuery]的的HTML解释器函数库。</td>
+</tr>
+<tr>
+<td align="center">cssutils</td>
+<td align="center">Python CSS库。</td>
+</tr>
+<tr>
+<td align="center">MarkupSafe</td>
+<td align="center">XML或HTML / XHTML安全字符串标记工具。</td>
+</tr>
+<tr>
+<td align="center">cssutils</td>
+<td align="center">ACSS library for Python., MarkupSafe - Implements a XML/HTML/XHTML</td>
+</tr>
+<tr>
+<td align="center">bleach</td>
+<td align="center">漂白，基于HTML的白名单函数库。</td>
+</tr>
+<tr>
+<td align="center">xmltodict</td>
+<td align="center">类似JSON的XML工具包。</td>
+</tr>
+<tr>
+<td align="center">xhtml2pdf</td>
+<td align="center">HTML / CSS格式转换器，看生成pdf文档。</td>
+</tr>
+<tr>
+<td align="center">untangle</td>
+<td align="center">把XML文档，转换为Python对象，方便访问。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">文件处理</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Mimetypes</td>
+<td align="center">Python标准库，映射文件名到MIME类型。</td>
+</tr>
+<tr>
+<td align="center">imghdr</td>
+<td align="center">Python标准库，确定图像类型。</td>
+</tr>
+<tr>
+<td align="center">python-magic</td>
+<td align="center">libmagic文件类型识别库，Python接口格式。path.py，os.path模块的二次封装。</td>
+</tr>
+<tr>
+<td align="center">watchdog</td>
+<td align="center">一组API和shell实用程序，用于监视文件系统事件。</td>
+</tr>
+<tr>
+<td align="center">Unipath</td>
+<td align="center">面向对象的文件/目录的操作工具包。</td>
+</tr>
+<tr>
+<td align="center">pathlib</td>
+<td align="center">（Python 3.4版已经作为Python标准库），一个跨平台，面向path的函数库。</td>
+</tr>
+<tr>
+<td align="center">pickle/cPickle</td>
+<td align="center">python的pickle模块实现了基本的数据序列和反序列化。通过pickle模块的序列化操作我们能够将程序中运行的对象信息保存到文件中去，永久存储；通过pickle模块的反序列化操作，我们能够从文件中创建上一次程序保存的对象。</td>
+</tr>
+<tr>
+<td align="center">cPickle</td>
+<td align="center">是[C语言]实现的版本，速度更快。</td>
+</tr>
+<tr>
+<td align="center">ConfigParser</td>
+<td align="center">Python标准库，INI文件解析器。</td>
+</tr>
+<tr>
+<td align="center">configobj</td>
+<td align="center">INI文件解析器。</td>
+</tr>
+<tr>
+<td align="center">config</td>
+<td align="center">分层次配置，logging作者编写。</td>
+</tr>
+<tr>
+<td align="center">profig</td>
+<td align="center">多格式配置转换工具。</td>
+</tr>
+<tr>
+<td align="center">logging</td>
+<td align="center">Python标准库，日志文件生成管理函数库。</td>
+</tr>
+<tr>
+<td align="center">logbook</td>
+<td align="center">logging的替换品。</td>
+</tr>
+<tr>
+<td align="center">Sentry</td>
+<td align="center">实时log服务器。</td>
+</tr>
+<tr>
+<td align="center">Raven</td>
+<td align="center">哨兵Sentry的Python客户端。</td>
+</tr>
+<tr>
+<td align="center">Sphinx</td>
+<td align="center">斯芬克斯（狮身人面像），Python文档生成器。</td>
+</tr>
+<tr>
+<td align="center">reStructuredText</td>
+<td align="center">标记语法和解析工具，Docutils组件。</td>
+</tr>
+<tr>
+<td align="center">mkdocs</td>
+<td align="center">Markdown格式文档生成器。</td>
+</tr>
+<tr>
+<td align="center">pycco</td>
+<td align="center">简单快速、编程风格的文档生成器。</td>
+</tr>
+<tr>
+<td align="center">pdoc</td>
+<td align="center">自动生成的Python库API文档epydoc，从源码注释中生成各种格式文档的工具</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">图像处理</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">PIL（Python Image Library）</td>
+<td align="center">基于Python的图像处理库，功能强大，对图形文件的格式支持广泛，内置许多图像处理函数，如图像增强、滤波[算法]等</td>
+</tr>
+<tr>
+<td align="center">Pillow</td>
+<td align="center">图像处理库，PIL图像库的分支和升级替代产品。</td>
+</tr>
+<tr>
+<td align="center">Matplotlib</td>
+<td align="center">著名的绘图库，提供了整套和matlab相似的命令API，用以绘制一些高质量的数学二维图形，十分适合交互式地进行制图。</td>
+</tr>
+<tr>
+<td align="center">brewer2mpl</td>
+<td align="center">有一个专业的python配色工具包，提供了从美术角度来讲的精美配色。</td>
+</tr>
+<tr>
+<td align="center">PyGame</td>
+<td align="center">基于Python的多媒体开发和游戏软件开发模块，包含大量游戏和图像处理功能</td>
+</tr>
+<tr>
+<td align="center">Box2d</td>
+<td align="center">开源的2d物理引擎，愤怒的小鸟就是使用了这款物理引擎进行开发的，Box2d物理引擎内部模拟了一个世界，你可以设置这个世界里的重力，然后往这个世界里添加各种物体，以及他们的一些物理特性，比如质量，摩擦，阻尼等等。</td>
+</tr>
+<tr>
+<td align="center">Pymunk</td>
+<td align="center">类似box2d的开源物理图形模拟库</td>
+</tr>
+<tr>
+<td align="center">OpenCV,</td>
+<td align="center">目前最好的开源图像/视觉库，包括图像处理和计算机视觉方面、[机器学习]的很多通用算法。</td>
+</tr>
+<tr>
+<td align="center">SimpleCV</td>
+<td align="center">计算机视觉开源框架，类似opencv。</td>
+</tr>
+<tr>
+<td align="center">VTK</td>
+<td align="center">视觉化工具函式库（VTK， Visualization Toolkit）是一个开放源码，跨平台、支援平行处理（VTK曾用于处理大小近乎1个Petabyte的资料，其平台为美国Los Alamos国家实验室所有的具1024个处理器之大型系统）的图形应用函式库。2005年时曾被美国陆军研究实验室用于即时模拟俄罗斯制反导弹战车ZSU23-4受到平面波攻击的情形，其计算节点高达2.5兆个之多。</td>
+</tr>
+<tr>
+<td align="center">cgkit</td>
+<td align="center">Python Computer Graphics Kit,其module 主要分两个部分， 1. 与3d相关的一些python module 例如the vector, matrix and quaternion types, the RenderMan bindings, noise functions 这些模块可以在maya houdini nuke blender 等有Python扩展的程序中直接用; 2. 提供完整的场景操作的module， 他类似其他三维软件，在内存中保留完整的描述场景的信息。不能直接用于maya 等CGAL，Computational Geometry Algorithms Library，计算几何算法库，提供计算几何相关的数据结构和算法，诸如三角剖分（2D约束三角剖分及二维和三维Delaunay三角剖分），Voronoi图（二维和三维的点，2D加权Voronoi图，分割Voronoi图等），多边形（布尔操作，偏置），多面体（布尔运算），曲线整理及其应用，网格生成（二维Delaunay网格生成和三维表面和体积网格生成等），几何处理（表面网格简化，细分和参数化等），凸壳算法（2D，3D和dD），搜索结构（近邻搜索，kd树等），插值，形状分析，拟合，距离等。</td>
+</tr>
+<tr>
+<td align="center">Aggdraw</td>
+<td align="center">开源图像库，几乎涵盖了2d image操作的所有功能，使用起来非常灵活</td>
+</tr>
+<tr>
+<td align="center">Pycairo</td>
+<td align="center">开源矢量绘图库Cairo开罗的python接口，cairo提供在多个背景下做2-D的绘图，高级的更可以使用硬件加速功能。</td>
+</tr>
+<tr>
+<td align="center">wand</td>
+<td align="center">Python绑定魔杖工具（MagickWand），C语言API接口。thumbor， -智能成像工具，可调整大小和翻转图像。</td>
+</tr>
+<tr>
+<td align="center">imgSeek</td>
+<td align="center">查询相似的图像。</td>
+</tr>
+<tr>
+<td align="center">python-qrcode</td>
+<td align="center">纯Python的二维码（QR码）生成器。</td>
+</tr>
+<tr>
+<td align="center">pyBarcode</td>
+<td align="center">创建条码，无需PIL模块。</td>
+</tr>
+<tr>
+<td align="center">pygram</td>
+<td align="center">Instagram像图像过滤器。</td>
+</tr>
+<tr>
+<td align="center">Quads</td>
+<td align="center">基于四叉树的计算机艺术。</td>
+</tr>
+<tr>
+<td align="center">nude.py</td>
+<td align="center">裸体检测函数。</td>
+</tr>
+<tr>
+<td align="center">scikit-image</td>
+<td align="center">scikit工具箱的图像处理库。</td>
+</tr>
+<tr>
+<td align="center">hmap</td>
+<td align="center">图像直方图工具。</td>
+</tr>
+<tr>
+<td align="center">bokeh</td>
+<td align="center">交互的Web绘图。</td>
+</tr>
+<tr>
+<td align="center">plotly</td>
+<td align="center">Web协同的Python和Matplotlib绘制。</td>
+</tr>
+<tr>
+<td align="center">vincent</td>
+<td align="center">文森特，Python Vega的函数库。</td>
+</tr>
+<tr>
+<td align="center">d3py</td>
+<td align="center">Python绘图库，基于D3.JS, ggplot -API兼容R语言的ggplot2.Kartograph.py，在Python绘制漂亮的SVG地图。</td>
+</tr>
+<tr>
+<td align="center">pygal</td>
+<td align="center">SVG图表的创造者。</td>
+</tr>
+<tr>
+<td align="center">pygraphviz</td>
+<td align="center">Graphviz的Python接口。</td>
+</tr>
+<tr>
+<td align="center">Fonttlools</td>
+<td align="center">ttf字体工具函数包，用于fontforge、ttx等字体软件。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">游戏和多媒体</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">audiolazy</td>
+<td align="center">数字信号处理（DSP）的Python工具包。</td>
+</tr>
+<tr>
+<td align="center">audioread</td>
+<td align="center">跨平台（GStreamer + Core Audio + MAD + FFmpeg）音频解码库。</td>
+</tr>
+<tr>
+<td align="center">beets</td>
+<td align="center">音乐库管理。</td>
+</tr>
+<tr>
+<td align="center">dejavu</td>
+<td align="center">音频指纹识别算法。</td>
+</tr>
+<tr>
+<td align="center">Dejavu</td>
+<td align="center">听一次音频后就会记录该音频的指纹信息，然后可通过麦克风对输入的音频进行识别是否同一首歌。</td>
+</tr>
+<tr>
+<td align="center">django-elastic-transcoder</td>
+<td align="center">Django +亚马逊elastic转码。</td>
+</tr>
+<tr>
+<td align="center">eyeD3</td>
+<td align="center">音频文件工具，特别是MP3文件包含的ID3元数据。</td>
+</tr>
+<tr>
+<td align="center">id3reader</td>
+<td align="center">用于读取MP3的元数据。</td>
+</tr>
+<tr>
+<td align="center">mutagen</td>
+<td align="center">处理音频元数据。</td>
+</tr>
+<tr>
+<td align="center">pydub</td>
+<td align="center">-操纵音频和简单的高层次的接口。</td>
+</tr>
+<tr>
+<td align="center">pyechonest</td>
+<td align="center">Echo Nest API客户端。</td>
+</tr>
+<tr>
+<td align="center">talkbox</td>
+<td align="center">语音和信号处理的Python库。</td>
+</tr>
+<tr>
+<td align="center">TimeSide</td>
+<td align="center">开放的网络音频处理框架。</td>
+</tr>
+<tr>
+<td align="center">tinytag</td>
+<td align="center">读取音乐文件元数据，包括的MP3，OGG，FLAC和wave文件。</td>
+</tr>
+<tr>
+<td align="center">m3u8</td>
+<td align="center">用于解析m3u8文件。</td>
+</tr>
+<tr>
+<td align="center">moviepy</td>
+<td align="center">多格式视频编辑脚本模块，包括GIF动画。</td>
+</tr>
+<tr>
+<td align="center">shorten.tv</td>
+<td align="center">视频摘要。</td>
+</tr>
+<tr>
+<td align="center">scikit视频</td>
+<td align="center">SciPy视频处理例程。</td>
+</tr>
+<tr>
+<td align="center">GeoDjango</td>
+<td align="center">一个世界级的地理Web框架。</td>
+</tr>
+<tr>
+<td align="center">geopy</td>
+<td align="center">Geo地理编码的工具箱。</td>
+</tr>
+<tr>
+<td align="center">pygeoip</td>
+<td align="center">纯Python写的GeoIP API。</td>
+</tr>
+<tr>
+<td align="center">GeoIP</td>
+<td align="center">Python API接口，使用高精度GeoIP Legacy Database数据库。</td>
+</tr>
+<tr>
+<td align="center">geojson</td>
+<td align="center">GeoJSON函数库</td>
+</tr>
+<tr>
+<td align="center">django-countries</td>
+<td align="center">一个Django程序，提供国家选择，国旗图标的静态文件，和一个国家的地域模型。</td>
+</tr>
+<tr>
+<td align="center">Pygame</td>
+<td align="center">Python游戏设计模块。</td>
+</tr>
+<tr>
+<td align="center">Cocos2d</td>
+<td align="center">2D游戏框架，演示，和其他的图形/交互应用，基于pyglet。Cocos2d- cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications. It is based on pyglet.</td>
+</tr>
+<tr>
+<td align="center">PySDL2</td>
+<td align="center">SDL2的封装库。</td>
+</tr>
+<tr>
+<td align="center">Panda3D</td>
+<td align="center">3D游戏引擎，迪士尼开发。用C++写的，完全兼容Python。</td>
+</tr>
+<tr>
+<td align="center">PyOgre</td>
+<td align="center">OGRE 3D渲染引擎，可用于游戏，模拟，任何3D。</td>
+</tr>
+<tr>
+<td align="center">PyOpenGL</td>
+<td align="center">绑定OpenGL和它相关的API。</td>
+</tr>
+<tr>
+<td align="center">PySFML</td>
+<td align="center">Python绑定SFMLRenPy，视觉小说引擎。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">大数据与科学计算</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">pycuda/opencl</td>
+<td align="center">GPU高性能并发计算Pandas，python实现的类似R语言的数据统计、分析平台。基于NumPy和Matplotlib开发的，主要用于数据分析和数据可视化，它的数据结构DataFrame和R语言里的data.frame很像，特别是对于时间序列数据有自己的一套分析机制，非常不错。</td>
+</tr>
+<tr>
+<td align="center">Open Mining</td>
+<td align="center">商业智能（BI），Pandas的Web界面。</td>
+</tr>
+<tr>
+<td align="center">blaze</td>
+<td align="center">NumPy和Pandas大数据界面。</td>
+</tr>
+<tr>
+<td align="center">SciPy</td>
+<td align="center">开源的Python算法库和数学工具包，SciPy包含的模块有最优化、线性代数、积分、插值、特殊函数、快速傅里叶变换、信号处理和图像处理、常微分方程求解和其他科学与工程中常用的计算。其功能与软件MATLAB、Scilab和GNU Octave类似。 Numpy和Scipy常常结合着使用，Python大多数机器学习库都依赖于这两个模块。</td>
+</tr>
+<tr>
+<td align="center">ScientificPython</td>
+<td align="center">一组经过挑选的Python程序模块，用于科学计算，包括几何学（矢量、张量、变换、矢量和张量场），四元数，自动求导数，（线性）插值，多项式，基础统计学，非线性最小二乘拟合，单位计算，Fortran兼容的文本格式，通过VRML的3D显示，以及两个Tk小工具，分别用于绘制线图和3D网格模型。此外还具有到netCDF，MPI和BSPlib库的接口。</td>
+</tr>
+<tr>
+<td align="center">NumPy</td>
+<td align="center">科学计算库，提供了矩阵，线性代数，傅立叶变换等等的解决方案, 最常用的是它的N维数组对象. NumPy提供了两种基本的对象：ndarray（N-dimensional array object）和 ufunc（universal function object）。ndarray是存储单一数据类型的多维数组，而ufunc则是能够对数组进行处理的函数。</td>
+</tr>
+<tr>
+<td align="center">Cvxopt</td>
+<td align="center">最优化计算包，可进行线性规划、二次规划、半正定规划等的计算。</td>
+</tr>
+<tr>
+<td align="center">Numba</td>
+<td align="center">科学计算速度优化编译器。</td>
+</tr>
+<tr>
+<td align="center">pymvpa2</td>
+<td align="center">是为大数据集提供统计学习分析的Python工具包，它提供了一个灵活可扩展的框架。它提供的功能有分类、回归、特征选择、数据导入导出、可视化等NetworkX，复杂网络的优化软件包。</td>
+</tr>
+<tr>
+<td align="center">zipline</td>
+<td align="center">交易算法的函数库。</td>
+</tr>
+<tr>
+<td align="center">PyDy</td>
+<td align="center">Python动态建模函数库。</td>
+</tr>
+<tr>
+<td align="center">SymPy</td>
+<td align="center">符号数学的Python库。</td>
+</tr>
+<tr>
+<td align="center">statsmodels</td>
+<td align="center">Python的统计建模和计量经济学。</td>
+</tr>
+<tr>
+<td align="center">astropy</td>
+<td align="center">天文学界的Python库。</td>
+</tr>
+<tr>
+<td align="center">orange</td>
+<td align="center">橙色，数据挖掘，数据可视化，通过可视化编程或Python脚本学习机分析。</td>
+</tr>
+<tr>
+<td align="center">RDKit</td>
+<td align="center">化学信息学和机器学习的软件。</td>
+</tr>
+<tr>
+<td align="center">Open Babel</td>
+<td align="center">巴贝尔，开放的化学工具箱。</td>
+</tr>
+<tr>
+<td align="center">cclib</td>
+<td align="center">化学软件包的计算函数库。</td>
+</tr>
+<tr>
+<td align="center">Biopython</td>
+<td align="center">免费的生物计算工具包。</td>
+</tr>
+<tr>
+<td align="center">bccb</td>
+<td align="center">生物分析相关的代码集。</td>
+</tr>
+<tr>
+<td align="center">bcbio-nextgen</td>
+<td align="center">提供完全自动化、高通量、测序分析的工具包。</td>
+</tr>
+<tr>
+<td align="center">visvis</td>
+<td align="center">可视化计算模块库，可进行一维到四维数据的可视化。</td>
+</tr>
+<tr>
+<td align="center">MapReduce</td>
+<td align="center">是Google提出的一个软件[架构]，用于大规模数据集（大于1TB）的并行运算。概念“Map（映射）”和“Reduce（归纳）”，及他们的主要思想，都是从函数式编程语言借来的MapReduce函数库。Framworks and libraries for MapReduce.</td>
+</tr>
+<tr>
+<td align="center">PySpark</td>
+<td align="center">[Spark]的Python API。</td>
+</tr>
+<tr>
+<td align="center">dpark</td>
+<td align="center">Spark的Python克隆，Python中的MapReduce框架。</td>
+</tr>
+<tr>
+<td align="center">luigi</td>
+<td align="center">为批量工作，建立复杂的管道。</td>
+</tr>
+<tr>
+<td align="center">mrjob</td>
+<td align="center">运行在[Hadoop]，或亚马逊网络服务的，MapReduce工作。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">人工智能与机器学习</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NLTK（natural language toolkit)</td>
+<td align="center">是python的自然语言处理工具包。2001年推出，包括了大量的词料库，以及自然语言处理方面的算法实现：分词， 词根计算， 分类， 语义分析等。</td>
+</tr>
+<tr>
+<td align="center">Pattern</td>
+<td align="center">数据挖掘模块，包括自然语言处理，机器学习工具，等等。</td>
+</tr>
+<tr>
+<td align="center">textblob</td>
+<td align="center">提供API为自然语言处理、分解NLP任务。基于NLTK和Pattern模块。</td>
+</tr>
+<tr>
+<td align="center">jieba</td>
+<td align="center">结巴，中文分词工具。</td>
+</tr>
+<tr>
+<td align="center">snownlp</td>
+<td align="center">用于处理中文文本库。</td>
+</tr>
+<tr>
+<td align="center">loso</td>
+<td align="center">中文分词函数库。</td>
+</tr>
+<tr>
+<td align="center">genius</td>
+<td align="center">中文CRF基础库，条件随机场(conditional random field,简称 CRF),是一种鉴别式机率模型,是随机场的一种,常用于标注或分析序列资料,如自然语言文字或是生物序列Gensim，一个相当专业的主题模型Python工具包，无论是代码还是文档，可用于如何计算两个文档的相似度LIBSVM,是台湾大学林智仁(Lin Chih-Jen)教授等开发设计的一个简单、易于使用和快速有效的SVM模式识别与回归的软件包，他不但提供了编译好的可在Windows系列系统的执行文件，还提供了源代码，方便改进、修改以及在其它[操作系统]上应用；该软件对SVM所涉及的参数调节相对比较少，提供了很多的默认参数，利用这些默认参数可以解决很多问题；并提供了交互检验(Cross Validation)的功能。该软件可以解决C-SVM、ν-SVM、ε-SVR和ν-SVR等问题，包括基于一对一算法的多类模式识别问题。</td>
+</tr>
+<tr>
+<td align="center">scikits.learn</td>
+<td align="center">构建在SciPy之上用于机器学习的 Python 模块。它包括简单而高效的工具，可用于数据挖掘和数据分析。涵盖分类，回归和聚类算法，例如SVM， 逻辑回归，朴素贝叶斯，随机森林，k-means等算法，代码和文档都非常不错，在许多Python项目中都有应用。例如在我们熟悉的NLTK中，分类器方面就有专门针对scikit-learn的接口，可以调用scikit-learn的分类算法以及训练数据来训练分类器模型。</td>
+</tr>
+<tr>
+<td align="center">PyMC</td>
+<td align="center">机器学习采样工具包，scikit-learn似乎是所有人的宠儿，有人认为，PyMC更有魅力。PyMC主要用来做Bayesian分析。</td>
+</tr>
+<tr>
+<td align="center">Orange</td>
+<td align="center">基于组件的数据挖掘和机器学习软件套装，它的功能即友好，又很强大，快速而又多功能的可视化编程前端，以便浏览数据分析和可视化，包含了完整的一系列的组件以进行数据预处理，并提供了数据帐目，过渡，建模，模式评估和勘探的功能。侧重数据挖掘，可以用可视化语言或Python进行操作，拥有机器学习组件，还具有生物信息学以及文本挖掘的插件。</td>
+</tr>
+<tr>
+<td align="center">Milk</td>
+<td align="center">机器学习工具箱，其重点是提供监督分类法与几种有效的分类分析：SVMs(基于libsvm)，K-NN，随机森林经济和决策树。它还可以进行特征选择。这些分类可以在许多方面相结合，形成不同的分类系统。对于无监督学习，它提供K-means和affinity propagation聚类算法。</td>
+</tr>
+<tr>
+<td align="center">PyMVPA(Multivariate Pattern Analysis in Python)</td>
+<td align="center">是为大数据集提供统计学习分析的Python工具包，它提供了一个灵活可扩展的框架。它提供的功能有分类、回归、特征选择、数据导入导出、可视化等NuPIC，开源人工智能平台。该项目由Grok（原名 Numenta）公司开发，其中包括了公司的算法和软件架构。 NuPIC 的运作接近于人脑，“当模式变化的时候，它会忘掉旧模式，记忆新模式”。如人脑一样，CLA 算法能够适应新的变化。</td>
+</tr>
+<tr>
+<td align="center">Pylearn2</td>
+<td align="center">-基于Theano的机器学习库。</td>
+</tr>
+<tr>
+<td align="center">hebel</td>
+<td align="center">GPU加速，[深度学习]Python库。</td>
+</tr>
+<tr>
+<td align="center">gensim</td>
+<td align="center">机器学习库。</td>
+</tr>
+<tr>
+<td align="center">pybrain</td>
+<td align="center">机器学习模块，它的目标是为机器学习任务提供灵活、易应、强大的机器学习算法。pybrain包括神经网络、强化学习(及二者结合)、无监督学习、进化算法。以神经网络为核心，所有的训练方法都以神经网络为一个实例Mahout,是 Apache Software Foundation（ASF） 旗下的一个开源项目，提供一些可扩展的机器学习领域经典算法的实现，旨在帮助开发人员更加方便快捷地创建智能应用程序。Mahout包含许多实现，包括聚类、分类、推荐过滤、频繁子项挖掘。此外，通过使用 Apache Hadoop 库，Mahout 可以有效地扩展到云中。</td>
+</tr>
+<tr>
+<td align="center">Crab</td>
+<td align="center">灵活的，快速的推荐引擎。</td>
+</tr>
+<tr>
+<td align="center">python-recsys</td>
+<td align="center">娱乐系统分析，推荐系统。</td>
+</tr>
+<tr>
+<td align="center">vowpal_porpoise</td>
+<td align="center">Vowpal Wabbit轻量级Python封装。</td>
+</tr>
+<tr>
+<td align="center">Theano</td>
+<td align="center">用来定义、优化和模拟数学表达式计算，用于高效的解决多维数组的计算问题的python软件包。它使得写深度学习模型更加容易，同时也给出了一些关于在GPU上训练它们的选项。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">系统与命令行</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">threading</td>
+<td align="center">Python标准线程库，更高级别的线程接口。</td>
+</tr>
+<tr>
+<td align="center">envoy</td>
+<td align="center">特使，Python子线程的函数库。</td>
+</tr>
+<tr>
+<td align="center">sh</td>
+<td align="center">成熟的子线程替换函数库。</td>
+</tr>
+<tr>
+<td align="center">sarge</td>
+<td align="center">封装线程。</td>
+</tr>
+<tr>
+<td align="center">subprocess</td>
+<td align="center">调用shell命令的神器argparse，写命令行脚本必备，强大的命令行差数解析工具timeit，计算代码运行的时间等等unp，命令行工具，解压文件。</td>
+</tr>
+<tr>
+<td align="center">eventlet</td>
+<td align="center">开销很少的多线程模块，使用的是 green threads 概念，例如，pool = eventlet.GreenPool(10000) 这样一条语句便创建了一个可以处理 10000 个客户端连接的线程池。类似Gevent线程库Gevent，多线程模块pytools,著名的python通用函数、工具包SendKeys, 键盘鼠标操作模块, 模拟键盘鼠标模拟操作。</td>
+</tr>
+<tr>
+<td align="center">pyHook</td>
+<td align="center">基于Python的“钩子”库，主要用于监听当前电脑上鼠标和键盘的事件。这个库依赖于另一个Python库PyWin32，如同名字所显示的，PyWin32只能运行在Windows平台，所以PyHook也只能运行在Windows平台。</td>
+</tr>
+<tr>
+<td align="center">pstuil</td>
+<td align="center">跨平台地很方便获取和控制系统的进程，以及读取系统的CPU占用内存占用等信息.cement，一个轻量级的、功能齐全的命令行工具click，简单优雅的的命令行接口。</td>
+</tr>
+<tr>
+<td align="center">clint</td>
+<td align="center">Python命令行工具。</td>
+</tr>
+<tr>
+<td align="center">cliff</td>
+<td align="center">创造多层次指令的命令行程序框架。</td>
+</tr>
+<tr>
+<td align="center">Clime</td>
+<td align="center">可以转换任何模块为多的CLI命令程序，无任何配置。</td>
+</tr>
+<tr>
+<td align="center">docopt</td>
+<td align="center">Python命令行参数分析器。</td>
+</tr>
+<tr>
+<td align="center">pycli</td>
+<td align="center">命令行应用程序，支持的标准命令行解析，测井，单元[测试]和功能测试。</td>
+</tr>
+<tr>
+<td align="center">Gooey</td>
+<td align="center">打开命令行程序，作为为一个完整的GUI应用程序</td>
+</tr>
+<tr>
+<td align="center">cookiecutter</td>
+<td align="center">命令行工具，从cookiecutters（项目模板）创建项目。例如，Python包项目，jQuery插件项目。</td>
+</tr>
+<tr>
+<td align="center">percol</td>
+<td align="center">为UNIX传统管道pipe命令，添加交互式选择风格。</td>
+</tr>
+<tr>
+<td align="center">rainbowstream</td>
+<td align="center">聪明和漂亮的推特客户终端。</td>
+</tr>
+<tr>
+<td align="center">Django Models</td>
+<td align="center">Django的一部分SQLAlchemy，Python SQL工具包和对象关系映射。</td>
+</tr>
+<tr>
+<td align="center">peewee</td>
+<td align="center">小型的ORM解析器。</td>
+</tr>
+<tr>
+<td align="center">PonyORM</td>
+<td align="center">为ORM提供了一种面向SQL的接口。</td>
+</tr>
+<tr>
+<td align="center">MongoEngine</td>
+<td align="center">Python对象文件映射，使用[MongoDB]。, Django MongoDB引擎MongoDB , Django后台。django-mongodb-engine，Django后台.redisco,一个简单的模型和容器库，使用[Redis]flywheel，Amazon DynamoDB对象映射。</td>
+</tr>
+<tr>
+<td align="center">butterdb</td>
+<td align="center">谷歌电子表格的ORM，Python版。</td>
+</tr>
+<tr>
+<td align="center">celery</td>
+<td align="center">芹菜，异步任务队列/工作，基于分布式消息队列。</td>
+</tr>
+<tr>
+<td align="center">huey</td>
+<td align="center">休伊，轻量级，多线程任务队列。</td>
+</tr>
+<tr>
+<td align="center">mrq</td>
+<td align="center">队列先生，分布式任务队列，使用redis &amp; Gevent。</td>
+</tr>
+<tr>
+<td align="center">rq</td>
+<td align="center">简单的工作队列。</td>
+</tr>
+<tr>
+<td align="center">Queue</td>
+<td align="center">Queue模块可以用来实现多线程间通讯，让各个线程共享数据，生产者把货物放到Queue中，供消费者（线程）去使用。</td>
+</tr>
+<tr>
+<td align="center">simpleq</td>
+<td align="center">简单的，可扩展的队列，Amazon SQS基础队列。</td>
+</tr>
+<tr>
+<td align="center">Psyco</td>
+<td align="center">超强的python性能优化工具，psyco 的神奇在于它只需要在代码的入口处调用短短两行代码，性能就能提升 40% 或更多，真可谓是立竿见影！如果你的客户觉得你的程序有点慢，敬请不要急着去优化代码，psyco 或许能让他立即改变看法。psyco 堪称 Python 的 jit。</td>
+</tr>
+<tr>
+<td align="center">fn.py</td>
+<td align="center">Python函数编程：缺失的功能享受FP的实现。</td>
+</tr>
+<tr>
+<td align="center">funcy</td>
+<td align="center">函数编程工具。</td>
+</tr>
+<tr>
+<td align="center">Toolz</td>
+<td align="center">函数编程工具：迭代器、函数，字典。</td>
+</tr>
+<tr>
+<td align="center">CyToolz</td>
+<td align="center">Toolz的Cython实现，高性能的函数编程工具。</td>
+</tr>
+<tr>
+<td align="center">Ansible</td>
+<td align="center">安塞波，极为简单的自动化平台。</td>
+</tr>
+<tr>
+<td align="center">SaltStack</td>
+<td align="center">基础设施的自动化管理系统。</td>
+</tr>
+<tr>
+<td align="center">Fabric</td>
+<td align="center">织物，一个简单，远程执行和部署的语言工具。</td>
+</tr>
+<tr>
+<td align="center">Fabtools</td>
+<td align="center">Fabric的工具函数。</td>
+</tr>
+<tr>
+<td align="center">cuisine</td>
+<td align="center">热门的Fabric的工具函数。</td>
+</tr>
+<tr>
+<td align="center">psutil</td>
+<td align="center">跨平台的过程和系统工具模块。</td>
+</tr>
+<tr>
+<td align="center">pexpect</td>
+<td align="center">控制互动节目。</td>
+</tr>
+<tr>
+<td align="center">provy</td>
+<td align="center">易于使用的配置系统的Python。</td>
+</tr>
+<tr>
+<td align="center">honcho</td>
+<td align="center">Foreman的Python接口，用于管理procfile应用工具。</td>
+</tr>
+<tr>
+<td align="center">gunnery</td>
+<td align="center">多任务执行工具，与网络接口的分布式系统。</td>
+</tr>
+<tr>
+<td align="center">fig</td>
+<td align="center">快速。独立的开发环境中使用泊坞窗。</td>
+</tr>
+<tr>
+<td align="center">APScheduler</td>
+<td align="center">轻量级、但功能强大的在线任务调度程序。</td>
+</tr>
+<tr>
+<td align="center">django-schedule</td>
+<td align="center">Django日程应用程序。</td>
+</tr>
+<tr>
+<td align="center">doit</td>
+<td align="center">任务流道/生成工具。</td>
+</tr>
+<tr>
+<td align="center">Joblib</td>
+<td align="center">Python提供的轻量级的流水线工具函数。</td>
+</tr>
+<tr>
+<td align="center">Plan</td>
+<td align="center">简易生成crontab文件。</td>
+</tr>
+<tr>
+<td align="center">Spiff</td>
+<td align="center">纯Python实现的，功能强大的工作流引擎。</td>
+</tr>
+<tr>
+<td align="center">schedule</td>
+<td align="center">Python作业调度。</td>
+</tr>
+<tr>
+<td align="center">TaskFlow</td>
+<td align="center">有助于使任务执行简单。</td>
+</tr>
+<tr>
+<td align="center">ctypes</td>
+<td align="center">Python标准库，速度更快，Python调用C代码的外部函数接口。</td>
+</tr>
+<tr>
+<td align="center">cffi</td>
+<td align="center">Python调用C代码外部函数接口，类似于ctypes直接在python程序中调用c程序,但是比ctypes更方便不要求编译成so再调用。</td>
+</tr>
+<tr>
+<td align="center">Cytoolz</td>
+<td align="center">python 加速库SWIG，简化封装和接口生成器。</td>
+</tr>
+<tr>
+<td align="center">Cython</td>
+<td align="center">Python优化静态编译器。</td>
+</tr>
+<tr>
+<td align="center">PyPy</td>
+<td align="center">Python解释器的 Python实现。</td>
+</tr>
+<tr>
+<td align="center">Stackless Python</td>
+<td align="center">一个增强版本的Python。它使程序员从基于线程的编程方式中获得好处，并避免传统线程所带来的性能与复杂度问题。Stackless为 Python带来的微线程扩展，是一种低开销、轻量级的便利工具Pyston,使用LLVM和现代JIT技术,对python进行性能优化。</td>
+</tr>
+<tr>
+<td align="center">pythonlibs</td>
+<td align="center">非官方的Windows（32 / 64位）的Python扩展包scapy，优秀的数据包处理库。</td>
+</tr>
+<tr>
+<td align="center">ino</td>
+<td align="center">Arduino命令行工具。</td>
+</tr>
+<tr>
+<td align="center">Pyro</td>
+<td align="center">Python的机器人工具包。</td>
+</tr>
+<tr>
+<td align="center">pluginbase</td>
+<td align="center">一个简单而灵活的Python的插件系统。</td>
+</tr>
+<tr>
+<td align="center">itsdangerous</td>
+<td align="center">数据安全传输工具。</td>
+</tr>
+<tr>
+<td align="center">blinker</td>
+<td align="center">快速Python中的信号/事件调度系统。</td>
+</tr>
+<tr>
+<td align="center">pychievements</td>
+<td align="center">用于创建和跟踪成果框架。</td>
+</tr>
+<tr>
+<td align="center">python-patterns</td>
+<td align="center">Python中的设计模式。</td>
+</tr>
+<tr>
+<td align="center">pefileWindows</td>
+<td align="center">PE文件解析器SIP，自动为C和C++库生成Python扩展模块的工具</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">数据库</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MySQLdb</td>
+<td align="center">成熟的[MySQL]数据库模块</td>
+</tr>
+<tr>
+<td align="center">Baresql</td>
+<td align="center">SQL数据库包ZODB，Python本地对象数据库。一个K-V对象图数据库。</td>
+</tr>
+<tr>
+<td align="center">pickledb</td>
+<td align="center">简单和轻量级的K-V键值存储。</td>
+</tr>
+<tr>
+<td align="center">TinyDB</td>
+<td align="center">轻量级，面向文档的数据库。</td>
+</tr>
+<tr>
+<td align="center">mysql-python</td>
+<td align="center">MySQL的Python工具库。</td>
+</tr>
+<tr>
+<td align="center">mysqlclient</td>
+<td align="center">mysql-python分支，支持Python 3.</td>
+</tr>
+<tr>
+<td align="center">PyMySQL</td>
+<td align="center">纯Python写的 MySQL驱动程序，兼容mysql-python。</td>
+</tr>
+<tr>
+<td align="center">mysql-connector-python</td>
+<td align="center">MySQL连接器,来自[Oracle]，纯Python编写。</td>
+</tr>
+<tr>
+<td align="center">oursql</td>
+<td align="center">MySQL连接器，提供本地话指令语句和BLOBs支持。</td>
+</tr>
+<tr>
+<td align="center">psycopg2</td>
+<td align="center">最流行的Python PostgreSQL适配器。</td>
+</tr>
+<tr>
+<td align="center">txpostgres</td>
+<td align="center">于Twisted的异步驱动，用于PostgreSQL。</td>
+</tr>
+<tr>
+<td align="center">queries</td>
+<td align="center">psycopg2函数库，用于PostgreSQL。</td>
+</tr>
+<tr>
+<td align="center">dataset</td>
+<td align="center">存储Python字典数据,用于SQLite，MySQL和PostgreSQL。</td>
+</tr>
+<tr>
+<td align="center">cassandra-python-driver</td>
+<td align="center">开源分布式NoSQL数据库系统Apache Cassandra系统的Python驱动.</td>
+</tr>
+<tr>
+<td align="center">pycassa</td>
+<td align="center">简化的cassandra数据库Python驱动。</td>
+</tr>
+<tr>
+<td align="center">HappyBase</td>
+<td align="center">友好的Apache [Hbase]的函数库。</td>
+</tr>
+<tr>
+<td align="center">PyMongo</td>
+<td align="center">MongoDB官方客户端。</td>
+</tr>
+<tr>
+<td align="center">Plyvel</td>
+<td align="center">LevelDB快速和功能丰富的Python接口。</td>
+</tr>
+<tr>
+<td align="center">redis-py</td>
+<td align="center">redis客户端。</td>
+</tr>
+<tr>
+<td align="center">py2neo</td>
+<td align="center">Python客户端(基于Neo4j的RESTful接口).</td>
+</tr>
+<tr>
+<td align="center">telephus</td>
+<td align="center">基于Twisted的cassandra客户端。</td>
+</tr>
+<tr>
+<td align="center">txRedis</td>
+<td align="center">基于Twisted的Redis客户端。 【网络】</td>
+</tr>
+<tr>
+<td align="center">Curl</td>
+<td align="center">Pycurl包是一个libcurl的Python接口，它是由C语言编写的。与urllib相比，它的速度要快很多。</td>
+</tr>
+<tr>
+<td align="center">Libcurl</td>
+<td align="center">是一个支持FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE 和 LDAP的客户端URL传输库.libcurl也支持HTTPS认证,HTTP POST,HTTP PUT,FTP上传,代理,Cookies,基本身份验证,FTP文件断点继传,HTTP代理通道等等。</td>
+</tr>
+<tr>
+<td align="center">Requests</td>
+<td align="center">用Python语言编写，基于 urllib的开源 HTTP 库。它比 urllib 更加方便，更加 Pythoner。支持 Python3。</td>
+</tr>
+<tr>
+<td align="center">httpie</td>
+<td align="center">命令行HTTP客户端，用户友好的cURL的替换工具。</td>
+</tr>
+<tr>
+<td align="center">s3cmd</td>
+<td align="center">命令行工具，用于管理Amazon S3和CloudFront。</td>
+</tr>
+<tr>
+<td align="center">youtube-dl</td>
+<td align="center">命令行程序，从YouTube下载视频。</td>
+</tr>
+<tr>
+<td align="center">you-get</td>
+<td align="center">Python3写的视频下载工具，可用于YouTube/Youku优酷/Niconico视频下载Coursera，从coursera.org下载视频，可重新命名文件wikiteam，wiki下载工具。</td>
+</tr>
+<tr>
+<td align="center">subliminal</td>
+<td align="center">命令行工具，搜索和下载字幕的函数库requests，HTTP函数库，更加人性化。</td>
+</tr>
+<tr>
+<td align="center">grequests</td>
+<td align="center">异步HTTP请求+ Gevent（高性能高并发函数库）。</td>
+</tr>
+<tr>
+<td align="center">urllib3</td>
+<td align="center">一个线程安全的HTTP连接池，支持文件post。</td>
+</tr>
+<tr>
+<td align="center">httplib2</td>
+<td align="center">综合HTTP的客户端函数库。</td>
+</tr>
+<tr>
+<td align="center">treq</td>
+<td align="center">Python API接口，Twisted的HTTP客户。</td>
+</tr>
+<tr>
+<td align="center">Mininet</td>
+<td align="center">流行的网络仿真器,API采用python编写。</td>
+</tr>
+<tr>
+<td align="center">POX</td>
+<td align="center">基于Python的开源软件定义网络（SDN）控制开发平台的应用，如OpenFlow的SDN控制器。</td>
+</tr>
+<tr>
+<td align="center">Pyretic</td>
+<td align="center">SDN的编程语言，提供了强大的抽象在网络交换机或仿真器。</td>
+</tr>
+<tr>
+<td align="center">SDX Platform</td>
+<td align="center">基于SDN的IXP实现，利用最小网络，痘和热。</td>
+</tr>
+<tr>
+<td align="center">inbox.py</td>
+<td align="center">Python的SMTP服务器。</td>
+</tr>
+<tr>
+<td align="center">imbox</td>
+<td align="center">Python版本IMAP库。</td>
+</tr>
+<tr>
+<td align="center">inbox</td>
+<td align="center">收件箱，开源邮件工具包。</td>
+</tr>
+<tr>
+<td align="center">lamson</td>
+<td align="center">SMTP服务器。</td>
+</tr>
+<tr>
+<td align="center">flanker</td>
+<td align="center">侧卫,电子邮件地址和MIME解析库。</td>
+</tr>
+<tr>
+<td align="center">marrow.mailer</td>
+<td align="center">高性能可扩展邮件交付框架。</td>
+</tr>
+<tr>
+<td align="center">django-celery-ses</td>
+<td align="center">Django电子邮件后台，使用AWS SES和Celery。</td>
+</tr>
+<tr>
+<td align="center">modoboa</td>
+<td align="center">邮件托管和管理平台，包括现代和简化Web UI。</td>
+</tr>
+<tr>
+<td align="center">envelopes</td>
+<td align="center">邮件工具。</td>
+</tr>
+<tr>
+<td align="center">mailjet</td>
+<td align="center">批量邮寄mailjet API接口，带统计。</td>
+</tr>
+<tr>
+<td align="center">Talon</td>
+<td align="center">利爪，Mailgun库，提取消息和签名。</td>
+</tr>
+<tr>
+<td align="center">mailjet</td>
+<td align="center">Mailjet API implementation for batch mailing, statistics and more.</td>
+</tr>
+<tr>
+<td align="center">Talon</td>
+<td align="center">Mailgun library to extract message quotations and signatures.</td>
+</tr>
+<tr>
+<td align="center">pyzmail</td>
+<td align="center">编写，发送和解析电子邮件。</td>
+</tr>
+<tr>
+<td align="center">furl</td>
+<td align="center">燃料，小型的的URL解析库库。</td>
+</tr>
+<tr>
+<td align="center">purl</td>
+<td align="center">简单的，干净的API，操纵URL。</td>
+</tr>
+<tr>
+<td align="center">pyshorteners</td>
+<td align="center">纯Python库，URL短网址编辑。</td>
+</tr>
+<tr>
+<td align="center">short_url</td>
+<td align="center">短网址生成。</td>
+</tr>
+<tr>
+<td align="center">Scrapy</td>
+<td align="center">快速屏幕截取和网页抓取的框架。</td>
+</tr>
+<tr>
+<td align="center">portia</td>
+<td align="center">波西亚，Scrapy的可视化扩展。</td>
+</tr>
+<tr>
+<td align="center">feedparser</td>
+<td align="center">信息源解释器RoboBrowser，简单的网页浏览Python函数库，没有使用Web浏览器。</td>
+</tr>
+<tr>
+<td align="center">MechanicalSoup</td>
+<td align="center">网站自动化互动测试工具包。</td>
+</tr>
+<tr>
+<td align="center">mechanize</td>
+<td align="center">网页浏览编程工具。</td>
+</tr>
+<tr>
+<td align="center">Demiurge</td>
+<td align="center">造物主，-PyQuery的轻量级工具。</td>
+</tr>
+<tr>
+<td align="center">newspaper</td>
+<td align="center">提取报纸新闻。</td>
+</tr>
+<tr>
+<td align="center">html2text</td>
+<td align="center">转换HTML为 Markdown格式的文本。</td>
+</tr>
+<tr>
+<td align="center">python-goose</td>
+<td align="center">HTML内容提取器。</td>
+</tr>
+<tr>
+<td align="center">lassie</td>
+<td align="center">莱西,人性化的网站内容检索。</td>
+</tr>
+<tr>
+<td align="center">micawber</td>
+<td align="center">通过UR抓提网页的函数库。</td>
+</tr>
+<tr>
+<td align="center">sumy</td>
+<td align="center">概要，文本和HTML网页的自动文摘模块。</td>
+</tr>
+<tr>
+<td align="center">Haul</td>
+<td align="center">距离，可扩展的图像爬虫。</td>
+</tr>
+<tr>
+<td align="center">python-readability</td>
+<td align="center">可读性工具Arc90,快速的Python接口。</td>
+</tr>
+<tr>
+<td align="center">opengraph</td>
+<td align="center">OpenGraphProtocol协议解析模块</td>
+</tr>
+<tr>
+<td align="center">textract</td>
+<td align="center">从任何文件，Word，PowerPoint，PDF文件中提取文本，等。</td>
+</tr>
+<tr>
+<td align="center">sanitize</td>
+<td align="center">消毒，使混乱的数据变的理智。</td>
+</tr>
+<tr>
+<td align="center">AutobahnPython</td>
+<td align="center">WebSocket和WAMP的函数库，使用 Twisted和PythonWebSocket-for-Python，websocket客户端和服务器端函数库。</td>
+</tr>
+<tr>
+<td align="center">SimpleXMLRPCServer</td>
+<td align="center">python标准库，简单的XML-RPC服务器，单线程。</td>
+</tr>
+<tr>
+<td align="center">SimpleJSONRPCServer</td>
+<td align="center">JSON-RPC规范实施函数库。</td>
+</tr>
+<tr>
+<td align="center">zeroRPC</td>
+<td align="center">基于ZeroMQ和MessagePack的RPC实现。</td>
+</tr>
+<tr>
+<td align="center">apache-libcloud</td>
+<td align="center">所有云服务的Python接口库。</td>
+</tr>
+<tr>
+<td align="center">wifi</td>
+<td align="center">WiFi -一套个Python库和命令行工具与WiFi，用于[Linux]。</td>
+</tr>
+<tr>
+<td align="center">streamparse</td>
+<td align="center">运行Python代码和数据的实时流。集成了Apache Storm。</td>
+</tr>
+<tr>
+<td align="center">boto</td>
+<td align="center">亚马逊网络服务接口。</td>
+</tr>
+<tr>
+<td align="center">twython</td>
+<td align="center">Twitter推特API。</td>
+</tr>
+<tr>
+<td align="center">google-api-python-client</td>
+<td align="center">谷歌客户端API。</td>
+</tr>
+<tr>
+<td align="center">gspread</td>
+<td align="center">谷歌电子表格的Python API。</td>
+</tr>
+<tr>
+<td align="center">facebook-sdk</td>
+<td align="center">facebook平台Python SDK。</td>
+</tr>
+<tr>
+<td align="center">facepy</td>
+<td align="center">简易的facebook图形APIgmail，Gmail的Python接口。</td>
+</tr>
+<tr>
+<td align="center">django-wordpress</td>
+<td align="center">Django的WordPress的模型和视图。</td>
+</tr>
+<tr>
+<td align="center">Django</td>
+<td align="center">最流行的Python-Web框架，鼓励快速开发,并遵循MVC设计，开发周期短ActiveGrid企业级的Web2.0解决方案Karrigell简单的Web框架，自身包含了Web服务，py脚本引擎和纯python的数据库PyDBLitewebpy一个小巧灵活的Web框架，虽然简单但是功能强大CherryPy基于Python的Web应用程序开发框架Pylons基于Python的一个极其高效和可靠的Web开发框架Zope开源的Web应用服务器TurboGears基于Python的MVC风格的Web应用程序框架Twisted流行的网络编程库，大型Web框架QuixoteWeb开发框架Flask,轻量级web框架Bottle，快速，简单和轻量级的WSGI模式Web框架。</td>
+</tr>
+<tr>
+<td align="center">Pyramid</td>
+<td align="center">轻量级，快速，稳定的开源Web框架。</td>
+</tr>
+<tr>
+<td align="center">web2py</td>
+<td align="center">简单易用的全堆栈Web框架和平台。</td>
+</tr>
+<tr>
+<td align="center">web.py</td>
+<td align="center">强大、简单的Web框架。</td>
+</tr>
+<tr>
+<td align="center">TurboGears</td>
+<td align="center">便于扩展的Web框架。</td>
+</tr>
+<tr>
+<td align="center">CherryPy</td>
+<td align="center">极简Python Web框架，支持，HTTP 1.1和WSGI线程池。</td>
+</tr>
+<tr>
+<td align="center">Grok</td>
+<td align="center">基于Zope3的Web框架。</td>
+</tr>
+<tr>
+<td align="center">Bluebream</td>
+<td align="center">开源的Web应用服务器，原名Zope 3。</td>
+</tr>
+<tr>
+<td align="center">guava</td>
+<td align="center">轻量级，高性能的Python-Web框架，采用c语言编写。</td>
+</tr>
+<tr>
+<td align="center">django-cms</td>
+<td align="center">基于Django企业级开源CMS。djedi-cms轻量级但功能强大的Django CMS的插件，内联编辑和性能优化。</td>
+</tr>
+<tr>
+<td align="center">FeinCMS</td>
+<td align="center">基于Django的先进内容管理系统。</td>
+</tr>
+<tr>
+<td align="center">Kotte</td>
+<td align="center">高层次的Python的Web应用框架，基于Pyramid。</td>
+</tr>
+<tr>
+<td align="center">Mezzanine</td>
+<td align="center">强大，一致，灵活的内容管理平台。</td>
+</tr>
+<tr>
+<td align="center">Opps</td>
+<td align="center">基于Django的CMS，用于高流量的报纸、杂志和门户网站。</td>
+</tr>
+<tr>
+<td align="center">Plone</td>
+<td align="center">基于Zope的开源应用服务器Zope。</td>
+</tr>
+<tr>
+<td align="center">Quokka</td>
+<td align="center">灵活，可扩展的，轻量级的CMS系统，使用Flask和MongoDB。</td>
+</tr>
+<tr>
+<td align="center">Wagtail</td>
+<td align="center">Django内容管理系统。</td>
+</tr>
+<tr>
+<td align="center">Widgy</td>
+<td align="center">CMS框架，基于Django。</td>
+</tr>
+<tr>
+<td align="center">django-oscar</td>
+<td align="center">Django奥斯卡，开源的电子商务框架。</td>
+</tr>
+<tr>
+<td align="center">django-shop</td>
+<td align="center">基于Django的网店系统。</td>
+</tr>
+<tr>
+<td align="center">merchant</td>
+<td align="center">支持多种付款处理工具。</td>
+</tr>
+<tr>
+<td align="center">money</td>
+<td align="center">可扩展的货币兑换解决方案。</td>
+</tr>
+<tr>
+<td align="center">python-currencies</td>
+<td align="center">货币显示格式。</td>
+</tr>
+<tr>
+<td align="center">cornice</td>
+<td align="center">Pyramid的REST框架。</td>
+</tr>
+<tr>
+<td align="center">django-rest-framework</td>
+<td align="center">Django框架，强大灵活的工具，可以很容易地构建Web API。</td>
+</tr>
+<tr>
+<td align="center">django-tastypie</td>
+<td align="center">创造精美的Django应用程序API接口。</td>
+</tr>
+<tr>
+<td align="center">django-formapi</td>
+<td align="center">创建JSON API、HMAC认证和Django表单验证。</td>
+</tr>
+<tr>
+<td align="center">flask-api</td>
+<td align="center">提供统一的浏览器体验，基于Django框架。</td>
+</tr>
+<tr>
+<td align="center">flask-restful</td>
+<td align="center">快速构建REST API支持扩展。</td>
+</tr>
+<tr>
+<td align="center">flask-api-utils</td>
+<td align="center">flask的扩展。</td>
+</tr>
+<tr>
+<td align="center">falcon</td>
+<td align="center">猎鹰，高性能的Python框架，构建云API和Web应用程序后端。</td>
+</tr>
+<tr>
+<td align="center">eve</td>
+<td align="center">夏娃，REST API框架，使用Flask，MongoDB和良好意愿。</td>
+</tr>
+<tr>
+<td align="center">sandman</td>
+<td align="center">睡魔，为现有的数据库驱动的系统，自动生成REST API。</td>
+</tr>
+<tr>
+<td align="center">restless</td>
+<td align="center">类似TastyPie的框架。</td>
+</tr>
+<tr>
+<td align="center">savory-pie</td>
+<td align="center">REST API构建函数库（Django，及其他）Jinja2，现代设计师友好的语言模板。</td>
+</tr>
+<tr>
+<td align="center">Genshi</td>
+<td align="center">网络感知输出模板工具包。</td>
+</tr>
+<tr>
+<td align="center">Mako</td>
+<td align="center">马可，Python平台的超高速、轻型模板。</td>
+</tr>
+<tr>
+<td align="center">Chameleon</td>
+<td align="center">变色龙，一个HTML / XML模板引擎。仿照ZPT，优化速度。</td>
+</tr>
+<tr>
+<td align="center">Spitfire</td>
+<td align="center">快速的Python编译模板。</td>
+</tr>
+<tr>
+<td align="center">django-haystack</td>
+<td align="center">大海捞针,Django模块搜索。elasticsearch-py,Elasticsearch官方低级的Python客户端。</td>
+</tr>
+<tr>
+<td align="center">solrpy</td>
+<td align="center">solr客户端。</td>
+</tr>
+<tr>
+<td align="center">Whoosh</td>
+<td align="center">呼,快速，纯Python搜索引擎库。</td>
+</tr>
+<tr>
+<td align="center">Feedly</td>
+<td align="center">建立新闻和通知系统的函数库，使用Cassandra和Redis。</td>
+</tr>
+<tr>
+<td align="center">django-activity-stream</td>
+<td align="center">Django活动流,从你网站上的行动,产生通用的活动流。</td>
+</tr>
+<tr>
+<td align="center">Beaker</td>
+<td align="center">烧杯，一个缓存和会话使用的Web应用程序，独立的Python脚本和应用程序库。</td>
+</tr>
+<tr>
+<td align="center">dogpile.cache</td>
+<td align="center">是Beaker作者的下一代替代作品。</td>
+</tr>
+<tr>
+<td align="center">HermesCache</td>
+<td align="center">Python的缓存库，基于标签的失效及预防Dogpile效果。</td>
+</tr>
+<tr>
+<td align="center">django-cache-machine</td>
+<td align="center">Django缓存机，自动缓存失效，使用ORM。</td>
+</tr>
+<tr>
+<td align="center">django-cacheops</td>
+<td align="center">自动颗粒事件驱动，ORM缓存失效。</td>
+</tr>
+<tr>
+<td align="center">johnny-cache</td>
+<td align="center">约翰尼高速缓存框架,Django应用程序。</td>
+</tr>
+<tr>
+<td align="center">django-viewlet</td>
+<td align="center">渲染模板部件扩展缓存控制。</td>
+</tr>
+<tr>
+<td align="center">pylibmc</td>
+<td align="center">在libmemcached接口。</td>
+</tr>
+<tr>
+<td align="center">WTForms-JSON</td>
+<td align="center">JSON表单数据处理扩展。</td>
+</tr>
+<tr>
+<td align="center">Deform</td>
+<td align="center">HTML表单生成的函数库。</td>
+</tr>
+<tr>
+<td align="center">django-bootstrap3</td>
+<td align="center">bootstrap3，集成了Django。</td>
+</tr>
+<tr>
+<td align="center">django-crispy-forms</td>
+<td align="center">Django程序，可以创建优雅的表单。</td>
+</tr>
+<tr>
+<td align="center">django-remote-forms</td>
+<td align="center">Django的远程表单，Django表格的序列化程序。</td>
+</tr>
+<tr>
+<td align="center">django-simple-spam-blocker</td>
+<td align="center">Django简单的垃圾邮件拦截器。</td>
+</tr>
+<tr>
+<td align="center">django-simple-captcha</td>
+<td align="center">Django简单验证码，简单的和高度可定制的Django应用程序，用于添加验证码图像Ajenti，服务器管理面板。</td>
+</tr>
+<tr>
+<td align="center">Grappelli</td>
+<td align="center">界面花哨的django皮肤。</td>
+</tr>
+<tr>
+<td align="center">django-suit</td>
+<td align="center">Django替代o界面（仅用于非商业用途）。</td>
+</tr>
+<tr>
+<td align="center">django-xadmin</td>
+<td align="center">Django管理面板替代工具。</td>
+</tr>
+<tr>
+<td align="center">flask-admin</td>
+<td align="center">简单的flask管理界面框架flower，实时监控和Web管理面板。</td>
+</tr>
+<tr>
+<td align="center">Pelican</td>
+<td align="center">鹈鹕，Markdown或ReST，字王内容主题。支持 DVCS, Disqus. AGPL。</td>
+</tr>
+<tr>
+<td align="center">Cactus</td>
+<td align="center">仙人掌,设计师的网站静态生成器。</td>
+</tr>
+<tr>
+<td align="center">Hyde</td>
+<td align="center">海德， 基于Jinja2的静态网站生成器。</td>
+</tr>
+<tr>
+<td align="center">Nikola</td>
+<td align="center">尼古拉-一个静态网站和博客生成器。</td>
+</tr>
+<tr>
+<td align="center">Tags</td>
+<td align="center">标签，最简单的静态网站生成器。</td>
+</tr>
+<tr>
+<td align="center">Tinkerer</td>
+<td align="center">工匠，基于Sphinx的静态网站生成器。</td>
+</tr>
+<tr>
+<td align="center">asyncio</td>
+<td align="center">（在Python 3.4 +是Python标准库），异步I/O，事件循环，协同任务。</td>
+</tr>
+<tr>
+<td align="center">gevent</td>
+<td align="center">基于Python的网络库。</td>
+</tr>
+<tr>
+<td align="center">Twisted</td>
+<td align="center">扭曲，事件驱动的网络引擎。</td>
+</tr>
+<tr>
+<td align="center">Tornado</td>
+<td align="center">龙卷风，Web框架和异步网络的函数库。</td>
+</tr>
+<tr>
+<td align="center">pulsar</td>
+<td align="center">脉冲星，事件驱动的并行框架的Python。</td>
+</tr>
+<tr>
+<td align="center">diesel</td>
+<td align="center">柴油，绿色的，基于事件的I/O框架。</td>
+</tr>
+<tr>
+<td align="center">eventlet</td>
+<td align="center">WSGI支持异步框架。</td>
+</tr>
+<tr>
+<td align="center">pyzmq</td>
+<td align="center">0MQ消息库的Python封装。</td>
+</tr>
+<tr>
+<td align="center">txZMQ</td>
+<td align="center">基于Twisted的0MQ消息库封Crossbar,开源统一应用路由器（WebSocket和WAMP）。</td>
+</tr>
+<tr>
+<td align="center">wsgiref</td>
+<td align="center">Python标准库，WSGI封装实现，单线程。</td>
+</tr>
+<tr>
+<td align="center">Werkzeug</td>
+<td align="center">机床，WSGI工具函数库，很容易地嵌入到你自己的项目框架。</td>
+</tr>
+<tr>
+<td align="center">paste</td>
+<td align="center">粘贴，多线程，稳定的，久经考验的WSGI工具。</td>
+</tr>
+<tr>
+<td align="center">rocket</td>
+<td align="center">火箭，多线程服务，基于Pyramid。</td>
+</tr>
+<tr>
+<td align="center">netius</td>
+<td align="center">快速的、异步WSGI服务器，gunicorn，forked前身，部分用C写的。</td>
+</tr>
+<tr>
+<td align="center">fapws3</td>
+<td align="center">异步网络，用C写的。</td>
+</tr>
+<tr>
+<td align="center">meinheld</td>
+<td align="center">异步WSGI服务器，是用C写的。</td>
+</tr>
+<tr>
+<td align="center">bjoern</td>
+<td align="center">-快速的、异步WSGI服务器，用C写的。【安全】Permissions函数库，允许或拒绝用户访问数据或函数。</td>
+</tr>
+<tr>
+<td align="center">django-guardian</td>
+<td align="center">Django守护者，管理每个对象的权限，用于Django 1.2 +Carteblanche，管理导航和权限。</td>
+</tr>
+<tr>
+<td align="center">Authomatic</td>
+<td align="center">简单强大的认证/授权客户端。</td>
+</tr>
+<tr>
+<td align="center">OAuthLib</td>
+<td align="center">通用，规范，OAuth请求签约工具。</td>
+</tr>
+<tr>
+<td align="center">rauth</td>
+<td align="center">用于OAuth 1.0，2.0，的Python库。</td>
+</tr>
+<tr>
+<td align="center">python-oauth2</td>
+<td align="center">利用全面测试，抽象接口来创建OAuth的客户端和服务器。</td>
+</tr>
+<tr>
+<td align="center">python-social-auth</td>
+<td align="center">易于安装的社会认证机制。</td>
+</tr>
+<tr>
+<td align="center">django-oauth-toolkit</td>
+<td align="center">Django OAuth工具包django-oauth2-provider,Django OAuth2工具包。</td>
+</tr>
+<tr>
+<td align="center">django-allauth</td>
+<td align="center">Django认证的应用程序。</td>
+</tr>
+<tr>
+<td align="center">Flask-OAuthlib</td>
+<td align="center">Flask的OAuth工具包sanction，制裁，简单的oauth2客户端。</td>
+</tr>
+<tr>
+<td align="center">jose</td>
+<td align="center">[JavaScript]对象签名和加密(JOSE)草案实施，标记状态。</td>
+</tr>
+<tr>
+<td align="center">python-jwt</td>
+<td align="center">JSON的Web令牌生成和验证模块。</td>
+</tr>
+<tr>
+<td align="center">pyjwt</td>
+<td align="center">JSON的Web令牌草案01。</td>
+</tr>
+<tr>
+<td align="center">python-jws</td>
+<td align="center">JSON的Web令牌草案02。</td>
+</tr>
+<tr>
+<td align="center">PyCrypto</td>
+<td align="center">Python的加密工具包。</td>
+</tr>
+<tr>
+<td align="center">Paramiko</td>
+<td align="center">sshv2协议的实现，提供了客户端和服务器端的功能。</td>
+</tr>
+<tr>
+<td align="center">cryptography</td>
+<td align="center">密码开发工具包。</td>
+</tr>
+<tr>
+<td align="center">PyNac</td>
+<td align="center">网络和密码（NaCl）函数库。</td>
+</tr>
+<tr>
+<td align="center">hashids</td>
+<td align="center">hashids的 Python函数库。</td>
+</tr>
+<tr>
+<td align="center">Passlib</td>
+<td align="center">安全的密码存储/哈希库，非常高的水平。</td>
+</tr>
+<tr>
+<td align="center">hashlib</td>
+<td align="center">md5, sha等hash算法，用来替换md5和sha模块，并使他们的API一致。它由OpenSSL支持，支持如下算法：md5,sha1, sha224, sha256, sha384, sha512.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gui">GUI</h3>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">PyGtk</td>
+<td align="center">基于Python的GUI程序开发GTK+库</td>
+</tr>
+<tr>
+<td align="center">PyQt</td>
+<td align="center">用于Python的QT开发库</td>
+</tr>
+<tr>
+<td align="center">WxPython</td>
+<td align="center">Python下的GUI编程框架，其消息机制与MFC的架构相似,入门非常简单，需要快速开发相关的应用可以使用这个</td>
+</tr>
+<tr>
+<td align="center">Tkinter</td>
+<td align="center">Python下标准的界面编程包，因此不算是第三方库了</td>
+</tr>
+<tr>
+<td align="center">PySide</td>
+<td align="center">跨平台Qt的应用程序和用户界面框架，支撑Qt v4框架。</td>
+</tr>
+<tr>
+<td align="center">wxPython</td>
+<td align="center">混合wxWidgets的C++类库。</td>
+</tr>
+<tr>
+<td align="center">kivy</td>
+<td align="center">创建应用程序GUI函数库，看运行于Windows，Linux，MAC OS X，[Android]和[iOS]。</td>
+</tr>
+<tr>
+<td align="center">curse</td>
+<td align="center">用于创建终端GUI应用程序。</td>
+</tr>
+<tr>
+<td align="center">urwid</td>
+<td align="center">创建终端GUI应用程序窗体的函数库，支持事件，色彩丰富。</td>
+</tr>
+<tr>
+<td align="center">pyglet</td>
+<td align="center">跨平台的窗口和多媒体库的Python。</td>
+</tr>
+<tr>
+<td align="center">Tkinter</td>
+<td align="center">是Python事实上的标准GUI软件包。</td>
+</tr>
+<tr>
+<td align="center">enaml</td>
+<td align="center">创建漂亮的用户界面，语法类似QML。</td>
+</tr>
+<tr>
+<td align="center">Toga</td>
+<td align="center">托加，OS原生GUI工具包。 【构建封装】</td>
+</tr>
+<tr>
+<td align="center">pyenv</td>
+<td align="center">简单的Python版本管理。</td>
+</tr>
+<tr>
+<td align="center">virtualenv</td>
+<td align="center">创建独立的Python环境，用于同时安装不同版本的python环境。</td>
+</tr>
+<tr>
+<td align="center">virtualenvwrapper</td>
+<td align="center">是virtualenv的一组扩展。</td>
+</tr>
+<tr>
+<td align="center">pew</td>
+<td align="center">一套管理多个虚拟环境的工具。</td>
+</tr>
+<tr>
+<td align="center">vex</td>
+<td align="center">使运行指定的virtualenv命令。</td>
+</tr>
+<tr>
+<td align="center">PyRun</td>
+<td align="center">一个单文件，无需安装的Python版本管理工具。</td>
+</tr>
+<tr>
+<td align="center">PIP</td>
+<td align="center">Python包和依赖的管理工具。</td>
+</tr>
+<tr>
+<td align="center">easy_install</td>
+<td align="center">软件包管理系统,提供一个标准的分配Python软件和 函式库的格式。是一个附带设置工具的模块，和一个第三方函式库。旨在加快Python函式库的分配程式的速度。类似Ruby语言的RubyGems 。</td>
+</tr>
+<tr>
+<td align="center">conda</td>
+<td align="center">跨平台，二进制软件包管理器。</td>
+</tr>
+<tr>
+<td align="center">Curdling</td>
+<td align="center">一个管理Python包的命令行工具。</td>
+</tr>
+<tr>
+<td align="center">wheel</td>
+<td align="center">Python发行的新标准，旨在替代eggs.</td>
+</tr>
+<tr>
+<td align="center">cx-Freeze</td>
+<td align="center">跨平台的，用于打包成可执行文件的库</td>
+</tr>
+<tr>
+<td align="center">py2exe,</td>
+<td align="center">Windows平台的Freeze脚本工具，Py2exe ，将python脚本转换为windows上可以独立运行的可执行程序</td>
+</tr>
+<tr>
+<td align="center">py2app</td>
+<td align="center">MAC OS X平台的Freeze脚本工具</td>
+</tr>
+<tr>
+<td align="center">pyinstaller</td>
+<td align="center">-转换成独立的可执行文件的Python程序（跨平台）。</td>
+</tr>
+<tr>
+<td align="center">pynsist</td>
+<td align="center">构建Windows安装程序的工具，用Python编写。</td>
+</tr>
+<tr>
+<td align="center">dh-virtualenv</td>
+<td align="center">建立和分发virtualenv(Debian软件包格式)</td>
+</tr>
+<tr>
+<td align="center">PyPI</td>
+<td align="center">新一代的Python包库管理工具。</td>
+</tr>
+<tr>
+<td align="center">warehouse</td>
+<td align="center">新一代的Python包库（PyPI）管理工具。</td>
+</tr>
+<tr>
+<td align="center">devpi</td>
+<td align="center">PyPI服务器和包装/测试/发布工具。</td>
+</tr>
+<tr>
+<td align="center">localshop</td>
+<td align="center">PyPI官方包镜像服务器，支持本地（私人）包上传。</td>
+</tr>
+<tr>
+<td align="center">buildout</td>
+<td align="center">创建，组装和部署应用程序的多个部分，其中一些可能是非基于Python的。</td>
+</tr>
+<tr>
+<td align="center">SCons</td>
+<td align="center">软件构造工具。</td>
+</tr>
+<tr>
+<td align="center">platformio</td>
+<td align="center">一个控制台的工具，构建的代码可用于不同的开发平台。</td>
+</tr>
+<tr>
+<td align="center">bitbake</td>
+<td align="center">特殊设计的工具，用于创建和部署[嵌入式]Linux软件包</td>
+</tr>
+<tr>
+<td align="center">fabricate</td>
+<td align="center">自动为任何编程语言，生成依赖包。</td>
+</tr>
+<tr>
+<td align="center">django-compressor</td>
+<td align="center">Django压缩机，压缩和内联JavaScript或CSS，链接到一个单一的缓存文件。</td>
+</tr>
+<tr>
+<td align="center">jinja-assets-compressor</td>
+<td align="center">金贾压缩机，一个Jinja扩展，通过编译，压缩你的资源。</td>
+</tr>
+<tr>
+<td align="center">webassets</td>
+<td align="center">优化管理，静态资源，独特的缓存清除。</td>
+</tr>
+<tr>
+<td align="center">fanstatic</td>
+<td align="center">球迷，包优化，提供静态文件。</td>
+</tr>
+<tr>
+<td align="center">fileconveyor</td>
+<td align="center">监控资源变化，，可保存到CDN（内容分发网络）和文件系统。</td>
+</tr>
+<tr>
+<td align="center">django-storages</td>
+<td align="center">一组自定义存储Django后台。</td>
+</tr>
+<tr>
+<td align="center">glue</td>
+<td align="center">胶胶，一个简单的命令行工具，生成CSS Sprites。</td>
+</tr>
+<tr>
+<td align="center">libsass-python</td>
+<td align="center">Sass (层叠样式表)的Python接口。</td>
+</tr>
+<tr>
+<td align="center">Flask-Assets</td>
+<td align="center">整合应用程序资源。 【代码调试】</td>
+</tr>
+<tr>
+<td align="center">unittest</td>
+<td align="center">Python标准库，单元测试框架。</td>
+</tr>
+<tr>
+<td align="center">nose</td>
+<td align="center">鼻子，unittest延伸产品。</td>
+</tr>
+<tr>
+<td align="center">pytest</td>
+<td align="center">成熟的全功能的Python测试工具。</td>
+</tr>
+<tr>
+<td align="center">mamba</td>
+<td align="center">曼巴，Python的权威测试工具。出自BDD的旗下。</td>
+</tr>
+<tr>
+<td align="center">contexts</td>
+<td align="center">背景，BDD测试框架，基于C#。</td>
+</tr>
+<tr>
+<td align="center">pyshould</td>
+<td align="center">should风格的测试框架，基于PyHamcrest.</td>
+</tr>
+<tr>
+<td align="center">pyvows</td>
+<td align="center">BDD风格测试框架</td>
+</tr>
+<tr>
+<td align="center">Selenium</td>
+<td align="center">web测试框架，Python绑定Selenium。</td>
+</tr>
+<tr>
+<td align="center">splinter</td>
+<td align="center">分裂，测试Web应用程序的开源工具。</td>
+</tr>
+<tr>
+<td align="center">locust</td>
+<td align="center">刺槐，可扩展的用户负载测试工具，用Python写的。</td>
+</tr>
+<tr>
+<td align="center">sixpack</td>
+<td align="center">语言无关的A/B测试框架。</td>
+</tr>
+<tr>
+<td align="center">mock</td>
+<td align="center">模拟对象（英语：mock object，也译作模仿对象），模拟测试库。</td>
+</tr>
+<tr>
+<td align="center">responses</td>
+<td align="center">工具函数，用于mock模拟测试。</td>
+</tr>
+<tr>
+<td align="center">doublex</td>
+<td align="center">-强大的测试框架。</td>
+</tr>
+<tr>
+<td align="center">freezegun</td>
+<td align="center">通过时间调整，测试模块。</td>
+</tr>
+<tr>
+<td align="center">httpretty</td>
+<td align="center">HTTP请求的模拟工具。</td>
+</tr>
+<tr>
+<td align="center">httmock</td>
+<td align="center">mock模拟测试。</td>
+</tr>
+<tr>
+<td align="center">coverage</td>
+<td align="center">代码覆盖度量测试。</td>
+</tr>
+<tr>
+<td align="center">faker</td>
+<td align="center">生成模拟测试数据的Python包。</td>
+</tr>
+<tr>
+<td align="center">mixer</td>
+<td align="center">混频器，产生模拟数据，用于Django ORM，SQLAlchemy，Peewee, MongoEngine, Pony ORM等</td>
+</tr>
+<tr>
+<td align="center">model_mommy</td>
+<td align="center">在Django创建测试随机工具。</td>
+</tr>
+<tr>
+<td align="center">ForgeryPy</td>
+<td align="center">易用的模拟数据发生器。</td>
+</tr>
+<tr>
+<td align="center">radar</td>
+<td align="center">雷达，生成随机日期/时间。</td>
+</tr>
+<tr>
+<td align="center">FuckIt.py</td>
+<td align="center">测试Python代码运行。</td>
+</tr>
+<tr>
+<td align="center">Code Analysispysonar2</td>
+<td align="center">Python类型索引。</td>
+</tr>
+<tr>
+<td align="center">pycallgraph</td>
+<td align="center">可视化的流量（调用图）应用程序。</td>
+</tr>
+<tr>
+<td align="center">code2flow</td>
+<td align="center">转换Python和JavaScript代码到流程图。</td>
+</tr>
+<tr>
+<td align="center">LinterFlake8</td>
+<td align="center">源代码模块检查器</td>
+</tr>
+<tr>
+<td align="center">pylama</td>
+<td align="center">Python和JavaScript代码审计工具。</td>
+</tr>
+<tr>
+<td align="center">Pylint</td>
+<td align="center">源代码分析器，它查找编程错误，帮助执行一个代码标准和嗅探一些代码味道。注意：相比于PyChecker，Pylint是一个高阶的Python代码分析工具，它分析Python代码中的错误。</td>
+</tr>
+<tr>
+<td align="center">Pyflakes</td>
+<td align="center">一个用于检查Python源文件错误的简单程序。Pyflakes分析程序并且检查各种错误。它通过解析源文件实现，无需导入。</td>
+</tr>
+<tr>
+<td align="center">pdb</td>
+<td align="center">Python标准库,Python调试器。</td>
+</tr>
+<tr>
+<td align="center">ipdb</td>
+<td align="center">IPython使用的PDB。</td>
+</tr>
+<tr>
+<td align="center">winpdb</td>
+<td align="center">独立于平台的GUI调试器。</td>
+</tr>
+<tr>
+<td align="center">pudb</td>
+<td align="center">全屏，基于python调试控制台。</td>
+</tr>
+<tr>
+<td align="center">pyringe</td>
+<td align="center">-可附着于及注入代码到Python程序的调试器。</td>
+</tr>
+<tr>
+<td align="center">python-statsd</td>
+<td align="center">statsd服务器客户端。</td>
+</tr>
+<tr>
+<td align="center">memory_profiler</td>
+<td align="center">内存监视。</td>
+</tr>
+<tr>
+<td align="center">profiling</td>
+<td align="center">交互式Python分析器。</td>
+</tr>
+<tr>
+<td align="center">django-debug-toolbar,</td>
+<td align="center">Django调试工具栏,显示各种调试信息:当前请求/响应。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">django-devserver</td>
+<td align="center">Django调试工具。</td>
+</tr>
+<tr>
+<td align="center">flask-debugtoolbar</td>
+<td align="center">flask调试工具。</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

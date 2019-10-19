@@ -1,0 +1,805 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>edx学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="暴走的二进制" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              暴走的二进制
+            </span>
+            <span class="md-header-nav__topic">
+              
+                edx学习笔记
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="暴走的二进制" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    暴走的二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Open edX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-1-click-installed/" title="一键安装 - Tutor" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-app/" title="独立app" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-develop/" title="openedx-develop" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-lms/" title="LMS" class="md-nav__link">
+      LMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-config/" title="openedx-config" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-saml/" title="开启SAML功能" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      网络协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        网络协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../protocol/http/" title="HTTP协议" class="md-nav__link">
+      HTTP协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      编程语言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        编程语言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/Python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/C++/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pl/nodejs/" title="NodeJS" class="md-nav__link">
+      NodeJS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      架构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        架构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../archi/micro-frontend/" title="micro-frontend" class="md-nav__link">
+      micro-frontend
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      容器技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-mysql/" title="docker常用容器配置" class="md-nav__link">
+      docker常用容器配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-machine/" title="docker-machine" class="md-nav__link">
+      docker-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/certbot/" title="certbot" class="md-nav__link">
+      certbot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    序言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    零、初步认识
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-installations-include-the-following-open-edx-components" class="md-nav__link">
+    All installations include the following Open edX components:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devstack-fullstack-and-native-installations-also-include" class="md-nav__link">
+    Devstack, fullstack and native installations also include:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fullstack-and-native-also-include-the-following-open-edx-components" class="md-nav__link">
+    Fullstack and native also include the following Open edX components:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-devstack-also-includes-the-following-open-edx-components" class="md-nav__link">
+    Analytics devstack also includes the following Open edX components:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    windows部署方案
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    一、软件、知识准备
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>edx学习笔记</h1>
+                
+                <h3 id="_1">序言</h3>
+<p>学习 <strong>Open edX</strong> ，我们需要提前准备一些知识，在具备这些知识的前提下，我们能够更好的理解和学习edx的思想和设计
+比如：vagrant、paver</p>
+<h3 id="_2">零、初步认识</h3>
+<p><strong>Open edX</strong> 项目是由麻省理工学院和哈佛大学创建的，由斯坦福大学、谷歌和45所高级院校提供 支持
+目前，open edx官方发布的已经有 <strong>7个</strong> 版本(open-release)：</p>
+<ul>
+<li><strong>Birch</strong></li>
+<li><strong>Cypress</strong></li>
+<li><strong>Dogwood</strong></li>
+<li><strong>Eucalyptus</strong></li>
+<li><strong>Ficus</strong></li>
+<li><strong>Ginkgo</strong></li>
+<li><strong>Hawthorn</strong></li>
+</ul>
+<p>Open edX是个庞大而复杂的系统，笔者是因为工作原因接触的edx，他包括N个站点+N个服务结合而成，可以说是个生态也不为过(对于生态的概念认知不准确请指出)。
+所以相对的，官方文档也是个相当庞大的文档体系。
+edx这边提及到，如果我们是需要自己手动安装的话，需要考虑<strong>两个点</strong>：</p>
+<ol>
+<li><a href="https://openedx.atlassian.net/wiki/spaces/DOC/pages/11108700/Open+edX+Releases">版本</a></li>
+<li><a href="https://openedx.atlassian.net/wiki/spaces/OpenOPS/pages/60227779/Open+edX+Installation+Options">方式</a></li>
+</ol>
+<p>像上面我提及的，edx官方发布的已经有7个版本的代码了，我们需要选择哪个版本来安装部署
+另外，edx在安装方式上也提供了多种，主要有以下几点：
+- <strong>Devstack</strong>: useful if you want to modify the Open edX code.
+  - <strong>Ginkgo</strong> 版本及之前的，<strong>devstack</strong> 是个 <strong>Vagrant</strong> 实例。 Details are on the Running Vagrant-based Devstack page.
+  - <strong>Hawthorn</strong> 版本, <strong>devstack</strong> 将基于 <strong>Docker</strong>. An unsupported pre-release is available. See the Docker Devstack repo for instructions.
+- <strong>Fullstack</strong>: <strong>Ginkgo</strong> 版本及之前的, a Vagrant installation that mimics a production environment. Details are on the Running Fullstack page.
+- <strong>Native</strong>: Automated installation on an Ubuntu machine of your own. Details are on the Native Open edX Ubuntu 16.04 64 bit Installation page.
+- <strong>Manual</strong>: 手动安装，一步步执行脚本，安装依赖，配置服务
+- <strong>Bitnami</strong>: installable pre-packaged images for popular cloud platforms. Details are at the Bitnami Open edX page.</p>
+<p>补充上述，主要是因为笔者在学习的过程中会对不同的stack产生疑问，了解过、接触过后才有深入的了解。
+一开始会有种错觉，以为Devstack只有部分服务应用，而Fullstack是全部应用，但并不是这样的，他们是你部署、配置、开发、生产一系列的工作栈
+所以刚入门的菜鸟(像我一样)，要好好理解这一部分了。</p>
+<p>基于以上，目前我们公司使用的是Ficus.1版，Devstack的版本方式安装，ok，目标明确了，那我们就开始动手吧~</p>
+<h3 id="_3">一、安装</h3>
+<p><a href="https://openedx.atlassian.net/wiki/spaces/OpenOPS/pages/60227787/Running+Vagrant-based+Devstack">安装步骤</a>
+<a href="http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/installation/installation_options.html#info-devstack">安装配置</a>
+对不同的工作栈，里面包含的内容不一，笔者在学习的过程中了解到，也认为这个比较重要，就给大家列出来</p>
+<h4 id="all-installations-include-the-following-open-edx-components">All installations include the following Open edX components:</h4>
+<p>The Learning Management System (LMS).
+Open edX Studio.
+Discussion Forums.
+Open Response Assessments (ORA).</p>
+<h4 id="devstack-fullstack-and-native-installations-also-include">Devstack, fullstack and native installations also include:</h4>
+<p>E-Commerce
+Programs
+A demonstration Open edX course.
+Open edX Search.</p>
+<h4 id="fullstack-and-native-also-include-the-following-open-edx-components">Fullstack and native also include the following Open edX components:</h4>
+<p>Open edX Analytics Data API.
+Open edX Insights.
+Certificates
+XQueue, the queuing server that uses RabbitMQ for external graders.</p>
+<h4 id="analytics-devstack-also-includes-the-following-open-edx-components">Analytics devstack also includes the following Open edX components:</h4>
+<p>Open edX Analytics Data API.
+Open edX Insights.
+The components needed to run the Open edX Analytics Pipeline. This is the primary extract, transform, and load (ETL) tool that extracts and analyzes data from the other Open edX services.</p>
+<h3 id="windows">windows部署方案</h3>
+<h4 id="_4">一、软件、知识准备</h4>
+<ul>
+<li>virtualbox</li>
+<li>vagrant</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

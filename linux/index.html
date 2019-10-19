@@ -1,0 +1,1354 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="暴走的二进制" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              暴走的二进制
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Linux
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="暴走的二进制" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    暴走的二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Open edX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-1-click-installed/" title="一键安装 - Tutor" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-app/" title="独立app" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-develop/" title="openedx-develop" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-lms/" title="LMS" class="md-nav__link">
+      LMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-config/" title="openedx-config" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-saml/" title="开启SAML功能" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx/micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      网络协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        网络协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protocol/http/" title="HTTP协议" class="md-nav__link">
+      HTTP协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      编程语言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        编程语言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/Python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/C++/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pl/nodejs/" title="NodeJS" class="md-nav__link">
+      NodeJS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      架构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        架构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../archi/micro-frontend/" title="micro-frontend" class="md-nav__link">
+      micro-frontend
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      容器技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker-mysql/" title="docker常用容器配置" class="md-nav__link">
+      docker常用容器配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container/docker-machine/" title="docker-machine" class="md-nav__link">
+      docker-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/certbot/" title="certbot" class="md-nav__link">
+      certbot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    操作系统的历史
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    操作系统信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-display-disk-usage-statistics" class="md-nav__link">
+    du - 磁盘使用统计(display disk usage statistics)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#df-display-free-disk-space" class="md-nav__link">
+    df - 磁盘剩余空间(display free disk space)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fdisk-dos-partition-maintenance-program" class="md-nav__link">
+    fdisk - (DOS partition maintenance program)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps-process-status" class="md-nav__link">
+    ps - 进程的快照(Process Status)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    进程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    网络状态
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    权限控制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    光标移动
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    文件操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    权限查看
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    查找命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    查看存储大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    根据端口查进程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    测试远端服务是否可用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    安全拷贝
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    配置ssh服务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ufw" class="md-nav__link">
+    ufw
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    常用系统默认端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    常用软件端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    常见软件包格式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deb" class="md-nav__link">
+    一、deb包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    二、rpm包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bin" class="md-nav__link">
+    三、bin包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    四、run包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targzbzbz2" class="md-nav__link">
+    五、tar.gz(bz或bz2等)包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Linux</h1>
+                
+                <h3 id="_1">操作系统的历史</h3>
+<p>UNIX -&gt; BSD -&gt; GNU -&gt; Linux</p>
+<h3 id="_2">操作系统信息</h3>
+<pre><code>uname -a
+</code></pre>
+<h3 id="du-display-disk-usage-statistics">du - 磁盘使用统计(display disk usage statistics)</h3>
+<h3 id="df-display-free-disk-space">df - 磁盘剩余空间(display free disk space)</h3>
+<h3 id="fdisk-dos-partition-maintenance-program">fdisk - (DOS partition maintenance program)</h3>
+<h3 id="ps-process-status">ps - 进程的快照(Process Status)</h3>
+<pre><code>ps
+</code></pre>
+<h3 id="_3">进程</h3>
+<pre><code class="shell">top
+</code></pre>
+
+<h3 id="_4">网络状态</h3>
+<pre><code class="shell">netstat
+
+</code></pre>
+
+<h3 id="_5">权限控制</h3>
+<pre><code class="shell">chmod 777 yeah.py # 为文件修改权限
+chmod -R 700 /opt/oracle/ # 为目录下所有文件修改权限
+</code></pre>
+
+<h3 id="_6">光标移动</h3>
+<p>ctr+a：移动光标到命令行开始处（紧接命令提示符号）
+ctr+e：移动光标到命令行行尾
+ctr+k：删除光标到命令行行尾
+ctr+u：删除光标到命令行开始处
+ctr+h  往后删除一字符      ctr+d 往前删除一字符
+ctr+b  光标往前            ctr+f 往后
+ctr+u   删除到最前         ctr+K删除到最后
+ctr+a  光标到最前          ctr+e 光标到最后
+ctr+p   往上一条历史命令   ctr+n  往下一条命令</p>
+<h3 id="_7">文件操作</h3>
+<pre><code class="bash">scp -i &lt;identity&gt; -P&lt;port&gt; &lt;src\_file&gt; root@&lt;ip&gt;:&lt;dest\_path&gt; # 安全拷贝
+</code></pre>
+
+<h3 id="_8">权限查看</h3>
+<pre><code class="shell">$ groupadd elsearch # 添加组
+$ useradd elsearch -g elsearch -p elasticsearch # 添加用户
+
+$ cat /etc/passwd # 可以查看所有用户的列表
+$ w # 可以查看当前活跃的用户列表
+$ cat /etc/group # 查看用户组
+用户组（Group）、用户组口令、GID及该用户组所包含的用户（User）
+daemon:x:2:root,bin,daemon
+</code></pre>
+
+<h3 id="_9">查找命令</h3>
+<pre><code>find &lt;path&gt; -name &lt;name&gt; or -name &lt;name&gt;
+</code></pre>
+<h3 id="_10">查看存储大小</h3>
+<pre><code class="shell">du -h --max-depth=1 ./
+</code></pre>
+
+<h3 id="_11">根据端口查进程</h3>
+<pre><code class="shell">lsof -i:&lt;port&gt;
+    kill
+</code></pre>
+
+<h3 id="_12">测试远端服务是否可用</h3>
+<pre><code class="shell">telnet &lt;ip&gt; &lt;port&gt;
+</code></pre>
+
+<h3 id="_13">安全拷贝</h3>
+<pre><code>scp [option] source_target dest_target
+eg. scp -i file -P 3780 a.tar.gz root@127.0.0.1:/var
+</code></pre>
+<h3 id="ssh">配置ssh服务</h3>
+<pre><code>sudo apt-get update
+sudo apt-get install openssh-server
+ps -e | grep ssh # sshd 为 服务端，ssh-client 为客户端
+</code></pre>
+<h2 id="ufw">ufw</h2>
+<pre><code>ubuntu的防火墙服务
+sudo ufw allow 3307 # 直接开启端口
+</code></pre>
+<p>检查是否安装mysql
+rpm -qa|grep mysql</p>
+<h3 id="_14">常用系统默认端口</h3>
+<table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">服务</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">Reserved</td>
+<td align="center">通常用于分析操作系统。这一方法能够工作是因为在一些系统中“0”是无效端口，当你试图使用通常的闭合端口连接它时将产生不同的结果。一种典型的扫描，使用IP地址为0.0.0.0，设置ACK位并在以太网层广播。</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">tcpmux</td>
+<td align="center">这显示有人在寻找SGI Irix机器。Irix是实现tcpmux的主要提供者，默认情况下tcpmux在这种系统中被打开。Irix机器在发布是含有几个默认的无密码的帐户，如：IP、GUEST UUCP、NUUCP、DEMOS 、TUTOR、DIAG、OUTOFBOX等。许多管理员在安装后忘记删除这些帐户。因此HACKER在INTERNET上搜索tcpmux并利用这些帐户。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Echo</td>
+<td align="center">能看到许多人搜索Fraggle放大器时，发送到X.X.X.0和X.X.X.255的信息。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">Character Generator</td>
+<td align="center">这是一种仅仅发送字符的服务。UDP版本将会在收到UDP包后回应含有垃圾字符的包。TCP连接时会发送含有垃圾字符的数据流直到连接关闭。HACKER利用IP欺骗可以发动DoS攻击。伪造两个chargen服务器之间的UDP包。同样Fraggle DoS攻击向目标地址的这个端口广播一个带有伪造受害者IP的数据包，受害者为了回应这些数据而过载。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">FTP</td>
+<td align="center">FTP服务器所开放的端口，用于上传、下载。最常见的攻击者用于寻找打开anonymous的FTP服务器的方法。这些服务器带有可读写的目录。木马Doly Trojan、Fore、Invisible FTP、WebEx、WinCrash和Blade Runner所开放的端口。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">Ssh</td>
+<td align="center">PcAnywhere建立的TCP和这一端口的连接可能是为了寻找ssh。这一服务有许多弱点，如果配置成特定的模式，许多使用RSAREF库的版本就会有不少的漏洞存在。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="center">Telnet</td>
+<td align="center">远程登录，入侵者在搜索远程登录UNIX的服务。大多数情况下扫描这一端口是为了找到机器运行的操作系统。还有使用其他技术，入侵者也会找到密码。木马Tiny Telnet Server就开放这个端口。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td align="center">SMTP</td>
+<td align="center">SMTP服务器所开放的端口，用于发送邮件。入侵者寻找SMTP服务器是为了传递他们的SPAM。入侵者的帐户被关闭，他们需要连接到高带宽的E-MAIL服务器上，将简单的信息传递到不同的地址。木马Antigen、Email Password Sender、Haebu Coceda、Shtrilitz Stealth、WinPC、WinSpy都开放这个端口。</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="center">MSG Authentication</td>
+<td align="center">木马Master Paradise、Hackers Paradise开放此端口。</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">WINS Replication</td>
+<td align="center">WINS复制</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td align="center">Domain Name Server（DNS）</td>
+<td align="center">DNS服务器所开放的端口，入侵者可能是试图进行区域传递（TCP），欺骗DNS（UDP）或隐藏其他的通信。因此_blank"&gt;防火墙常常过滤或记录此端口。</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td align="center">Bootstrap Protocol Server</td>
+<td align="center">通过DSL和Cable modem的_blank"&gt;防火墙常会看见大量发送到广播地址255.255.255.255的数据。这些机器在向DHCP服务器请求一个地址。HACKER常进入它们，分配一个地址把自己作为局部路由器而发起大量中间人（man-in-middle）攻击。客户端向68端口广播请求配置，服务器向67端口广播回应请求。这种回应使用广播是因为客户端还不知道可以发送的IP地址。</td>
+</tr>
+<tr>
+<td align="center">69</td>
+<td align="center">Trival File Transfer</td>
+<td align="center">许多服务器与bootp一起提供这项服务，便于从系统下载启动代码。但是它们常常由于错误配置而使入侵者能从系统中窃取任何 文件。它们也可用于系统写入文件。</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td align="center">Finger Server</td>
+<td align="center">入侵者用于获得用户信息，查询操作系统，探测已知的缓冲区溢出错误，回应从自己机器到其他机器Finger扫描。</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td align="center">HTTP</td>
+<td align="center">用于网页浏览。木马Executor开放此端口。</td>
+</tr>
+<tr>
+<td align="center">99</td>
+<td align="center">Metagram Relay</td>
+<td align="center">后门程序ncx99开放此端口。</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td align="center">Message transfer agent(MTA)-X.400 over TCP/IP</td>
+<td align="center">消息传输代理。</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td align="center">Post Office Protocol -Version3</td>
+<td align="center">POP3服务器开放此端口，用于接收邮件，客户端访问服务器端的邮件服务。POP3服务有许多公认的弱点。关于用户名和密码交 换缓冲区溢出的弱点至少有20个，这意味着入侵者可以在真正登陆前进入系统。成功登陆后还有其他缓冲区溢出错误。</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">SUN公司的RPC服务所有端口</td>
+<td align="center">常见RPC服务有rpc.mountd、NFS、rpc.statd、rpc.csmd、rpc.ttybd、amd等</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td align="center">Authentication Service</td>
+<td align="center">这是一个许多计算机上运行的协议，用于鉴别TCP连接的用户。使用标准的这种服务可以获得许多计算机的信息。但是它可作为许多服务的记录器，尤其是FTP、POP、IMAP、SMTP和IRC等服务。通常如果有许多客户通过_blank"&gt;防火墙访问这些服务，将会看到许多这个端口的连接请求。记住，如果阻断这个端口客户端会感觉到在_blank"&gt;防火墙另一边与E-MAIL服务器的缓慢连接。许多_blank"&gt;防火墙支持TCP连接的阻断过程中发回RST。这将会停止缓慢的连接。</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td align="center">Network News Transfer Protocol</td>
+<td align="center">NEWS新闻组传输协议，承载USENET通信。这个端口的连接通常是人们在寻找USENET服务器。多数ISP限制，只有他们的客户才能访问他们的新闻组服务器。打开新闻组服务器将允许发/读任何人的帖子，访问被限制的新闻组服务器，匿名发帖或发送SPAM。</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td align="center">Location Service</td>
+<td align="center">Microsoft在这个端口运行DCE RPC end-point mapper为它的DCOM服务。这与UNIX 111端口的功能很相似。使用DCOM和RPC的服务利用计算机上的end-point mapper注册它们的位置。远端客户连接到计算机时，它们查找end-point mapper找到服务的位置。HACKER扫描计算机的这个端口是为了找到这个计算机上运行Exchange Server吗？什么版本？还有些DOS攻击直接针对这个端口。</td>
+</tr>
+<tr>
+<td align="center">137、138、139</td>
+<td align="center">NETBIOS Name Service</td>
+<td align="center">其中137、138是UDP端口，当通过网上邻居传输文件时用这个端口。而139端口：通过这个端口进入的连接试图获得NetBIOS/SMB服务。这个协议被用于windows文件和打印机共享和SAMBA。还有WINS Regisrtation也用它。</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td align="center">Interim Mail Access Protocol v2</td>
+<td align="center">和POP3的安全问题一样，许多IMAP服务器存在有缓冲区溢出漏洞。记住：一种LINUX蠕虫（admv0rm）会通过这个端口繁殖，因此许多这个端口的扫描来自不知情的已经被感染的用户。当REDHAT在他们的LINUX发布版本中默认允许IMAP后，这些漏洞变的很流行。这一端口还被用于IMAP2，但并不流行。</td>
+</tr>
+<tr>
+<td align="center">161</td>
+<td align="center">SNMP</td>
+<td align="center">SNMP允许远程管理设备。所有配置和运行信息的储存在数据库中，通过SNMP可获得这些信息。许多管理员的错误配置将被暴露在Internet。Cackers将试图使用默认的密码public、private访问系统。他们可能会试验所有可能的组合。SNMP包可能会被错误的指向用户的网络。</td>
+</tr>
+<tr>
+<td align="center">177</td>
+<td align="center">X Display Manager Control Protocol</td>
+<td align="center">许多入侵者通过它访问X-windows操作台，它同时需要打开6000端口。</td>
+</tr>
+<tr>
+<td align="center">389</td>
+<td align="center">LDAP、ILS</td>
+<td align="center">轻型目录访问协议和NetMeeting Internet Locator Server共用这一端口。</td>
+</tr>
+<tr>
+<td align="center">443</td>
+<td align="center">Https</td>
+<td align="center">网页浏览端口，能提供加密和通过安全端口传输的另一种HTTP。</td>
+</tr>
+<tr>
+<td align="center">456</td>
+<td align="center">[NULL]</td>
+<td align="center">木马HACKERS PARADISE开放此端口。</td>
+</tr>
+<tr>
+<td align="center">513</td>
+<td align="center">Login,remote login</td>
+<td align="center">是从使用cable modem或DSL登陆到子网中的UNIX计算机发出的广播。这些人为入侵者进入他们的系统提供了信息。</td>
+</tr>
+<tr>
+<td align="center">544</td>
+<td align="center">[NULL]</td>
+<td align="center">kerberos kshell</td>
+</tr>
+<tr>
+<td align="center">548</td>
+<td align="center">Macintosh,File Services(AFP/IP)</td>
+<td align="center">Macintosh,文件服务。</td>
+</tr>
+<tr>
+<td align="center">553</td>
+<td align="center">CORBA IIOP （UDP）</td>
+<td align="center">使用cable modem、DSL或VLAN将会看到这个端口的广播。CORBA是一种面向对象的RPC系统。入侵者可以利用这些信息进入系统。</td>
+</tr>
+<tr>
+<td align="center">555</td>
+<td align="center">DSF</td>
+<td align="center">木马PhAse1.0、Stealth Spy、IniKiller开放此端口。</td>
+</tr>
+<tr>
+<td align="center">568</td>
+<td align="center">Membership DPA</td>
+<td align="center">成员资格 DPA。</td>
+</tr>
+<tr>
+<td align="center">569</td>
+<td align="center">Membership MSN</td>
+<td align="center">成员资格 MSN。</td>
+</tr>
+<tr>
+<td align="center">635</td>
+<td align="center">mountd</td>
+<td align="center">Linux的mountd Bug。这是扫描的一个流行BUG。大多数对这个端口的扫描是基于UDP的，但是基于TCP的mountd有所增加（mountd同时运行于两个端口）。记住mountd可运行于任何端口（到底是哪个端口，需要在端口111做portmap查询），只是Linux默认端口是635，就像NFS通常运行于2049端口。</td>
+</tr>
+<tr>
+<td align="center">636</td>
+<td align="center">LDAP</td>
+<td align="center">SSL（Secure Sockets layer）</td>
+</tr>
+<tr>
+<td align="center">666</td>
+<td align="center">Doom Id Software</td>
+<td align="center">木马Attack FTP、Satanz Backdoor开放此端口</td>
+</tr>
+<tr>
+<td align="center">993</td>
+<td align="center">IMAP</td>
+<td align="center">SSL（Secure Sockets layer）</td>
+</tr>
+<tr>
+<td align="center">1001、1011</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Silencer、WebEx开放1001端口。木马Doly Trojan开放1011端口。</td>
+</tr>
+<tr>
+<td align="center">1024</td>
+<td align="center">Reserved</td>
+<td align="center">它是动态端口的开始，许多程序并不在乎用哪个端口连接网络，它们请求系统为它们分配下一个闲置端口。基于这一点分配从端口1024开始。这就是说第一个向系统发出请求的会分配到1024端口。你可以重启机器，打开Telnet，再打开一个窗口运行natstat -a 将会看到Telnet被分配1024端口。还有SQL session也用此端口和5000端口。</td>
+</tr>
+<tr>
+<td align="center">1025、1033</td>
+<td align="center">1025：network blackjack 1033：[NULL]</td>
+<td align="center">木马netspy开放这2个端口。</td>
+</tr>
+<tr>
+<td align="center">1080</td>
+<td align="center">SOCKS</td>
+<td align="center">这一协议以通道方式穿过_blank"&gt;防火墙，允许_blank"&gt;防火墙后面的人通过一个IP地址访问INTERNET。理论上它应该只允许内部的通信向外到达INTERNET。但是由于错误的配置，它会允许位于_blank"&gt;防火墙外部的攻击穿过_blank"&gt;防火墙。WinGate常会发生这种错误，在加入IRC聊天室时常会看到这种情况。</td>
+</tr>
+<tr>
+<td align="center">1170</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Streaming Audio Trojan、Psyber Stream Server、Voice开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1234、1243、6711、6776</td>
+<td align="center">[NULL]</td>
+<td align="center">木马SubSeven2.0、Ultors Trojan开放1234、6776端口。木马SubSeven1.0/1.9开放1243、6711、6776端口。</td>
+</tr>
+<tr>
+<td align="center">1245</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Vodoo开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1433</td>
+<td align="center">SQL</td>
+<td align="center">Microsoft的SQL服务开放的端口。</td>
+</tr>
+<tr>
+<td align="center">1492</td>
+<td align="center">stone-design-1</td>
+<td align="center">木马FTP99CMP开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1500</td>
+<td align="center">RPC client fixed port session queries</td>
+<td align="center">RPC客户固定端口会话查询</td>
+</tr>
+<tr>
+<td align="center">1503</td>
+<td align="center">NetMeeting T.120</td>
+<td align="center">NetMeeting T.120</td>
+</tr>
+<tr>
+<td align="center">1524</td>
+<td align="center">ingress</td>
+<td align="center">许多攻击脚本将安装一个后门SHELL于这个端口，尤其是针对SUN系统中Sendmail和RPC服务漏洞的脚本。如果刚安装了_blank"&gt;防火墙就看到在这个端口上的连接企图，很可能是上述原因。可以试试Telnet到用户的计算机上的这个端口，看看它是否会给你一个SHELL。连接到600/pcserver也存在这个问题。</td>
+</tr>
+<tr>
+<td align="center">1600</td>
+<td align="center">issd</td>
+<td align="center">木马Shivka-Burka开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1720</td>
+<td align="center">NetMeeting</td>
+<td align="center">NetMeeting H.233 call Setup。</td>
+</tr>
+<tr>
+<td align="center">1731</td>
+<td align="center">NetMeeting Audio Call Control</td>
+<td align="center">NetMeeting音频调用控制。</td>
+</tr>
+<tr>
+<td align="center">1807</td>
+<td align="center">[NULL]</td>
+<td align="center">木马SpySender开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1981</td>
+<td align="center">[NULL]</td>
+<td align="center">木马ShockRave开放此端口。</td>
+</tr>
+<tr>
+<td align="center">1999</td>
+<td align="center">cisco identification port</td>
+<td align="center">木马BackDoor开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">[NULL]</td>
+<td align="center">木马GirlFriend 1.3、Millenium 1.0开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2001</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Millenium 1.0、Trojan Cow开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2023</td>
+<td align="center">xinuexpansion 4</td>
+<td align="center">木马Pass Ripper开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2049</td>
+<td align="center">NFS</td>
+<td align="center">NFS程序常运行于这个端口。通常需要访问Portmapper查询这个服务运行于哪个端口。</td>
+</tr>
+<tr>
+<td align="center">2115</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Bugs开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2140、3150</td>
+<td align="center">[NULL]</td>
+<td align="center">木马Deep Throat 1.0/3.0开放此端口。</td>
+</tr>
+<tr>
+<td align="center">2500</td>
+<td align="center">RPC client using a fixed port session replication</td>
+<td align="center">应用固定端口会话复制的RPC客户</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">常用软件端口</h3>
+<table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">服务</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3306</td>
+<td align="center">mysql</td>
+<td align="center">mysq数据库</td>
+</tr>
+<tr>
+<td align="center">27017</td>
+<td align="center">mongodb</td>
+<td align="center">mongodb数据库</td>
+</tr>
+<tr>
+<td align="center">9200</td>
+<td align="center">elaticsearch</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">6379</td>
+<td align="center">redis</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">常见软件包格式</h3>
+<h4 id="deb">一、deb包</h4>
+<ol>
+<li>如果是ubuntu系统双击软件包，按照引导即可</li>
+<li>也可以用命令：sudo dpkg -i 包名.deb</li>
+<li>卸载命令：sudo apt-get remove 包名</li>
+</ol>
+<h4 id="rpm">二、rpm包</h4>
+<ol>
+<li>如果是在图形界面，双击即可</li>
+<li>也可以使用命令：rpm -i 包名.rpm</li>
+<li>卸载命令：rpm -e 完整软件名（如：firefox -1.0.1-1.3.2）</li>
+</ol>
+<p>ps:如果不知道完整名称使用命令：rpm -qa 部分包名*　进行模糊查询</p>
+<h4 id="bin">三、bin包</h4>
+<ol>
+<li>打开终端，进入包所在的目录，先给包加上可执行的权限：chmod +x 包名.bin。再执行：./包名.bin。</li>
+<li>卸载：把安装时的安装目录删除即可</li>
+</ol>
+<h4 id="run">四、run包</h4>
+<ol>
+<li>同bin包，先加上可执行权限：chmod +x 包名.run。再执行：./包名.run。</li>
+<li>卸载：到安装目录下，有uninstall文件，执行这个文件即可： ./uninstall。</li>
+</ol>
+<h4 id="targzbzbz2">五、tar.gz(bz或bz2等)包</h4>
+<p>１，打开终端，进入源代码压缩包所在目录
+２，根据类型解压文件：tar -zxvf 包名.tar.gz
+３，执行解压缩命令后，通常在解压缩后产生的文件中，有“Install”的文件。该文件为纯文本文件，详细讲述了该软件包的安装方法。
+４，执行解压缩后产生的一个名为configure的可执行脚本程序。它是用于检查系统是否有编译时所需的库，以及库的版本是否满足编译的需要等安装所需要的系统信息。为随后的编译工作做准备。命令为：#./configure。
+５，检查通过后，将生成用于编译的Makefile文件。此时，可以开始进行编译了。编译的过程视软件的规模和计算机性能的不同，所耗费的时间也不同。命令为：#make。
+６，成功编译后，键入如下的命令开始安装：#make install</p>
+<pre><code>    安装完毕，应清除编译过程中产生的临时文件和配置过程中产生的文件。键入如下命令：
+
+    #make clean
+    #make distclean
+</code></pre>
+<p>ｐｓ：如果你的包是二进制包，解压后可以直接使用，３、４、５、６步可以省略。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

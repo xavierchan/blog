@@ -1,0 +1,2493 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>NodeJS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#nodejs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="暴走的二进制" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              暴走的二进制
+            </span>
+            <span class="md-header-nav__topic">
+              
+                NodeJS
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="暴走的二进制" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    暴走的二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Open edX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-1-click-installed/" title="一键安装 - Tutor" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-app/" title="独立app" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-develop/" title="openedx-develop" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-lms/" title="LMS" class="md-nav__link">
+      LMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-config/" title="openedx-config" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-saml/" title="开启SAML功能" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      网络协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        网络协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../protocol/http/" title="HTTP协议" class="md-nav__link">
+      HTTP协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      编程语言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        编程语言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../C++/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        NodeJS
+      </label>
+    
+    <a href="./" title="NodeJS" class="md-nav__link md-nav__link--active">
+      NodeJS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    node.js是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs_1" class="md-nav__link">
+    node.js 特点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    核心要点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs_2" class="md-nav__link">
+    一、node.js核心技术大纲
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js" class="md-nav__link">
+    js类定义方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js_1" class="md-nav__link">
+    js类继承的方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    作用域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsthis" class="md-nav__link">
+    js里边的this指的是什么?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-callbind" class="md-nav__link">
+    apply, call和bind有什么区别?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caller-calleearguments" class="md-nav__link">
+    caller, callee和arguments分别是什么?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    什么是闭包，闭包有哪些用处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defineproperty-hasownproperty-isenumerable" class="md-nav__link">
+    defineProperty, hasOwnProperty, isEnumerable都是做什么用的？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js_2" class="md-nav__link">
+    js常用设计模式的实现思路，单例，工厂，代理，观察者模式等
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    列举数组相关的常用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-node" class="md-nav__link">
+    node核心内置类库(事件，流，文件，网络等) node概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node" class="md-nav__link">
+    为什么要用node?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_1" class="md-nav__link">
+    node的构架是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_2" class="md-nav__link">
+    node有哪些核心模块?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    process有哪些常用方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console" class="md-nav__link">
+    console有哪些常用方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_3" class="md-nav__link">
+    node有哪些定时功能?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_4" class="md-nav__link">
+    node中的事件循环是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodebuffer" class="md-nav__link">
+    node中的Buffer如何应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter" class="md-nav__link">
+    EventEmitter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_1" class="md-nav__link">
+    什么是EventEmitter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_2" class="md-nav__link">
+    如何实现一个EventEmitter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_3" class="md-nav__link">
+    EventEmitter有哪些典型应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_4" class="md-nav__link">
+    怎么捕获EventEmitter的错误事件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitternewlistenser" class="md-nav__link">
+    EventEmitter中的newListenser事件有什么用处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" class="md-nav__link">
+    Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_1" class="md-nav__link">
+    什么是Stream?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_2" class="md-nav__link">
+    Stream有什么好处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_3" class="md-nav__link">
+    Stream有哪些典型应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_4" class="md-nav__link">
+    怎么捕获Stream的错误事件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_5" class="md-nav__link">
+    有哪些常用Stream,分别什么时候使用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writable-stream" class="md-nav__link">
+    实现一个Writable Stream?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    内置的fs模块架构是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    读写一个文件有多少种方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    怎么读取json配置文件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fswatchfswatchfile" class="md-nav__link">
+    fs.watch和fs.watchFile有什么区别，怎么应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    网络
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_5" class="md-nav__link">
+    node的网络模块架构是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodehttpstls" class="md-nav__link">
+    node是怎样支持https,tls的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    实现一个简单的http服务器?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-process" class="md-nav__link">
+    child-process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-process_1" class="md-nav__link">
+    为什么需要child-process?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execexecfilespawnfork" class="md-nav__link">
+    exec,execFile,spawn和fork都是做什么用的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    实现一个简单的命令行交互程序?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_6" class="md-nav__link">
+    两个node程序之间怎样交互?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jslinux" class="md-nav__link">
+    怎样让一个js文件变得像linux命令一样可执行?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-processprocessstdinstdoutstderror" class="md-nav__link">
+    child-process和process的stdin,stdout,stderror是一样的吗?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_7" class="md-nav__link">
+    node高级话题(异步，部署，性能调优，异常调试等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_8" class="md-nav__link">
+    node中的异步和同步怎么理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    有哪些方法可以进行异步流程的控制?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node80" class="md-nav__link">
+    怎样绑定node程序到80端口?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_9" class="md-nav__link">
+    有哪些方法可以让node程序遇到错误后自动重启?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    怎样充分利用多个CPU?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_10" class="md-nav__link">
+    怎样调节node执行单元的内存大小?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    程序总是崩溃，怎样找出问题在哪里?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    有哪些常用方法可以防止程序崩溃?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_11" class="md-nav__link">
+    怎样调试node程序?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-express" class="md-nav__link">
+    常用知名第三方类库(Async, Express等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    async都有哪些常用方法，分别是怎么用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express" class="md-nav__link">
+    express项目的目录大致是什么样子的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express_1" class="md-nav__link">
+    express常用函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express_2" class="md-nav__link">
+    express中如何获取路由的参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express-response" class="md-nav__link">
+    express response有哪些常用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb-redis-apache-nginx" class="md-nav__link">
+    其它相关后端常用技术(MongoDB, Redis, Apache, Nginx等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    mongodb有哪些常用优化措施
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    redis支持哪些功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis_1" class="md-nav__link">
+    redis最简单的应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apachenginx" class="md-nav__link">
+    apache,nginx有什么区别?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5-css3-jquery" class="md-nav__link">
+    常用前端技术(Html5, CSS3, JQuery等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5" class="md-nav__link">
+    Html5有哪些比较实用新功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css3jquery" class="md-nav__link">
+    CSS3/JQuery有哪些学常见选择器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jquery" class="md-nav__link">
+    JQuery有哪些经典应用
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      架构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        架构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../archi/micro-frontend/" title="micro-frontend" class="md-nav__link">
+      micro-frontend
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      容器技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-mysql/" title="docker常用容器配置" class="md-nav__link">
+      docker常用容器配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker-machine/" title="docker-machine" class="md-nav__link">
+      docker-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/certbot/" title="certbot" class="md-nav__link">
+      certbot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    node.js是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs_1" class="md-nav__link">
+    node.js 特点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    核心要点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs_2" class="md-nav__link">
+    一、node.js核心技术大纲
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js" class="md-nav__link">
+    js类定义方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js_1" class="md-nav__link">
+    js类继承的方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    作用域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsthis" class="md-nav__link">
+    js里边的this指的是什么?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-callbind" class="md-nav__link">
+    apply, call和bind有什么区别?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caller-calleearguments" class="md-nav__link">
+    caller, callee和arguments分别是什么?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    什么是闭包，闭包有哪些用处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defineproperty-hasownproperty-isenumerable" class="md-nav__link">
+    defineProperty, hasOwnProperty, isEnumerable都是做什么用的？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#js_2" class="md-nav__link">
+    js常用设计模式的实现思路，单例，工厂，代理，观察者模式等
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    列举数组相关的常用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-node" class="md-nav__link">
+    node核心内置类库(事件，流，文件，网络等) node概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node" class="md-nav__link">
+    为什么要用node?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_1" class="md-nav__link">
+    node的构架是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_2" class="md-nav__link">
+    node有哪些核心模块?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    process有哪些常用方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console" class="md-nav__link">
+    console有哪些常用方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_3" class="md-nav__link">
+    node有哪些定时功能?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_4" class="md-nav__link">
+    node中的事件循环是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodebuffer" class="md-nav__link">
+    node中的Buffer如何应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter" class="md-nav__link">
+    EventEmitter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_1" class="md-nav__link">
+    什么是EventEmitter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_2" class="md-nav__link">
+    如何实现一个EventEmitter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_3" class="md-nav__link">
+    EventEmitter有哪些典型应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitter_4" class="md-nav__link">
+    怎么捕获EventEmitter的错误事件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventemitternewlistenser" class="md-nav__link">
+    EventEmitter中的newListenser事件有什么用处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" class="md-nav__link">
+    Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_1" class="md-nav__link">
+    什么是Stream?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_2" class="md-nav__link">
+    Stream有什么好处?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_3" class="md-nav__link">
+    Stream有哪些典型应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_4" class="md-nav__link">
+    怎么捕获Stream的错误事件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream_5" class="md-nav__link">
+    有哪些常用Stream,分别什么时候使用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writable-stream" class="md-nav__link">
+    实现一个Writable Stream?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    内置的fs模块架构是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    读写一个文件有多少种方法?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    怎么读取json配置文件?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fswatchfswatchfile" class="md-nav__link">
+    fs.watch和fs.watchFile有什么区别，怎么应用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    网络
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_5" class="md-nav__link">
+    node的网络模块架构是什么样子的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodehttpstls" class="md-nav__link">
+    node是怎样支持https,tls的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    实现一个简单的http服务器?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-process" class="md-nav__link">
+    child-process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-process_1" class="md-nav__link">
+    为什么需要child-process?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execexecfilespawnfork" class="md-nav__link">
+    exec,execFile,spawn和fork都是做什么用的?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    实现一个简单的命令行交互程序?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_6" class="md-nav__link">
+    两个node程序之间怎样交互?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jslinux" class="md-nav__link">
+    怎样让一个js文件变得像linux命令一样可执行?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-processprocessstdinstdoutstderror" class="md-nav__link">
+    child-process和process的stdin,stdout,stderror是一样的吗?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_7" class="md-nav__link">
+    node高级话题(异步，部署，性能调优，异常调试等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_8" class="md-nav__link">
+    node中的异步和同步怎么理解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    有哪些方法可以进行异步流程的控制?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node80" class="md-nav__link">
+    怎样绑定node程序到80端口?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_9" class="md-nav__link">
+    有哪些方法可以让node程序遇到错误后自动重启?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    怎样充分利用多个CPU?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_10" class="md-nav__link">
+    怎样调节node执行单元的内存大小?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    程序总是崩溃，怎样找出问题在哪里?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    有哪些常用方法可以防止程序崩溃?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_11" class="md-nav__link">
+    怎样调试node程序?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-express" class="md-nav__link">
+    常用知名第三方类库(Async, Express等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    async都有哪些常用方法，分别是怎么用?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express" class="md-nav__link">
+    express项目的目录大致是什么样子的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express_1" class="md-nav__link">
+    express常用函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express_2" class="md-nav__link">
+    express中如何获取路由的参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#express-response" class="md-nav__link">
+    express response有哪些常用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb-redis-apache-nginx" class="md-nav__link">
+    其它相关后端常用技术(MongoDB, Redis, Apache, Nginx等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    mongodb有哪些常用优化措施
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    redis支持哪些功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis_1" class="md-nav__link">
+    redis最简单的应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apachenginx" class="md-nav__link">
+    apache,nginx有什么区别?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5-css3-jquery" class="md-nav__link">
+    常用前端技术(Html5, CSS3, JQuery等)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5" class="md-nav__link">
+    Html5有哪些比较实用新功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css3jquery" class="md-nav__link">
+    CSS3/JQuery有哪些学常见选择器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jquery" class="md-nav__link">
+    JQuery有哪些经典应用
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>NodeJS</h1>
+                
+                <h2 id="nodejs">node.js是什么</h2>
+<ol>
+<li>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</li>
+<li>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</li>
+<li>Node.js 的包管理器 npm，是全球最大的开源库生态系统。</li>
+</ol>
+<h2 id="nodejs_1">node.js 特点</h2>
+<ul>
+<li>RESTful API</li>
+<li>单线程</li>
+<li>Node.js可以在不新增额外线程的情况下，依然可以对任务进行并行处理 —— Node.js是单线程的。它通过事件轮询（event loop）来实现并行操作，对此，我们应该要充分利用这一点 —— 尽可能的避免阻塞操作，取而代之，多使用非阻塞操作。</li>
+<li>非阻塞IO</li>
+<li>V8虚拟机</li>
+<li>事件驱动</li>
+</ul>
+<h2 id="_1">核心要点</h2>
+<ol>
+<li>
+<p>node.js运行原理及性能、优点</p>
+</li>
+<li>
+<p>常用API（http、promission）</p>
+</li>
+<li>
+<p>闭包</p>
+</li>
+<li>Javascript允许使用内部函数 — 即函数定义和函数表达式位于另一个函数的函数体内。</li>
+<li>内部函数，可以访问它所在的外部函数中，所声明的所有局部变量、参数和声明的其他内部函数。</li>
+<li>当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。</li>
+</ol>
+<hr />
+<h2 id="nodejs_2">一、node.js核心技术大纲</h2>
+<ol>
+<li>javascript高级话题(面向对象，作用域，闭包，设计模式等)</li>
+<li>node核心内置类库(事件，流，文件，网络等)</li>
+<li>node高级话题(异步，部署，性能调优，异常调试等)</li>
+<li>常用知名第三方类库(Async, Express等) 其它相关后端常用技术(MongoDB, Redis, Apache, Nginx等)</li>
+<li>常用前端技术(html5, CSS3, JQuery等)</li>
+</ol>
+<h2 id="_2">二、</h2>
+<h2 id="js">js类定义方法</h2>
+<ol>
+<li>构造函数原型</li>
+</ol>
+<pre><code class="js">function Person(){
+    this.name = 'michaelqin';
+}
+Person.prototype.sayName = function(){
+    alert(this.name);
+}
+var person = new Person();
+person.sayName();
+</code></pre>
+
+<ol>
+<li>对象创建</li>
+</ol>
+<pre><code class="js">var Person = {
+    name: 'michaelqin',
+    sayName: function(){ alert(this.name); }
+};
+var person = Object.create(Person);
+person.sayName();
+</code></pre>
+
+<h2 id="js_1">js类继承的方法</h2>
+<ol>
+<li>原型链法</li>
+</ol>
+<pre><code class="js">function Animal() {
+    this.name = 'animal';
+}
+Animal.prototype.sayName = {
+    alert(this.name);
+};
+function Person() {}
+Person.prototype = Animal.prototype; // 人继承自动物
+Person.prototype.constructor = 'Person'; // 更新构造函数为人
+</code></pre>
+
+<ol>
+<li>属性复制法</li>
+</ol>
+<pre><code class="js">function Animal() {
+    this.name = 'animal';
+}
+Animal.prototype.sayName = {
+    alert(this.name);
+};
+function Person() {}
+for(prop in Animal.prototype) {
+    Person.prototype[prop] = Animal.prototype[prop];
+} // 复制动物的所有属性到人量边
+Person.prototype.constructor = 'Person'; // 更新构造函数为人
+</code></pre>
+
+<ol>
+<li>构造器应用法</li>
+</ol>
+<pre><code class="js">function Animal() {
+    this.name = 'animal';
+}
+Animal.prototype.sayName = {
+    alert(this.name);
+};
+function Person() {
+    Animal.call(this); // apply, call, bind方法都可以．细微区别，后面会提到．
+}
+</code></pre>
+
+<h2 id="_3">作用域</h2>
+<p>大多数语言里边都是块作作用域，以{}进行限定，js里边不是．js里边叫函数作用域，就是一个变量在全函数里有效．比如有个变量p1在函数最后一行定义，第一行也有效，但是值是undefined.</p>
+<h2 id="jsthis">js里边的this指的是什么?</h2>
+<p>this指的是对象本身，而不是构造函数．</p>
+<h2 id="apply-callbind">apply, call和bind有什么区别?</h2>
+<ul>
+<li>三者都可以把一个函数应用到其他对象上，注意不是自身对象．</li>
+<li>apply,call是直接执行函数调用，bind是绑定，执行需要再次调用．</li>
+<li>apply和call的区别是apply接受数组作为参数，而call是接受逗号分隔的无限多个参数列表，</li>
+</ul>
+<pre><code class="js">1) apply
+Person.prototype.sayName.apply(obj, [param1, param2, param3]);
+2) call
+Person.prototype.sayName.call(obj, param1, param2, param3);
+3) bind
+var sn = Person.prototype.sayName.bind(obj);
+sn([param1, param2, param3]); // bind需要先绑定，再执行
+sn(param1, param2, param3); // bind需要先绑定，再执行
+</code></pre>
+
+<h2 id="caller-calleearguments">caller, callee和arguments分别是什么?</h2>
+<ul>
+<li>caller,callee之间的关系就像是employer和employee之间的关系，就是调用与被调用的关系，二者返回的都是函数对象引用．</li>
+<li>arguments是函数的所有参数列表，它是一个类数组的变量．</li>
+</ul>
+<h2 id="_4">什么是闭包，闭包有哪些用处?</h2>
+<ul>
+<li>两个字函数，更多字嵌套函数的父子自我引用关系．所有函数都是闭包．</li>
+<li>通俗的说，闭包就是作用域范围，因为js是函数作用域，所以函数就是闭包．</li>
+<li>全局函数的作用域范围就是全局，所以无须讨论．更多的应用其实是在内嵌函数，这就会涉及到内嵌作用域，或者叫作用域链．说到内嵌，其实就是父子引用关系(父函数包含子函数，子函数因为函数作用域又引用父函数，这它妈不是死结吗？所以叫闭包），这就会带来另外一个问题，什么时候引用结束？如果不结束，就会一直占用内存，引起内存泄漏．好吧，不用的时候就引用设为空，死结就解开了．</li>
+</ul>
+<h2 id="defineproperty-hasownproperty-isenumerable">defineProperty, hasOwnProperty, isEnumerable都是做什么用的？</h2>
+<ul>
+<li>Object.defineProperty(obj, prop, descriptor)用来给对象定义属性,有value,writable,configurable,enumerable,set/get等.</li>
+<li>hasOwnProerty用于检查某一属性是不是存在于对象本身，继承来的父亲的属性不算．</li>
+<li>isEnumerable用来检测某一属性是否可遍历，也就是能不能用for..in循环来取到.</li>
+</ul>
+<h2 id="js_2">js常用设计模式的实现思路，单例，工厂，代理，观察者模式等</h2>
+<ol>
+<li>单例： 任意对象都是单例，无须特别处理</li>
+</ol>
+<pre><code class="js">var obj = {name: 'michaelqin', age: 30};
+</code></pre>
+
+<ol>
+<li>工厂: 就是同样形式参数返回不同的实例</li>
+</ol>
+<pre><code class="js">function Person() { this.name = 'Person1'; }
+function Animal() { this.name = 'Animal1'; }
+function Factory() {}
+Factory.prototype.getInstance = function(className) {
+    return eval('new ' + className + '()');
+}
+var factory = new Factory();
+var obj1 = factory.getInstance('Person');
+var obj2 = factory.getInstance('Animal');
+console.log(obj1.name); // Person1
+console.log(obj2.name); // Animal1
+</code></pre>
+
+<ol>
+<li>代理: 就是新建个类调用老类的接口,包一下</li>
+</ol>
+<pre><code class="js">function Person() { }
+Person.prototype.sayName = function() { console.log('michaelqin'); }
+Person.prototype.sayAge = function() { console.log(30); }
+function PersonProxy() {
+    this.person = new Person();
+    var that = this;
+    this.callMethod = function(functionName) {
+        console.log('before proxy:', functionName);
+        that.person[functionName](); // 代理
+        console.log('after proxy:', functionName);
+    }
+}
+var pp = new PersonProxy();
+pp.callMethod('sayName'); // 代理调用Person的方法sayName()
+pp.callMethod('sayAge'); // 代理调用Person的方法sayAge()
+</code></pre>
+
+<ol>
+<li>观察者: 就是事件模式，比如按钮的onclick这样的应用.</li>
+</ol>
+<pre><code class="js">function Publisher() {
+    this.listeners = [];
+}
+Publisher.prototype = {
+    'addListener': function(listener) {
+        this.listeners.push(listener);
+    },
+    'removeListener': function(listener) {
+        delete this.listeners[listener];
+    },
+    'notify': function(obj) {
+        for(var i = 0; i &lt; this.listeners.length; i++) {
+            var listener = this.listeners[i];
+            if (typeof listener !== 'undefined') {
+                listener.process(obj);
+            }
+        }
+    }
+}; // 发布者
+
+function Subscriber() {}
+Subscriber.prototype = {
+    'process': function(obj) {
+    console.log(obj);
+    }
+}; // 订阅者
+var publisher = new Publisher();
+publisher.addListener(new Subscriber());
+publisher.addListener(new Subscriber());
+publisher.notify({name: 'michaelqin', ageo: 30}); // 发布一个对象到所有订阅者
+publisher.notify('2 subscribers will both perform process'); // 发布一个字符串到所有订阅者
+</code></pre>
+
+<h2 id="_5">列举数组相关的常用方法</h2>
+<ul>
+<li>push/pop,</li>
+<li>shift/unshift,</li>
+<li>split/join,</li>
+<li>slice/splice/concat,</li>
+<li>sort/reverse,</li>
+<li>map/reduce,</li>
+<li>forEach,</li>
+<li>
+<p>filter</p>
+</li>
+<li>
+<p>列举字符串相关的常用方法</p>
+</li>
+<li>indexOf/lastIndexOf/charAt,</li>
+<li>split/match/test,</li>
+<li>slice/substring/substr,</li>
+<li>toLowerCase/toUpperCase</li>
+</ul>
+<hr />
+<h2 id="node-node">node核心内置类库(事件，流，文件，网络等) node概览</h2>
+<h2 id="node">为什么要用node?</h2>
+<p>简单强大，轻量可扩展．
+- 简单体现在node使用的是javascript,json来进行编码，人人都会；
+- 强大体现在非阻塞IO,可以适应分块传输数据，较慢的网络环境，尤其擅长高并发访问；
+- 轻量体现在node本身既是代码，又是服务器，前后端使用统一语言;
+- 可扩展体现在可以轻松应对多实例，多服务器架构，同时有海量的第三方应用组件．</p>
+<h2 id="node_1">node的构架是什么样子的?</h2>
+<ul>
+<li>主要分为三层，应用app &gt;&gt; V8及node内置架构 &gt;&gt; 操作系统.</li>
+<li>V8是node运行的环境，可以理解为node虚拟机．</li>
+<li>node内置架构又可分为三层: 核心模块(javascript实现) &gt;&gt; c++绑定 &gt;&gt; libuv + CAes + http.</li>
+</ul>
+<h2 id="node_2">node有哪些核心模块?</h2>
+<ul>
+<li>EventEmitter,</li>
+<li>Stream,</li>
+<li>FS,</li>
+<li>Net</li>
+<li>全局对象</li>
+<li>process,</li>
+<li>console,</li>
+<li>Buffer</li>
+<li>exports</li>
+</ul>
+<h2 id="process">process有哪些常用方法?</h2>
+<ul>
+<li>process.stdin,</li>
+<li>process.stdout,</li>
+<li>process.stderr,</li>
+<li>process.on,</li>
+<li>process.env,</li>
+<li>process.argv,</li>
+<li>process.arch,</li>
+<li>process.platform,</li>
+<li>process.exit</li>
+</ul>
+<h2 id="console">console有哪些常用方法?</h2>
+<ul>
+<li>console.log/console.info,</li>
+<li>console.error/console.warning,</li>
+<li>console.time/console.timeEnd,</li>
+<li>console.trace,</li>
+<li>console.table</li>
+</ul>
+<h2 id="node_3">node有哪些定时功能?</h2>
+<ul>
+<li>setTimeout/clearTimeout,</li>
+<li>setInterval/clearInterval,</li>
+<li>setImmediate/clearImmediate,</li>
+<li>process.nextTick</li>
+</ul>
+<h2 id="node_4">node中的事件循环是什么样子的?</h2>
+<ul>
+<li>event loop其实就是一个事件队列，先加入先执行，执行完一次队列，再次循环遍历看有没有新事件加入队列．</li>
+<li>执行中的叫IO events, setImmediate是在当前队列立即执行,setTimout/setInterval是把执行定时到下一个队列，
+process.nextTick是在当前执行完，下次遍历前执行．
+所以总体顺序是: IO events &gt;&gt; setImmediate &gt;&gt; setTimeout/setInterval &gt;&gt; process.nextTick</li>
+</ul>
+<h2 id="nodebuffer">node中的Buffer如何应用?</h2>
+<ul>
+<li>Buffer是用来处理二进制数据的，比如图片，mp3,数据库文件等.</li>
+<li>Buffer支持各种编码解码，二进制字符串互转．</li>
+</ul>
+<hr />
+<h2 id="eventemitter">EventEmitter</h2>
+<h2 id="eventemitter_1">什么是EventEmitter?</h2>
+<p>EventEmitter是node中一个实现观察者模式的类，主要功能是监听和发射消息，用于处理多模块交互问题.</p>
+<h2 id="eventemitter_2">如何实现一个EventEmitter?</h2>
+<p>主要分三步：定义一个子类，调用构造函数，继承EventEmitter</p>
+<pre><code class="js">var util = require('util');
+var EventEmitter = require('events').EventEmitter;
+function MyEmitter() {
+EventEmitter.call(this);
+} // 构造函数
+util.inherits(MyEmitter, EventEmitter); // 继承
+var em = new MyEmitter();
+em.on('hello', function(data) {
+console.log('收到事件hello的数据:', data);
+}); // 接收事件，并打印到控制台
+em.emit('hello', 'EventEmitter传递消息真方便!');
+</code></pre>
+
+<h2 id="eventemitter_3">EventEmitter有哪些典型应用?</h2>
+<ol>
+<li>模块间传递消息</li>
+<li>回调函数内外传递消息</li>
+<li>处理流数据，因为流是在EventEmitter基础上实现的.</li>
+<li>观察者模式发射触发机制相关应用</li>
+</ol>
+<h2 id="eventemitter_4">怎么捕获EventEmitter的错误事件?</h2>
+<p>监听error事件即可．如果有多个EventEmitter,也可以用domain来统一处理错误事件.</p>
+<pre><code class="js">var domain = require('domain');
+var myDomain = domain.create();
+myDomain.on('error', function(err){
+console.log('domain接收到的错误事件:', err);
+}); // 接收事件并打印
+myDomain.run(function(){
+var emitter1 = new MyEmitter();
+emitter1.emit('error', '错误事件来自emitter1');
+emitter2 = new MyEmitter();
+emitter2.emit('error', '错误事件来自emitter2');
+});
+</code></pre>
+
+<h2 id="eventemitternewlistenser">EventEmitter中的newListenser事件有什么用处?</h2>
+<ul>
+<li>newListener可以用来做事件机制的反射，特殊应用，事件管理等．</li>
+<li>当任何on事件添加到EventEmitter时，就会触发newListener事件，基于这种模式，我们可以做很多自定义处理.</li>
+</ul>
+<pre><code class="js">var emitter3 = new MyEmitter();
+emitter3.on('newListener', function(name, listener) {
+console.log(&quot;新事件的名字:&quot;, name);
+console.log(&quot;新事件的代码:&quot;, listener);
+setTimeout(function(){ console.log(&quot;我是自定义延时处理机制&quot;); }, 1000);
+});
+emitter3.on('hello', function(){
+console.log('hello node');
+});
+</code></pre>
+
+<hr />
+<h2 id="stream">Stream</h2>
+<h2 id="stream_1">什么是Stream?</h2>
+<ul>
+<li>stream是基于事件EventEmitter的数据管理模式．</li>
+<li>由各种不同的抽象接口组成，主要包括可写，可读，可读写，可转换等几种类型．</li>
+</ul>
+<h2 id="stream_2">Stream有什么好处?</h2>
+<p>非阻塞式数据处理提升效率，片断处理节省内存，管道处理方便可扩展等.</p>
+<h2 id="stream_3">Stream有哪些典型应用?</h2>
+<p>文件，网络，数据转换，音频视频等.</p>
+<h2 id="stream_4">怎么捕获Stream的错误事件?</h2>
+<p>监听error事件，方法同EventEmitter.</p>
+<h2 id="stream_5">有哪些常用Stream,分别什么时候使用?</h2>
+<ul>
+<li>Readable为可被读流，在作为输入数据源时使用；</li>
+<li>Writable为可被写流,在作为输出源时使用；</li>
+<li>Duplex为可读写流,它作为输出源接受被写入，同时又作为输入源被后面的流读出．</li>
+<li>Transform机制和Duplex一样，都是双向流，区别时Transfrom只需要实现一个函数_transfrom(chunk, encoding, callback);而Duplex需要分别实现_read(size)函数和_write(chunk, encoding, callback)函数.</li>
+</ul>
+<h2 id="writable-stream">实现一个Writable Stream?</h2>
+<ol>
+<li>构造函数call Writable</li>
+<li>继承Writable</li>
+<li>实现_write(chunk, encoding, callback)函数</li>
+</ol>
+<pre><code class="js">var Writable = require('stream').Writable;
+var util = require('util');
+function MyWritable(options) {
+Writable.call(this, options);
+} // 构造函数
+util.inherits(MyWritable, Writable); // 继承自Writable
+MyWritable.prototype._write = function(chunk, encoding, callback) {
+console.log(&quot;被写入的数据是:&quot;, chunk.toString()); // 此处可对写入的数据进行处理
+callback();
+};
+process.stdin.pipe(new MyWritable()); // stdin作为输入源，MyWritable作为输出源
+</code></pre>
+
+<hr />
+<p>文件系统</p>
+<h2 id="fs">内置的fs模块架构是什么样子的?</h2>
+<ol>
+<li>POSIX文件Wrapper,对应于操作系统的原生文件操作</li>
+<li>文件流 fs.createReadStream和fs.createWriteStream</li>
+<li>同步文件读写,fs.readFileSync和fs.writeFileSync</li>
+<li>异步文件读写, fs.readFile和fs.writeFile</li>
+</ol>
+<h2 id="_6">读写一个文件有多少种方法?</h2>
+<ol>
+<li>POSIX式低层读写</li>
+<li>流式读写</li>
+<li>同步文件读写</li>
+<li>异步文件读写</li>
+</ol>
+<h2 id="json">怎么读取json配置文件?</h2>
+<ul>
+<li>第一种是利用node内置的require('data.json')机制，直接得到js对象;</li>
+<li>第二种是读入文件入内容，然后用JSON.parse(content)转换成js对象．</li>
+<li>二者的区别是require机制情况下，如果多个模块都加载了同一个json文件，那么其中一个改变了js对象，其它跟着改变，这是由node模块的缓存机制造成的，只有一个js模块对象; 第二种方式则可以随意改变加载后的js变量，而且各模块互不影响，因为他们都是独立的，是多个js对象.</li>
+</ul>
+<h2 id="fswatchfswatchfile">fs.watch和fs.watchFile有什么区别，怎么应用?</h2>
+<ul>
+<li>二者主要用来监听文件变动．</li>
+<li>fs.watch利用操作系统原生机制来监听，可能不适用网络文件系统;</li>
+<li>fs.watchFile则是定期检查文件状态变更，适用于网络文件系统，</li>
+<li>但是相比fs.watch有些慢，因为不是实时机制．</li>
+</ul>
+<hr />
+<h2 id="_7">网络</h2>
+<h2 id="node_5">node的网络模块架构是什么样子的?</h2>
+<p>node全面支持各种网络服务器和客户端，包括tcp, http/https, tcp, udp, dns, tls/ssl等.</p>
+<h2 id="nodehttpstls">node是怎样支持https,tls的?</h2>
+<ol>
+<li>openssl生成公钥私钥</li>
+<li>服务器或客户端使用https替代http</li>
+<li>服务器或客户端加载公钥私钥证书</li>
+</ol>
+<h2 id="http">实现一个简单的http服务器?</h2>
+<p>经典又很没毛意义的一个题目．思路是加载http模块，创建服务器，监听端口.</p>
+<pre><code class="js">var http = require('http'); // 加载http模块
+http.createServer(function(req, res) {
+res.writeHead(200, {'Content-Type': 'text/html'}); // 200代表状态成功, 文档类型是给浏览器识别用的
+res.write('&lt;meta charset=&quot;UTF-8&quot;&gt; &lt;h1&gt;我是标题啊！&lt;/h1&gt; &lt;font color=&quot;red&quot;&gt;这么原生，初级的服务器，下辈子能用着吗?!&lt;/font&gt;'); // 返回给客户端的html数据
+res.end(); // 结束输出流
+}).listen(3000); // 绑定3ooo, 查看效果请访问 http://localhost:3000
+</code></pre>
+
+<hr />
+<h2 id="child-process">child-process</h2>
+<h2 id="child-process_1">为什么需要child-process?</h2>
+<ul>
+<li>node是异步非阻塞的，这对高并发非常有效．</li>
+<li>可是我们还有其它一些常用需求，比如和操作系统shell命令交互，调用可执行文件，创建子进程进行阻塞式访问或高CPU计算等，child-process就是为满足这些需求而生的．child-process顾名思义，就是把node阻塞的工作交给子进程去做．</li>
+</ul>
+<h2 id="execexecfilespawnfork">exec,execFile,spawn和fork都是做什么用的?</h2>
+<p>参考答案: exec可以用操作系统原生的方式执行各种命令，如管道 cat ab.txt | grep hello; execFile是执行一个文件; spawn是流式和操作系统进行交互; fork是两个node程序(javascript)之间时行交互.</p>
+<h2 id="_8">实现一个简单的命令行交互程序?</h2>
+<p>参考答案: 那就用spawn吧.</p>
+<pre><code class="js">var cp = require('child_process');
+var child = cp.spawn('echo', ['你好', &quot;钩子&quot;]); // 执行命令
+child.stdout.pipe(process.stdout); // child.stdout是输入流，process.stdout是输出流
+</code></pre>
+
+<p>// 这句的意思是将子进程的输出作为当前程序的输入流，然后重定向到当前程序的标准输出，即控制台</p>
+<h2 id="node_6">两个node程序之间怎样交互?</h2>
+<p>用fork嘛，上面讲过了．原理是子程序用process.on, process.send，父程序里用child.on,child.send进行交互.
+1) fork-parent.js</p>
+<pre><code class="js">var cp = require('child_process');
+var child = cp.fork('./fork-child.js');
+child.on('message', function(msg){
+console.log('老爸从儿子接受到数据:', msg);
+});
+child.send('我是你爸爸，送关怀来了!');
+</code></pre>
+
+<p>2) fork-child.js</p>
+<pre><code class="js">process.on('message', function(msg){
+console.log(&quot;儿子从老爸接收到的数据:&quot;, msg);
+process.send(&quot;我不要关怀，我要银民币！&quot;);
+});
+</code></pre>
+
+<h2 id="jslinux">怎样让一个js文件变得像linux命令一样可执行?</h2>
+<ol>
+<li>在myCommand.js文件头部加入 #!/usr/bin/env node</li>
+<li>chmod命令把js文件改为可执行即可</li>
+<li>进入文件目录，命令行输入myComand就是相当于node myComand.js了</li>
+</ol>
+<h2 id="child-processprocessstdinstdoutstderror">child-process和process的stdin,stdout,stderror是一样的吗?</h2>
+<ul>
+<li>概念都是一样的，输入，输出，错误，都是流．</li>
+<li>区别是在父程序眼里，子程序的stdout是输入流，stdin是输出流．</li>
+</ul>
+<hr />
+<h2 id="node_7">node高级话题(异步，部署，性能调优，异常调试等)</h2>
+<h2 id="node_8">node中的异步和同步怎么理解</h2>
+<ul>
+<li>node是单线程的，异步是通过一次次的循环事件队列来实现的．</li>
+<li>同步则是说阻塞式的IO,这在高并发环境会是一个很大的性能问题，所以同步一般只在基础框架的启动时使用，用来加载配置文件，初始化程序什么的．</li>
+</ul>
+<h2 id="_9">有哪些方法可以进行异步流程的控制?</h2>
+<ol>
+<li>多层嵌套回调</li>
+<li>为每一个回调写单独的函数，函数里边再回调</li>
+<li>用第三方框架比方async, q, promise等</li>
+</ol>
+<h2 id="node80">怎样绑定node程序到80端口?</h2>
+<ol>
+<li>sudo</li>
+<li>apache/nginx代理</li>
+<li>用操作系统的firewall iptables进行端口重定向</li>
+</ol>
+<h2 id="node_9">有哪些方法可以让node程序遇到错误后自动重启?</h2>
+<ol>
+<li>runit</li>
+<li>forever</li>
+<li>nohup npm start &amp;</li>
+</ol>
+<h2 id="cpu">怎样充分利用多个CPU?</h2>
+<p>一个CPU运行一个node实例</p>
+<h2 id="node_10">怎样调节node执行单元的内存大小?</h2>
+<p>用--max-old-space-size 和 --max-new-space-size 来设置 v8 使用内存的上限</p>
+<h2 id="_10">程序总是崩溃，怎样找出问题在哪里?</h2>
+<ol>
+<li>node --prof 查看哪些函数调用次数多</li>
+<li>memwatch和heapdump获得内存快照进行对比，查找内存溢出</li>
+</ol>
+<h2 id="_11">有哪些常用方法可以防止程序崩溃?</h2>
+<ol>
+<li>try-catch-finally</li>
+<li>EventEmitter/Stream error事件处理</li>
+<li>domain统一控制</li>
+<li>jshint静态检查</li>
+<li>jasmine/mocha进行单元测试</li>
+</ol>
+<h2 id="node_11">怎样调试node程序?</h2>
+<p>node --debug app.js 和node-inspector</p>
+<hr />
+<h2 id="async-express">常用知名第三方类库(Async, Express等)</h2>
+<h2 id="async">async都有哪些常用方法，分别是怎么用?</h2>
+<p>async是一个js类库，它的目的是解决js中异常流程难以控制的问题．async不仅适用在node.js里，浏览器中也可以使用．</p>
+<p>1) async.parallel并行执行完多个函数后，调用结束函数</p>
+<pre><code class="js">async.parallel([
+function(){ ... },
+function(){ ... }
+], callback);
+</code></pre>
+
+<p>2) async.series串行执行完多个函数后，调用结束函数</p>
+<pre><code class="js">async.series([
+function(){ ... },
+function(){ ... }
+]);
+</code></pre>
+
+<p>3) async.waterfall依次执行多个函数，后一个函数以前面函数的结果作为输入参数</p>
+<pre><code class="js">async.waterfall([
+function(callback) {
+callback(null, 'one', 'two');
+},
+function(arg1, arg2, callback) {
+// arg1 now equals 'one' and arg2 now equals 'two'
+callback(null, 'three');
+},
+function(arg1, callback) {
+// arg1 now equals 'three'
+callback(null, 'done');
+}
+], function (err, result) {
+// result now equals 'done'
+});
+</code></pre>
+
+<p>4) async.map异步执行多个数组，返回结果数组</p>
+<pre><code class="js">async.map(['file1','file2','file3'], fs.stat, function(err, results){
+// results is now an array of stats for each file
+});
+</code></pre>
+
+<p>5) async.filter异步过滤多个数组，返回结果数组</p>
+<pre><code class="js">async.filter(['file1','file2','file3'], fs.exists, function(results){
+// results now equals an array of the existing files
+});
+</code></pre>
+
+<h2 id="express">express项目的目录大致是什么样子的</h2>
+<ul>
+<li>app.js,</li>
+<li>package.json,</li>
+<li>bin/www,</li>
+<li>public,</li>
+<li>routes,</li>
+<li>views.</li>
+</ul>
+<h2 id="express_1">express常用函数</h2>
+<ul>
+<li>express.Router路由组件,</li>
+<li>app.get路由定向，</li>
+<li>app.configure配置，</li>
+<li>app.set设定参数,</li>
+<li>app.use使用中间件</li>
+</ul>
+<h2 id="express_2">express中如何获取路由的参数</h2>
+<ul>
+<li>/users/:name使用req.params.name来获取;</li>
+<li>req.body.username则是获得表单传入参数username;</li>
+<li>express路由支持常用通配符 ?, +, *, and ()</li>
+</ul>
+<h2 id="express-response">express response有哪些常用方法</h2>
+<ul>
+<li>res.download() 弹出文件下载</li>
+<li>res.end() 结束response</li>
+<li>res.json() 返回json</li>
+<li>res.jsonp() 返回jsonp</li>
+<li>res.redirect() 重定向请求</li>
+<li>res.render() 渲染模板</li>
+<li>res.send() 返回多种形式数据</li>
+<li>res.sendFile 返回文件</li>
+<li>res.sendStatus() 返回状态</li>
+</ul>
+<hr />
+<h2 id="mongodb-redis-apache-nginx">其它相关后端常用技术(MongoDB, Redis, Apache, Nginx等)</h2>
+<h2 id="mongodb">mongodb有哪些常用优化措施</h2>
+<p>类似传统数据库，索引和分区．</p>
+<h2 id="redis">redis支持哪些功能</h2>
+<ul>
+<li>set/get,</li>
+<li>hset/hget,</li>
+<li>publish/subscribe,</li>
+<li>expire</li>
+</ul>
+<h2 id="redis_1">redis最简单的应用</h2>
+<pre><code class="js">var redis = require(&quot;redis&quot;),
+client = redis.createClient();
+client.set(&quot;foo_rand000000000000&quot;, &quot;some fantastic value&quot;);
+client.get(&quot;foo_rand000000000000&quot;, function (err, reply) {
+console.log(reply.toString());
+});
+client.end();
+</code></pre>
+
+<h2 id="apachenginx">apache,nginx有什么区别?</h2>
+<ul>
+<li>二者都是代理服务器，功能类似．</li>
+<li>apache应用简单，相当广泛．</li>
+<li>nginx在分布式，静态转发方面比较有优势．</li>
+</ul>
+<hr />
+<h2 id="html5-css3-jquery">常用前端技术(Html5, CSS3, JQuery等)</h2>
+<h2 id="html5">Html5有哪些比较实用新功能</h2>
+<ul>
+<li>File API支持本地文件操作;</li>
+<li>Canvans/SVG支持绘图;</li>
+<li>拖拽功能支持;</li>
+<li>本地存储支持;</li>
+<li>表单多属性验证支持;</li>
+<li>原生音频视频支持等</li>
+</ul>
+<h2 id="css3jquery">CSS3/JQuery有哪些学常见选择器</h2>
+<ul>
+<li>id,</li>
+<li>元素，</li>
+<li>属性,</li>
+<li>值，</li>
+<li>父子兄弟,</li>
+<li>序列等</li>
+</ul>
+<h2 id="jquery">JQuery有哪些经典应用</h2>
+<ul>
+<li>文档选择</li>
+<li>文档操作</li>
+<li>动画</li>
+<li>ajax</li>
+<li>json</li>
+<li>js扩展等</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../C++/" title="C++" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                C++
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../archi/micro-frontend/" title="micro-frontend" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                micro-frontend
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
