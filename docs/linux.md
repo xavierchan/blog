@@ -29,6 +29,12 @@ UNIX -> BSD -> GNU -> Linux
 top
 ```
 
+### 查看CPU
+
+```shell
+lscpu
+```
+
 ### 网络状态
 
 ```shell

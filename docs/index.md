@@ -1,17 +1,25 @@
-# Welcome to MkDocs
+# Welcome to My Blog
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 
-## Commands
+## 联系我
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+- [Github](https://github.com/xavierchan)
+- [Email](xavierchanit@gmail.com)
 
-## Project layout
+## 最近在折腾的项目
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [home-assistant](https://www.home-assistant.io/?_blank)
+- [openedx](https://github.com/edx/edx-platform)
+- [codelab-adapter](https://github.com/Scratch3Lab/codelab_adapter_extensions?_blank)
+
+## 友情链接
+
+- [种瓜](https://blog.just4fun.site)
+
+## 商业项目
+
+- 国内第一家 Open edX 服务提供商 - [英荔教育](https://www.elitemba.cn/)
+
+For full documentation visit [mkdocs.org](https://mkdocs.org).
+
