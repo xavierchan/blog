@@ -38,7 +38,7 @@
     
     
       
-        <title>LMS</title>
+        <title>LMS 项目剖析(基于I版本)</title>
       
     
     
@@ -86,7 +86,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="暴走的二进制" class="md-header-nav__button md-logo">
+        <a href="../../nav/" title="暴走的二进制" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                LMS
+                LMS 项目剖析(基于I版本)
               
             </span>
           
@@ -156,7 +156,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="暴走的二进制" class="md-nav__button md-logo">
+    <a href="../../nav/" title="暴走的二进制" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -172,9 +172,57 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../../nav/" title="介绍" class="md-nav__link">
+      介绍
     </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      我的项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        我的项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prj/edx/" title="Open edX" class="md-nav__link">
+      Open edX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prj/ha/" title="Hass" class="md-nav__link">
+      Hass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -187,17 +235,263 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       Open edX
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         Open edX
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="引言" class="md-nav__link">
+      引言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LMS 项目剖析(基于I版本)
+      </label>
+    
+    <a href="./" title="LMS 项目剖析(基于I版本)" class="md-nav__link md-nav__link--active">
+      LMS 项目剖析(基于I版本)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    序言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一、技术栈
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二、运行环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、依赖服务
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 数据库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 服务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    三、目录结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    三、相关功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31_1" class="md-nav__link">
+    3.1 业务性功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    四、通用设计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    四、相关脚本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    五、发布相关
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 完整发布流程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    六、常见问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-studio/" title="Studio" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-ecommerce/" title="E-commerce" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-discovery/" title="Discovery" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openedx-insights/" title="Insights" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../theme/" title="主题切换" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
         
           
           
@@ -241,163 +535,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../openedx-studio/" title="Studio" class="md-nav__link">
-      Studio
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        LMS
-      </label>
-    
-    <a href="./" title="LMS" class="md-nav__link md-nav__link--active">
-      LMS
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    一、技术栈
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    二、运行环境
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    三、相关功能
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    3.1 业务性功能
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    3.2 系统性功能
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    四、相关脚本
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    五、发布相关
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    5.1 完整发布流程
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    六、常见问题
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    参考资料
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../openedx-ecommerce/" title="E-commerce" class="md-nav__link">
-      E-commerce
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../openedx-discovery/" title="Discovery" class="md-nav__link">
-      Discovery
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../openedx-config/" title="openedx-config" class="md-nav__link">
       openedx-config
     </a>
@@ -422,32 +559,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../openedx-insights/" title="Insights" class="md-nav__link">
-      Insights
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../theme/" title="主题切换" class="md-nav__link">
-      主题切换
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../micro-frontend/" title="Open edX 微前端进度" class="md-nav__link">
-      Open edX 微前端进度
+    <a href="../tracking-log/" title="Tracking log" class="md-nav__link">
+      Tracking log
     </a>
   </li>
 
@@ -464,13 +577,217 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
+      HassIO
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        HassIO
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hassio/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hassio/hassio/" title="Hassio" class="md-nav__link">
+      Hassio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hassio/hass/" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      OpenBalena
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        OpenBalena
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hassio/hass/" title="Hass" class="md-nav__link">
+      Hass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Scratch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Scratch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scratch/scratch/" title="Scratch" class="md-nav__link">
+      Scratch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scratch/scratch-vm/" title="Scratch vm" class="md-nav__link">
+      Scratch vm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scratch/scratch-gui/" title="Scratch gui" class="md-nav__link">
+      Scratch gui
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scratch/scratch-www/" title="Scratch www" class="md-nav__link">
+      Scratch www
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      商业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        商业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../biz/connect/" title="Connect" class="md-nav__link">
+      Connect
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
       网络协议
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-8">
         网络协议
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -500,13 +817,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-9">
       编程语言
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-9">
         编程语言
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -560,13 +877,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-10">
       架构
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-10">
         架构
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -596,13 +913,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-11">
       容器技术
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-11">
         容器技术
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -656,13 +973,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-12">
       工具
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-12">
         工具
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -676,6 +993,18 @@
   <li class="md-nav__item">
     <a href="../../tools/certbot/" title="certbot" class="md-nav__link">
       certbot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/frp/" title="frp" class="md-nav__link">
+      frp
     </a>
   </li>
 
@@ -717,21 +1046,28 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    一、技术栈
+    序言
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二、运行环境
+    一、技术栈
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    三、相关功能
+    二、运行环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    三、依赖服务
   </a>
   
     <nav class="md-nav">
@@ -739,14 +1075,14 @@
         
           <li class="md-nav__item">
   <a href="#31" class="md-nav__link">
-    3.1 业务性功能
+    3.1 数据库
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#32" class="md-nav__link">
-    3.2 系统性功能
+    3.2 服务
   </a>
   
 </li>
@@ -757,14 +1093,48 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
+    三、目录结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    三、相关功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31_1" class="md-nav__link">
+    3.1 业务性功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    四、通用设计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     四、相关脚本
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     五、发布相关
   </a>
   
@@ -784,14 +1154,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     六、常见问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     参考资料
   </a>
   
@@ -814,9 +1184,11 @@
               
                 
                 
-                  <h1>LMS</h1>
+                  <h1>LMS 项目剖析(基于I版本)</h1>
                 
-                <h2 id="_1">一、技术栈</h2>
+                <h2 id="_1">序言</h2>
+<p>LMS 是一个 Django 应用，前后端耦合，前端使用了 django 和 mako 模板混用</p>
+<h2 id="_2">一、技术栈</h2>
 <ul>
 <li>Mysql==5.6.32</li>
 <li>Redis</li>
@@ -826,13 +1198,31 @@
 <li>Django==1.11.20</li>
 <li>celery==3.1.25</li>
 </ul>
-<h2 id="_2">二、运行环境</h2>
+<h2 id="_3">二、运行环境</h2>
 <ul>
+<li>根目录 - /edx/app/edxapp</li>
+<li>项目 - edx-platform</li>
 <li>运行用户 - edxapp</li>
-<li>环境变量 - /edx/app/edxapp/edx-platform/lms.env(auth).json</li>
+<li>环境变量 - edxapp_env</li>
+<li>环境配置 - lms.env(auth).json</li>
 </ul>
-<h2 id="_3">三、相关功能</h2>
-<h3 id="31">3.1 业务性功能</h3>
+<h2 id="_4">三、依赖服务</h2>
+<h3 id="31">3.1 数据库</h3>
+<ul>
+<li>Mysql</li>
+<li>MongoDB</li>
+<li>Memcached</li>
+<li>RabbitMQ</li>
+</ul>
+<h3 id="32">3.2 服务</h3>
+<ul>
+<li>Sentry</li>
+<li>GA</li>
+</ul>
+<h2 id="_5">三、目录结构</h2>
+<p>请看<a href="../project/">《edx-platform项目目录》</a></p>
+<h2 id="_6">三、相关功能</h2>
+<h3 id="31_1">3.1 业务性功能</h3>
 <ul>
 <li>课程证书 - <a href="http://pms.elitemc.cn/index.php?m=doc&amp;f=view&amp;docID=79">配置文档</a></li>
 <li>手机应用配置 - <a href="http://pms.elitemc.cn/index.php?m=doc&amp;f=view&amp;docID=72">配置文档</a></li>
@@ -843,16 +1233,16 @@
 <li>密码校验规则和删除用户功能 - <a href="http://pms.elitemc.cn/index.php?m=doc&amp;f=view&amp;docID=252">配置文档</a></li>
 <li>在Studio和LMS中启用课程证书- <a href="http://pms.elitemc.cn/index.php?m=doc&amp;f=view&amp;docID=268">配置文档</a></li>
 </ul>
-<h3 id="32">3.2 系统性功能</h3>
+<h2 id="_7">四、通用设计</h2>
 <ul>
 <li>OAUTH2</li>
 <li>Client 客户端</li>
 </ul>
-<h2 id="_4">四、相关脚本</h2>
+<h2 id="_8">四、相关脚本</h2>
 <ul>
 <li>安装lms脚本devstack - <a href="http://pms.elitemc.cn/index.php?m=doc&amp;f=view&amp;docID=250">配置文档</a></li>
 </ul>
-<h2 id="_5">五、发布相关</h2>
+<h2 id="_9">五、发布相关</h2>
 <h3 id="51">5.1 完整发布流程</h3>
 <pre><code class="shell"># 1. 切换用户，并切换项目根目录
 sudo -H -u edxapp bash
@@ -872,8 +1262,8 @@ exit
 /edx/bin/supervisorctl restart all
 </code></pre>
 
-<h2 id="_6">六、常见问题</h2>
-<h2 id="_7">参考资料</h2>
+<h2 id="_10">六、常见问题</h2>
+<h2 id="_11">参考资料</h2>
 <blockquote>
 <ul>
 <li><a href="https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/open-release-ironwood.master/configuration/index.html"><strong>Ironwood版本edx配置文档</strong></a></li>
@@ -900,7 +1290,7 @@ exit
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../openedx-studio/" title="Studio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../" title="引言" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -909,19 +1299,19 @@ exit
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Studio
+                引言
               </span>
             </div>
           </a>
         
         
-          <a href="../openedx-ecommerce/" title="E-commerce" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../openedx-studio/" title="Studio" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                E-commerce
+                Studio
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
