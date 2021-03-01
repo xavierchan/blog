@@ -1,0 +1,3057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <meta name="author" content="Xavier">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Balena-Supervisor - 暴走二进制</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-113061584-2","mkdocs.org"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="暴走二进制" class="md-header-nav__button md-logo" aria-label="暴走二进制">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            暴走二进制
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Balena-Supervisor
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="暴走二进制" class="md-nav__button md-logo" aria-label="暴走二进制">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    暴走二进制
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../nav/" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      CNCF
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CNCF" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        CNCF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/beats/" class="md-nav__link">
+      Beats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/logstash/" class="md-nav__link">
+      Logstash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/elasticsearch/" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/kibana/" class="md-nav__link">
+      Kibana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/prometheus/" class="md-nav__link">
+      Prometheus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/grafana/" class="md-nav__link">
+      Grafana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7" >
+    <label class="md-nav__link" for="nav-2-7">
+      CKA
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CKA" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        <span class="md-nav__icon md-icon"></span>
+        CKA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/cka/CKA-1/" class="md-nav__link">
+      集群架构，安装和配置(25%)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/cka/CKA-2/" class="md-nav__link">
+      2. 工作负载和调度 15%
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/cka/CKA-3/" class="md-nav__link">
+      3. 服务和网络 20%
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/cka/CKA-4/" class="md-nav__link">
+      4. 存储 10%
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cncf/cka/CKA-5/" class="md-nav__link">
+      5. 故障排除：30%
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    <label class="md-nav__link" for="nav-3">
+      Balena
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Balena" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Balena
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../balena/" class="md-nav__link">
+      Balena
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openbalena/" class="md-nav__link">
+      OpenBalena
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../balena-cli/" class="md-nav__link">
+      Balena-Cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Balena-Supervisor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Balena-Supervisor
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API 能力
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    3. API 文档
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API 文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-ping" class="md-nav__link">
+    GET /ping
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /ping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1blink" class="md-nav__link">
+    POST /v1/blink
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/blink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1update" class="md-nav__link">
+    POST /v1/update
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1reboot" class="md-nav__link">
+    POST /v1/reboot
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1shutdown" class="md-nav__link">
+    POST /v1/shutdown
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/shutdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1purge" class="md-nav__link">
+    POST /v1/purge
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/purge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_3" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1restart" class="md-nav__link">
+    POST /v1/restart
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/restart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_4" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1regenerate-api-key" class="md-nav__link">
+    POST /v1/regenerate-api-key
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/regenerate-api-key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1device" class="md-nav__link">
+    GET /v1/device
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1appsappidstop" class="md-nav__link">
+    POST /v1/apps/:appId/stop
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/apps/:appId/stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_5" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1appsappidstart" class="md-nav__link">
+    POST /v1/apps/:appId/start
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/apps/:appId/start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1appsappid" class="md-nav__link">
+    GET /v1/apps/:appId
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/apps/:appId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1healthy" class="md-nav__link">
+    GET /v1/healthy
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/healthy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-v1devicehost-config" class="md-nav__link">
+    PATCH /v1/device/host-config
+  </a>
+  
+    <nav class="md-nav" aria-label="PATCH /v1/device/host-config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_6" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1devicehost-config" class="md-nav__link">
+    GET /v1/device/host-config
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/device/host-config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2applicationsstate" class="md-nav__link">
+    GET /v2/applications/state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2applicationsappidstate" class="md-nav__link">
+    GET /v2/applications/:appId/state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2statestatus" class="md-nav__link">
+    GET /v2/state/status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-actions" class="md-nav__link">
+    Service Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-application-id" class="md-nav__link">
+    The application ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidrestart-service" class="md-nav__link">
+    POST /v2/applications/:appId/restart-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidstop-service" class="md-nav__link">
+    POST /v2/applications/:appId:/stop-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidstart-service" class="md-nav__link">
+    POST /v2/applications/:appId/start-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidrestart" class="md-nav__link">
+    POST /v2/applications/:appId/restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidpurge" class="md-nav__link">
+    POST /v2/applications/:appId/purge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2version" class="md-nav__link">
+    GET /v2/version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2containerid" class="md-nav__link">
+    GET /v2/containerId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-mode-endpoints" class="md-nav__link">
+    Local mode endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2localtarget-state" class="md-nav__link">
+    GET /v2/local/target-state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2localtarget-state" class="md-nav__link">
+    POST /v2/local/target-state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-device-type-information" class="md-nav__link">
+    Get the device type information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-local-mode-application-logs-from-device" class="md-nav__link">
+    Stream local mode application logs from device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-device-information" class="md-nav__link">
+    V2 Device Information
+  </a>
+  
+    <nav class="md-nav" aria-label="V2 Device Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-name" class="md-nav__link">
+    Device name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-tags" class="md-nav__link">
+    Device tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-vpn-information" class="md-nav__link">
+    Device VPN Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-utilities" class="md-nav__link">
+    V2 Utilities
+  </a>
+  
+    <nav class="md-nav" aria-label="V2 Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-volumes-with-no-references" class="md-nav__link">
+    Cleanup volumes with no references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journald-logs" class="md-nav__link">
+    Journald logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Journald logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-boolean" class="md-nav__link">
+    all: boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-boolean" class="md-nav__link">
+    follow: boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-integer" class="md-nav__link">
+    count: integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Open edX
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Open edX" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Open edX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/" class="md-nav__link">
+      引言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-lms/" class="md-nav__link">
+      LMS 项目剖析(基于I版本)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-studio/" class="md-nav__link">
+      Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-ecommerce/" class="md-nav__link">
+      E-commerce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-discovery/" class="md-nav__link">
+      Discovery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-insights/" class="md-nav__link">
+      Insights
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/theme/" class="md-nav__link">
+      主题切换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/micro-frontend/" class="md-nav__link">
+      Open edX 微前端进度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-1-click-installed/" class="md-nav__link">
+      一键安装 - Tutor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-app/" class="md-nav__link">
+      独立app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-develop/" class="md-nav__link">
+      openedx-develop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-config/" class="md-nav__link">
+      openedx-config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/openedx-saml/" class="md-nav__link">
+      开启SAML功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openedx/tracking-log/" class="md-nav__link">
+      Tracking log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      容器技术
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="容器技术" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        容器技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../container/docker/" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      开发指南
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="开发指南" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        开发指南
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/django/" class="md-nav__link">
+      Django
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API 能力
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    3. API 文档
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API 文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-ping" class="md-nav__link">
+    GET /ping
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /ping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1blink" class="md-nav__link">
+    POST /v1/blink
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/blink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1update" class="md-nav__link">
+    POST /v1/update
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1reboot" class="md-nav__link">
+    POST /v1/reboot
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1shutdown" class="md-nav__link">
+    POST /v1/shutdown
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/shutdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1purge" class="md-nav__link">
+    POST /v1/purge
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/purge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_3" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1restart" class="md-nav__link">
+    POST /v1/restart
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/restart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_4" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1regenerate-api-key" class="md-nav__link">
+    POST /v1/regenerate-api-key
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/regenerate-api-key">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1device" class="md-nav__link">
+    GET /v1/device
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1appsappidstop" class="md-nav__link">
+    POST /v1/apps/:appId/stop
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/apps/:appId/stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_5" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_9" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v1appsappidstart" class="md-nav__link">
+    POST /v1/apps/:appId/start
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /v1/apps/:appId/start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_10" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1appsappid" class="md-nav__link">
+    GET /v1/apps/:appId
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/apps/:appId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_11" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1healthy" class="md-nav__link">
+    GET /v1/healthy
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/healthy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_12" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-v1devicehost-config" class="md-nav__link">
+    PATCH /v1/device/host-config
+  </a>
+  
+    <nav class="md-nav" aria-label="PATCH /v1/device/host-config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_6" class="md-nav__link">
+    Request body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_13" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v1devicehost-config" class="md-nav__link">
+    GET /v1/device/host-config
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /v1/device/host-config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_14" class="md-nav__link">
+    Examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2applicationsstate" class="md-nav__link">
+    GET /v2/applications/state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2applicationsappidstate" class="md-nav__link">
+    GET /v2/applications/:appId/state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2statestatus" class="md-nav__link">
+    GET /v2/state/status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-actions" class="md-nav__link">
+    Service Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-application-id" class="md-nav__link">
+    The application ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidrestart-service" class="md-nav__link">
+    POST /v2/applications/:appId/restart-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidstop-service" class="md-nav__link">
+    POST /v2/applications/:appId:/stop-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidstart-service" class="md-nav__link">
+    POST /v2/applications/:appId/start-service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidrestart" class="md-nav__link">
+    POST /v2/applications/:appId/restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2applicationsappidpurge" class="md-nav__link">
+    POST /v2/applications/:appId/purge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2version" class="md-nav__link">
+    GET /v2/version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2containerid" class="md-nav__link">
+    GET /v2/containerId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-mode-endpoints" class="md-nav__link">
+    Local mode endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-v2localtarget-state" class="md-nav__link">
+    GET /v2/local/target-state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-v2localtarget-state" class="md-nav__link">
+    POST /v2/local/target-state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-device-type-information" class="md-nav__link">
+    Get the device type information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-local-mode-application-logs-from-device" class="md-nav__link">
+    Stream local mode application logs from device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-device-information" class="md-nav__link">
+    V2 Device Information
+  </a>
+  
+    <nav class="md-nav" aria-label="V2 Device Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-name" class="md-nav__link">
+    Device name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-tags" class="md-nav__link">
+    Device tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-vpn-information" class="md-nav__link">
+    Device VPN Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-utilities" class="md-nav__link">
+    V2 Utilities
+  </a>
+  
+    <nav class="md-nav" aria-label="V2 Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-volumes-with-no-references" class="md-nav__link">
+    Cleanup volumes with no references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journald-logs" class="md-nav__link">
+    Journald logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Journald logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-boolean" class="md-nav__link">
+    all: boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-boolean" class="md-nav__link">
+    follow: boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-integer" class="md-nav__link">
+    count: integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Balena-Supervisor</h1>
+                
+                <pre class="mermaid-experimental"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
+<h3 id="_1">库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>db - knex</li>
+</ul>
+<h3 id="_2">流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>src/app.ts - 定义 DNS 异常和接口，检查 mdns 是否生效，能否查到 xx.local 的解析，然后初始化 supervisor 对象</li>
+<li>db - 解除锁，执行 migrations</li>
+<li>config -</li>
+</ul>
+<h3 id="api">API 能力<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ping</li>
+<li>闪灯</li>
+<li>更新</li>
+<li>重启</li>
+<li>关机</li>
+<li>清除数据</li>
+<li>重启 - 服务</li>
+<li>重新生成 api key</li>
+<li>查看设备信息</li>
+<li>服务 - 查、启、停</li>
+<li>健康</li>
+<li>主机信息 - 查、更</li>
+<li>所有服务状态</li>
+</ul>
+<h2 id="3-api">3. API 文档<a class="headerlink" href="#3-api" title="Permanent link">&para;</a></h2>
+<h3 id="get-ping">GET /ping<a class="headerlink" href="#get-ping" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Responds with a simple "OK", signaling that the supervisor is alive and well.</p>
+<h4 id="examples">Examples:<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X GET --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/ping&quot;</span>
+</code></pre></div>
+Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/ping&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1blink">POST /v1/blink<a class="headerlink" href="#post-v1blink" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Starts a blink pattern on a LED for 15 seconds, if your device has one.
+Responds with an empty 200 response. It implements the "identify device" feature from the dashboard.</p>
+<h4 id="examples_1">Examples:<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/blink?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>(Empty response)</p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/blink&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1update">POST /v1/update<a class="headerlink" href="#post-v1update" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Triggers an update check on the supervisor. Optionally, forces an update when updates are locked.</p>
+<p>Responds with an empty 204 (No Content) response.</p>
+<h4 id="request-body">Request body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h4>
+<p>Can be a JSON object with a <code>force</code> property. If this property is true, the update lock will be overridden.
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;force&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="examples_2">Examples:<a class="headerlink" href="#examples_2" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;force&quot;: true}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/update?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+(Empty response)</p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;data&quot;: {&quot;force&quot;: true}}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/update&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1reboot">POST /v1/reboot<a class="headerlink" href="#post-v1reboot" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Reboots the device. This will first try to stop applications, and fail if there is an update lock.
+An optional "force" parameter in the body overrides the lock when true (and the lock can also be overridden from
+the dashboard).</p>
+<p>When successful, responds with 202 accepted and a JSON object:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Error&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="request-body_1">Request body<a class="headerlink" href="#request-body_1" title="Permanent link">&para;</a></h4>
+<p>Can contain a <code>force</code> property, which if set to <code>true</code> will cause the update lock to be overridden.</p>
+<h4 id="examples_3">Examples:<a class="headerlink" href="#examples_3" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/reboot?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;Data&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="nt">&quot;Error&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/reboot&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1shutdown">POST /v1/shutdown<a class="headerlink" href="#post-v1shutdown" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+<p><strong>Dangerous</strong>: Shuts down the device. This will first try to stop applications, and fail if there is an update lock.
+An optional "force" parameter in the body overrides the lock when true (and the lock can also be overridden from
+the dashboard).</p>
+</blockquote>
+<p>When successful, responds with 202 accepted and a JSON object:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Error&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="request-body_2">Request body<a class="headerlink" href="#request-body_2" title="Permanent link">&para;</a></h4>
+<p>Can contain a <code>force</code> property, which if set to <code>true</code> will cause the update lock to be overridden.</p>
+<h4 id="examples_4">Examples:<a class="headerlink" href="#examples_4" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/shutdown?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+Response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;Data&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="nt">&quot;Error&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
+</code></pre></div>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/shutdown&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1purge">POST /v1/purge<a class="headerlink" href="#post-v1purge" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Clears the user application's <code>/data</code> folder.</p>
+<p>When successful, responds with 200 and a JSON object:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Error&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="request-body_3">Request body<a class="headerlink" href="#request-body_3" title="Permanent link">&para;</a></h4>
+<p>Has to be a JSON object with an <code>appId</code> property, corresponding to the ID of the application the device is running. Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">2167</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="examples_5">Examples:<a class="headerlink" href="#examples_5" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;appId&quot;: &lt;appId&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/purge?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+Response:</p>
+<div class="highlight"><pre><span></span><code>{&quot;Data&quot;:&quot;OK&quot;,&quot;Error&quot;:&quot;&quot;}
+</code></pre></div>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;data&quot;: {&quot;appId&quot;: &lt;appId&gt;}}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/purge&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1restart">POST /v1/restart<a class="headerlink" href="#post-v1restart" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Restarts a user application container</p>
+<p>When successful, responds with 200 and an "OK"</p>
+<h4 id="request-body_4">Request body<a class="headerlink" href="#request-body_4" title="Permanent link">&para;</a></h4>
+<p>Has to be a JSON object with an <code>appId</code> property, corresponding to the ID of the application the device is running.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">2167</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="examples_6">Examples:<a class="headerlink" href="#examples_6" title="Permanent link">&para;</a></h4>
+<p>From an application container:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;appId&quot;: &lt;appId&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/restart?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Response:</p>
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div>
+<p>Remotely via the API proxy:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;data&quot;: {&quot;appId&quot;: &lt;appId&gt;}}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/restart&quot;</span>
+</code></pre></div>
+<h3 id="post-v1regenerate-api-key">POST /v1/regenerate-api-key<a class="headerlink" href="#post-v1regenerate-api-key" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Invalidates the current <code>BALENA_SUPERVISOR_API_KEY</code> and generates a new one. Responds with the new API key, but <strong>the application will be restarted on the next update cycle</strong> to update the API key environment variable.</p>
+<h4 id="examples_7">Examples:<a class="headerlink" href="#examples_7" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/regenerate-api-key?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:</p>
+<div class="highlight"><pre><span></span><code>480af7bb8a9cf56de8a1e295f0d50e6b3bb46676aaddbf4103aa43cb57039364
+</code></pre></div>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/regenerate-api-key&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="get-v1device">GET /v1/device<a class="headerlink" href="#get-v1device" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v1.6.</strong></p>
+<p><strong>Note:</strong> On devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Returns the current device state, as reported to the balenaCloud API and with some extra fields added to allow control over pending/locked updates.
+The state is a JSON object that contains some or all of the following:
+* <code>api_port</code>: Port on which the supervisor is listening.
+* <code>commit</code>: Hash of the current commit of the application that is running.
+* <code>ip_address</code>: Space-separated list of IP addresses of the device.
+* <code>mac_address</code>: Space-seperated list of MAC addresses of the device.
+* <code>status</code>: Status of the device regarding the app, as a string, i.e. "Stopping", "Starting", "Downloading", "Installing", "Idle".
+* <code>download_progress</code>: Amount of the application image that has been downloaded, expressed as a percentage. If the update has already been downloaded, this will be <code>null</code>.
+* <code>os_version</code>: Version of the host OS running on the device.
+* <code>supervisor_version</code>: Version of the supervisor running on the device.
+* <code>update_pending</code>: This one is not reported to the balenaCloud API. It's a boolean that will be true while the Supervisor is checking for updates (such as on boot or every poll interval) or if the supervisor has finally concluded there is an update.
+* <code>update_downloaded</code>: Not reported to the balenaCloud API either. Boolean that will be true if a pending update has already been downloaded.
+* <code>update_failed</code>: Not reported to the balenaCloud API. Boolean that will be true if the supervisor has tried to apply a pending update but failed (i.e. if the app was locked, there was a network failure or anything else went wrong).</p>
+<p>Other attributes may be added in the future, and some may be missing or null if they haven't been set yet.</p>
+<h4 id="examples_8">Examples:<a class="headerlink" href="#examples_8" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X GET --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/device?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;api_port&quot;</span><span class="p">:</span><span class="mi">48484</span><span class="p">,</span><span class="nt">&quot;ip_address&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.0.114 10.42.0.3&quot;</span><span class="p">,</span><span class="nt">&quot;commit&quot;</span><span class="p">:</span><span class="s2">&quot;414e65cd378a69a96f403b75f14b40b55856f860&quot;</span><span class="p">,</span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;Downloading&quot;</span><span class="p">,</span><span class="nt">&quot;download_progress&quot;</span><span class="p">:</span><span class="mi">84</span><span class="p">,</span><span class="nt">&quot;os_version&quot;</span><span class="p">:</span><span class="s2">&quot;Resin OS 1.0.4 (fido)&quot;</span><span class="p">,</span><span class="nt">&quot;supervisor_version&quot;</span><span class="p">:</span><span class="s2">&quot;1.6.0&quot;</span><span class="p">,</span><span class="nt">&quot;update_pending&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&quot;update_downloaded&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;update_failed&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">}</span>
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/device&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="post-v1appsappidstop">POST /v1/apps/:appId/stop<a class="headerlink" href="#post-v1appsappidstop" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v1.8</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Temporarily stops a user application container. A reboot or supervisor restart will cause the container to start again.
+The container is not removed with this endpoint.</p>
+<p>This is only supported on single-container devices, and will return 400 on devices running multiple containers.</p>
+<p>When successful, responds with 200 and the Id of the stopped container.</p>
+<p>The appId must be specified in the URL.</p>
+<h4 id="request-body_5">Request body<a class="headerlink" href="#request-body_5" title="Permanent link">&para;</a></h4>
+<p>Can contain a <code>force</code> property, which if set to <code>true</code> will cause the update lock to be overridden.</p>
+<h4 id="examples_9">Examples:<a class="headerlink" href="#examples_9" title="Permanent link">&para;</a></h4>
+<p>From an application container:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/apps/&lt;appId&gt;/stop?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="s2">&quot;5f4d4a857742e9ecac505ba5710834d3852ad7d71e10389fc6f61d8655a21806&quot;</span><span class="p">}</span>
+</code></pre></div>
+<p>Remotely via the API proxy:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/apps/&lt;appId&gt;/stop&quot;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="post-v1appsappidstart">POST /v1/apps/:appId/start<a class="headerlink" href="#post-v1appsappidstart" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v1.8</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Starts a user application container, usually after it has been stopped with <code>/v1/stop</code>.</p>
+<p>This is only supported on single-container devices, and will return 400 on devices running multiple containers.</p>
+<p>When successful, responds with 200 and the Id of the started container.</p>
+<p>The appId must be specified in the URL.</p>
+<h4 id="examples_10">Examples:<a class="headerlink" href="#examples_10" title="Permanent link">&para;</a></h4>
+<p>From an application container:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/apps/&lt;appId&gt;/start?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Response:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="s2">&quot;6d9e1efdb9aad90fdb2df911f785b6aa00270e9448e75226a9a7361c8a9500cf&quot;</span><span class="p">}</span>
+</code></pre></div>
+<p>Remotely via the API proxy:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/apps/&lt;appId&gt;/start&quot;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="get-v1appsappid">GET /v1/apps/:appId<a class="headerlink" href="#get-v1appsappid" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v1.8</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Returns the application running on the device
+The app is a JSON object that contains the following:
+* <code>appId</code>: The id of the app as per the balenaCloud API.
+* <code>commit</code>: Application commit that is running.
+* <code>imageId</code>: The docker image of the current application build.
+* <code>containerId</code>: ID of the docker container of the running app.
+* <code>env</code>: A key-value store of the app's environment variables.</p>
+<p>The appId must be specified in the URL.</p>
+<p>This is only supported on single-container devices, and will return 400 on devices running multiple containers.</p>
+<h4 id="examples_11">Examples:<a class="headerlink" href="#examples_11" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X GET --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/apps/&lt;appId&gt;?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">3134</span><span class="p">,</span><span class="nt">&quot;commit&quot;</span><span class="p">:</span><span class="s2">&quot;414e65cd378a69a96f403b75f14b40b55856f860&quot;</span><span class="p">,</span><span class="nt">&quot;imageId&quot;</span><span class="p">:</span><span class="s2">&quot;registry.balena-cloud.com/superapp/414e65cd378a69a96f403b75f14b40b55856f860&quot;</span><span class="p">,</span><span class="nt">&quot;containerId&quot;</span><span class="p">:</span><span class="s2">&quot;e5c1eace8b4e&quot;</span><span class="p">,</span><span class="nt">&quot;env&quot;</span><span class="p">:{</span><span class="nt">&quot;FOO&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span><span class="p">}}</span>
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/apps/&lt;appId&gt;&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="get-v1healthy">GET /v1/healthy<a class="headerlink" href="#get-v1healthy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v6.5</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Used <strong>internally</strong> to check whether the supervisor is running correctly, according to some heuristics that help determine
+whether the internal components, application updates and reporting to the balenaCloud API are functioning.</p>
+<p>Responds with an empty 200 response if the supervisor is healthy, or a 500 status code if something is not working
+correctly.</p>
+<h4 id="examples_12">Examples:<a class="headerlink" href="#examples_12" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/healthy&quot;</span>
+</code></pre></div>
+(Empty response)</p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/healthy&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="patch-v1devicehost-config">PATCH /v1/device/host-config<a class="headerlink" href="#patch-v1devicehost-config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v6.6</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>This endpoint allows setting some configuration values for the host OS. Currently it supports
+proxy and hostname configuration.</p>
+<p>For proxy configuration, balenaOS 2.0.7 and higher provides a transparent proxy redirector (redsocks) that makes all connections be routed to a SOCKS or HTTP proxy. This endpoint allows user applications to modify these proxy settings at runtime.</p>
+<h4 id="request-body_6">Request body<a class="headerlink" href="#request-body_6" title="Permanent link">&para;</a></h4>
+<p>Is a JSON object with several optional fields. Proxy and hostname configuration go under a "network" key. If "proxy" or "hostname" are not present (undefined), those values will not be modified, so that a request can modify hostname
+without changing proxy settings and viceversa.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;network&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;proxy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;http-connect&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;myproxy.example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8123</span><span class="p">,</span>
+            <span class="nt">&quot;login&quot;</span><span class="p">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;noProxy&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;152.10.30.4&quot;</span><span class="p">,</span> <span class="s2">&quot;253.1.1.0/16&quot;</span> <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;mynewhostname&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In the proxy settings, <code>type</code>, <code>ip</code>, <code>port</code>, <code>login</code> and <code>password</code> are the settings for the proxy redirector to
+be able to connnect to the proxy, based on how <a href="https://github.com/darkk/redsocks/blob/master/redsocks.conf.example">redsocks.conf</a> works. <code>type</code> can be <code>socks4</code>, <code>socks5</code>, <code>http-connect</code> or <code>http-relay</code> (not all proxies are
+guaranteed to work, especially if they block connections that the balena services may require).</p>
+<p>Keep in mind that, even if transparent proxy redirection will take effect immediately after the API call (i.e. all new connections will go through the proxy), open connections will not be closed. So, if for example, the device has managed to connect to the balenaCloud VPN without the proxy, it will stay connected directly without trying to reconnect through the proxy, unless the connection breaks - any reconnection attempts will then go through the proxy. To force <em>all</em> connections to go through the proxy, the best way is to reboot the device (see the /v1/reboot endpoint). In most networks were no connections to the Internet can be made if not through a proxy, this should not be necessary (as there will be no open connections before configuring the proxy settings).</p>
+<p>The "noProxy" setting for the proxy is an optional array of IP addresses/subnets that should not be routed through the
+proxy. Keep in mind that local/reserved subnets are already <a href="https://github.com/balena-os/meta-balena/blob/master/meta-balena-common/recipes-connectivity/resin-proxy-config/resin-proxy-config/resin-proxy-config#L76">excluded by balenaOS automatically</a>.</p>
+<p>If either "proxy" or "hostname" are null or empty values (i.e. <code>{}</code> for proxy or an empty string for hostname), they will be cleared to their default values (i.e. not using a proxy, and a hostname equal to the first 7 characters of the device's uuid, respectively).</p>
+<h4 id="examples_13">Examples:<a class="headerlink" href="#examples_13" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X PATCH --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;network&quot;: {&quot;hostname&quot;: &quot;newhostname&quot;}}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/device/host-config?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;PATCH&quot;, &quot;data&quot;: {&quot;network&quot;: {&quot;hostname&quot;: &quot;newhostname&quot;}}}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/device/host-config&quot;</span>
+</code></pre></div></p>
+<hr>
+
+<h3 id="get-v1devicehost-config">GET /v1/device/host-config<a class="headerlink" href="#get-v1devicehost-config" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v6.6</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>This endpoint allows reading some configuration values for the host OS, previously set with <code>PATCH /v1/device/host-config</code>. Currently it supports
+proxy and hostname configuration.</p>
+<p>Please refer to the PATCH endpoint above for details on the behavior and meaning of the fields in the response.</p>
+<h4 id="examples_14">Examples:<a class="headerlink" href="#examples_14" title="Permanent link">&para;</a></h4>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v1/device/host-config?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;network&quot;</span><span class="p">:{</span><span class="nt">&quot;proxy&quot;</span><span class="p">:{</span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="s2">&quot;192.168.0.199&quot;</span><span class="p">,</span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;8123&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;socks5&quot;</span><span class="p">},</span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;27b0fdc&quot;</span><span class="p">}}</span>
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>$ curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="se">\</span>
+    --header <span class="s2">&quot;Authorization: Bearer &lt;auth token&gt;&quot;</span> <span class="se">\</span>
+    --data <span class="s1">&#39;{&quot;uuid&quot;: &lt;uuid&gt;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+    <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v1/device/host-config&quot;</span>
+</code></pre></div></p>
+<h3 id="get-v2applicationsstate">GET /v2/applications/state<a class="headerlink" href="#get-v2applicationsstate" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.12</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Get a list of applications, services and their statuses. This will reflect the
+current state of the supervisor, and not the target state.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/state?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;appname&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">1011165</span><span class="p">,</span>
+    <span class="nt">&quot;commit&quot;</span><span class="p">:</span> <span class="s2">&quot;217d55237092995e4576367e529ebb03&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloaded&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">557617</span><span class="p">,</span>
+        <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="kc">null</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;frontend&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloading&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">557631</span><span class="p">,</span>
+        <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;proxy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloaded&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">557631</span><span class="p">,</span>
+        <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="kc">null</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloading&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">557631</span><span class="p">,</span>
+        <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="mi">7</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloading&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">557631</span><span class="p">,</span>
+        <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="mi">35</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Remotely via the API proxy:
+<div class="highlight"><pre><span></span><code>curl -X POST <span class="se">\</span>
+  -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">\</span>
+  -H <span class="s1">&#39;Authorization: Bearer &lt;auth token&gt;&#39;</span> <span class="se">\</span>
+  -d <span class="s1">&#39;{&quot;uuid&quot;: &quot;&lt;uuid&gt;&quot;, &quot;method&quot;: &quot;GET&quot;}&#39;</span> <span class="se">\</span>
+  <span class="s2">&quot;https://api.balena-cloud.com/supervisor/v2/applications/state&quot;</span>
+</code></pre></div></p>
+<h3 id="get-v2applicationsappidstate">GET /v2/applications/:appId/state<a class="headerlink" href="#get-v2applicationsappidstate" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.12</strong></p>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Use this endpoint to get the state of a single application, given the appId.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/state?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;local&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;1234&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;5678&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Running&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">99999</span><span class="p">,</span>
+          <span class="nt">&quot;download_progress&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;dependent&quot;</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="nt">&quot;commit&quot;</span><span class="p">:</span> <span class="s2">&quot;7fc9c5bea8e361acd49886fe6cc1e1cd&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="get-v2statestatus">GET /v2/state/status<a class="headerlink" href="#get-v2statestatus" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v9.7</strong></p>
+</blockquote>
+<p>This will return a list of images, containers, the overall download progress and the status of the state engine.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/state/status?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;appState&quot;</span><span class="p">:</span> <span class="s2">&quot;applied&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;overallDownloadProgress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;containers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Running&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">1032480</span><span class="p">,</span>
+      <span class="nt">&quot;imageId&quot;</span><span class="p">:</span> <span class="mi">959262</span><span class="p">,</span>
+      <span class="nt">&quot;serviceId&quot;</span><span class="p">:</span> <span class="mi">29396</span><span class="p">,</span>
+      <span class="nt">&quot;containerId&quot;</span><span class="p">:</span> <span class="s2">&quot;be4a860e34ffca609866f8af3596e9ee7b869e1e0bb9f51406d0b120b0a81cdd&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-11T16:05:34.506Z&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;images&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;registry2.balena-cloud.com/v2/fbf67cf6574fb0f8da3c8998226fde9e@sha256:9e328a53813e3c2337393c63cfd6c2f5294872cf0d03dc9f74d02e66b9ca1221&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="mi">1032480</span><span class="p">,</span>
+      <span class="nt">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;imageId&quot;</span><span class="p">:</span> <span class="mi">959262</span><span class="p">,</span>
+      <span class="nt">&quot;dockerImageId&quot;</span><span class="p">:</span> <span class="s2">&quot;sha256:2662fc0ca0c7dd0f549e87e224f454165f260ff54aac59308d2641d99ca95e58&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Downloaded&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;downloadProgress&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;release&quot;</span><span class="p">:</span> <span class="s2">&quot;804281fb17e8291c542f9640814ef546&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="service-actions">Service Actions<a class="headerlink" href="#service-actions" title="Permanent link">&para;</a></h3>
+<h4 id="the-application-id">The application ID<a class="headerlink" href="#the-application-id" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>For the following endpoints the application ID is required in the url. The application ID is exposed as <code>BALENA_APP_ID</code> inside your container. Otherwise, you can use the following snippet to determine the application ID programmatically:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">APPNAME</span><span class="o">=</span><span class="s2">&quot;supervisortest&quot;</span>
+<span class="nv">BALENA_APP_ID</span><span class="o">=</span><span class="k">$(</span>curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/state?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> <span class="p">|</span> jq <span class="s2">&quot;.</span><span class="nv">$APPNAME</span><span class="s2">.appId&quot;</span><span class="k">)</span>
+</code></pre></div>
+<p>The easiest way to find your application from the dashboard is to look at the
+url when on the device list.</p>
+<h3 id="post-v2applicationsappidrestart-service">POST /v2/applications/:appId/restart-service<a class="headerlink" href="#post-v2applicationsappidrestart-service" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Added in supervisor version v7.0.0. Support for passing <code>serviceName</code> instead of
+<code>imageId</code> added in v8.2.2.</p>
+<p>Use this endpoint to restart a service in the application with application id
+passed in with the url.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/restart-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;serviceName&quot;: &quot;my-service&quot;}&#39;</span>
+curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/restart-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;imageId&quot;: 1234}&#39;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>This endpoint can also take an extra optional boolean, <code>force</code>, which if true informs the supervisor to ignore any update locks which have been taken.</p>
+<h3 id="post-v2applicationsappidstop-service">POST /v2/applications/:appId:/stop-service<a class="headerlink" href="#post-v2applicationsappidstop-service" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Added in supervisor version v7.0.0. Support for passing <code>serviceName</code> instead of
+<code>imageId</code> added in v8.2.2.</p>
+<p>Use this endpoint to stop a service in the application with application id
+passed in with the url.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/stop-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;serviceName&quot;: &quot;my-service&quot;}&#39;</span>
+curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/stop-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;imageId&quot;: 1234}&#39;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>This endpoint can also take an extra optional boolean, <code>force</code>, which if true informs the supervisor to ignore any update locks which have been taken.</p>
+<h3 id="post-v2applicationsappidstart-service">POST /v2/applications/:appId/start-service<a class="headerlink" href="#post-v2applicationsappidstart-service" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Added in supervisor version v7.0.0. Support for passing <code>serviceName</code> instead of
+<code>imageId</code> added in v8.2.2.</p>
+<p>Use this endpoint to start a service in the application with application id
+passed in with the url.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/start-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;serviceName&quot;: &quot;my-service&quot;}&#39;</span>
+curl --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/start-service?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span> -d <span class="s1">&#39;{&quot;imageId&quot;: 1234}&#39;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>This endpoint can also take an extra optional boolean, <code>force</code>, which if true informs the supervisor to ignore any update locks which have been taken.</p>
+<h3 id="post-v2applicationsappidrestart">POST /v2/applications/:appId/restart<a class="headerlink" href="#post-v2applicationsappidrestart" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Added in supervisor version v7.0.0.</p>
+<p>Use this endpoint to restart every service in an application.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl -X POST --header <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/restart?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>This endpoint can also take an extra optional boolean, <code>force</code>, which if true informs the supervisor to ignore any update locks which have been taken.</p>
+<h3 id="post-v2applicationsappidpurge">POST /v2/applications/:appId/purge<a class="headerlink" href="#post-v2applicationsappidpurge" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note:</strong> on devices with supervisor version lower than 7.22.0, replace all <code>BALENA_</code> variables with <code>RESIN_</code>, e.g. <code>RESIN_SUPERVISOR_ADDRESS</code> instead of <code>BALENA_SUPERVISOR_ADDRESS</code>.</p>
+</blockquote>
+<p>Added in supervisor version v7.0.0.</p>
+<p>Use this endpoint to purge all user data for a given application id.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/applications/</span><span class="nv">$BALENA_APP_ID</span><span class="s2">/purge?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code>OK
+</code></pre></div></p>
+<p>This endpoint can also take an extra optional boolean, <code>force</code>, which if true informs the supervisor to ignore any update locks which have been taken.</p>
+<h3 id="get-v2version">GET /v2/version<a class="headerlink" href="#get-v2version" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.21</strong></p>
+</blockquote>
+<p>This endpoint returns the supervisor version currently running the device api.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/version?apikey=$BALENA_SUPERVISOR_API_KEY&quot;
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;v7.21.0&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="get-v2containerid">GET /v2/containerId<a class="headerlink" href="#get-v2containerid" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v8.6</strong></p>
+</blockquote>
+<p>Use this endpoint to match a service name to a container ID.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/containerId?apikey=$BALENA_SUPERVISOR_API_KEY&quot;
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;service-one&quot;</span><span class="p">:</span> <span class="s2">&quot;ad6d5d32576ad3cb1fcaa59b564b8f6f22b079631080ab1a3bbac9199953eb7d&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;service-two&quot;</span><span class="p">:</span> <span class="s2">&quot;756535dc6e9ab9b560f84c85063f55952273a23192641fc2756aa9721d9d1000&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>You can also specify a service, to return only that container id:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/containerId?apikey=$BALENA_SUPERVISOR_API_KEY&amp;service=service-one&quot;
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;containerId&quot;</span><span class="p">:</span> <span class="s2">&quot;ad6d5d32576ad3cb1fcaa59b564b8f6f22b079631080ab1a3bbac9199953eb7d&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="local-mode-endpoints">Local mode endpoints<a class="headerlink" href="#local-mode-endpoints" title="Permanent link">&para;</a></h3>
+<p>These endpoints are mainly for use by the CLI, for working with a local mode device.
+As such they are not recommended for general use.</p>
+<p>The device must be in local mode before these endpoints are
+called, with the exception of <code>GET /v2/local/target-state</code>,
+which can be called when the device is not in local mode.</p>
+<h3 id="get-v2localtarget-state">GET /v2/local/target-state<a class="headerlink" href="#get-v2localtarget-state" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.21</strong></p>
+</blockquote>
+<p>Get the current target state. Note that if a local mode target state has not been
+set then the apps section of the response will always be empty.</p>
+<p>Request:
+<div class="highlight"><pre><span></span><code>curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/local/target-state&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;local&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-device&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;HOST_CONFIG_disable_splash&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;HOST_CONFIG_dtparam&quot;</span><span class="p">:</span> <span class="s2">&quot;\&quot;i2c_arm=on\&quot;,\&quot;spi=on\&quot;,\&quot;audio=on\&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;HOST_CONFIG_enable_uart&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;HOST_CONFIG_gpu_mem&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_LOCAL_MODE&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_PERSISTENT_LOGGING&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_POLL_INTERVAL&quot;</span><span class="p">:</span> <span class="s2">&quot;600000&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_VPN_CONTROL&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_CONNECTIVITY_CHECK&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_LOG_CONTROL&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA_REQUEST_TIMEOUT&quot;</span><span class="p">:</span> <span class="s2">&quot;30000&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA_APPLY_TIMEOUT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA_RETRY_COUNT&quot;</span><span class="p">:</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA_RETRY_INTERVAL&quot;</span><span class="p">:</span> <span class="s2">&quot;10000&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_DELTA_VERSION&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;SUPERVISOR_OVERRIDE_LOCK&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;apps&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;dependent&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;apps&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="post-v2localtarget-state">POST /v2/local/target-state<a class="headerlink" href="#post-v2localtarget-state" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.21</strong></p>
+</blockquote>
+<p>Set the current target state.</p>
+<p>Request:
+<div class="highlight"><pre><span></span><code><span class="nv">TARGET_STATE</span><span class="o">=</span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;local&quot;: {</span>
+<span class="s1">        &quot;name&quot;: &quot;Home&quot;,</span>
+<span class="s1">        &quot;config&quot;: {</span>
+<span class="s1">            &quot;HOST_CONFIG_disable_splash&quot;: &quot;1&quot;,</span>
+<span class="s1">            &quot;HOST_CONFIG_dtparam&quot;: &quot;i2c_arm=on,i2s=on&quot;,</span>
+<span class="s1">            &quot;HOST_CONFIG_enable_uart&quot;: &quot;1&quot;,</span>
+<span class="s1">            &quot;HOST_CONFIG_gpio&quot;: &quot;\&quot;2=op\&quot;,\&quot;3=op\&quot;&quot;,</span>
+<span class="s1">            &quot;HOST_CONFIG_gpu_mem&quot;: &quot;16&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_LOCAL_MODE&quot;: &quot;1&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_POLL_INTERVAL&quot;: &quot;600000&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_VPN_CONTROL&quot;: &quot;true&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_CONNECTIVITY_CHECK&quot;: &quot;true&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_LOG_CONTROL&quot;: &quot;true&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA&quot;: &quot;false&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA_REQUEST_TIMEOUT&quot;: &quot;30000&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA_APPLY_TIMEOUT&quot;: &quot;&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA_RETRY_COUNT&quot;: &quot;30&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA_RETRY_INTERVAL&quot;: &quot;10000&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_DELTA_VERSION&quot;: &quot;2&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_OVERRIDE_LOCK&quot;: &quot;false&quot;,</span>
+<span class="s1">            &quot;SUPERVISOR_PERSISTENT_LOGGING&quot;: &quot;false&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        &quot;apps&quot;: {</span>
+<span class="s1">            &quot;1&quot;: {</span>
+<span class="s1">                &quot;name&quot;: &quot;localapp&quot;,</span>
+<span class="s1">                &quot;commit&quot;: &quot;localcommit&quot;,</span>
+<span class="s1">                &quot;releaseId&quot;: &quot;1&quot;,</span>
+<span class="s1">                &quot;services&quot;: {</span>
+<span class="s1">                    &quot;1&quot;: {</span>
+<span class="s1">                        &quot;environment&quot;: {},</span>
+<span class="s1">                        &quot;labels&quot;: {},</span>
+<span class="s1">                        &quot;imageId&quot;: 1,</span>
+<span class="s1">                        &quot;serviceName&quot;: &quot;one&quot;,</span>
+<span class="s1">                        &quot;serviceId&quot;: 1,</span>
+<span class="s1">                        &quot;image&quot;: &quot;local_image_one:latest&quot;,</span>
+<span class="s1">                        &quot;running&quot;: true</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;2&quot;: {</span>
+<span class="s1">                        &quot;environment&quot;: {},</span>
+<span class="s1">                        &quot;labels&quot;: {},</span>
+<span class="s1">                        &quot;network_mode&quot;: &quot;container:one&quot;,</span>
+<span class="s1">                        &quot;imageId&quot;: 2,</span>
+<span class="s1">                        &quot;serviceName&quot;: &quot;two&quot;,</span>
+<span class="s1">                        &quot;serviceId&quot;: 2,</span>
+<span class="s1">                        &quot;image&quot;: &quot;local_image_two:latest&quot;,</span>
+<span class="s1">                        &quot;running&quot;: true</span>
+<span class="s1">                    }</span>
+<span class="s1">                },</span>
+<span class="s1">                &quot;volumes&quot;: {},</span>
+<span class="s1">                &quot;networks&quot;: {}</span>
+<span class="s1">            }</span>
+<span class="s1">        }</span>
+<span class="s1">    },</span>
+<span class="s1">    &quot;dependent&quot;: {</span>
+<span class="s1">        &quot;apps&quot;: [],</span>
+<span class="s1">        &quot;devices&quot;: []</span>
+<span class="s1">    }</span>
+<span class="s1">}</span>
+<span class="s1">&#39;</span>
+
+curl -X POST --header <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/local/target-state&quot;</span> -d <span class="nv">$TARGET_STATE</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="get-the-device-type-information">Get the device type information<a class="headerlink" href="#get-the-device-type-information" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.21</strong></p>
+</blockquote>
+<p>Get the architecture and device type of the device.</p>
+<p>Request:
+<div class="highlight"><pre><span></span><code>curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/local/device-info&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;arch&quot;</span><span class="p">:</span> <span class="s2">&quot;armv7hf&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;deviceType&quot;</span><span class="p">:</span> <span class="s2">&quot;raspberry-pi3&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="stream-local-mode-application-logs-from-device">Stream local mode application logs from device<a class="headerlink" href="#stream-local-mode-application-logs-from-device" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Introduced in supervisor v7.21</strong></p>
+</blockquote>
+<p>This endpoint will stream the logs of the applications containers and the supervisor. The logs
+come in as NDJSON.</p>
+<p>Request:
+<div class="highlight"><pre><span></span><code>curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/local/logs&quot;</span>
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;log line text&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1541508467072</span><span class="p">,</span>
+    <span class="nt">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;another log line&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1541508467072</span><span class="p">,</span>
+    <span class="nt">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="v2-device-information">V2 Device Information<a class="headerlink" href="#v2-device-information" title="Permanent link">&para;</a></h3>
+<h4 id="device-name">Device name<a class="headerlink" href="#device-name" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Introduced in supervisor v9.11</strong></p>
+</blockquote>
+<p>Get the last returned device name from the balena API. Note that this differs from the
+<code>BALENA_DEVICE_NAME_AT_INIT</code> environment variable provided to containers, as this will
+not change throughout the runtime of the container, but the endpoint will always return
+the latest known device name.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/device/name?apikey=$BALENA_SUPERVISOR_API_KEY&quot;
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;holy-wildflower&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="device-tags">Device tags<a class="headerlink" href="#device-tags" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Introduced in supervisor v9.11</strong></p>
+</blockquote>
+<p>Retrieve any device tags from the balena API. Note that this endpoint will not work when
+the device does not have an available connection to the balena API.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/device/tags?apikey=$BALENA_SUPERVISOR_API_KEY&quot;
+</code></pre></div></p>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">188303</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceLocation&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;warehouse #3&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="device-vpn-information">Device VPN Information<a class="headerlink" href="#device-vpn-information" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Introduced in supervisor v11.4</strong></p>
+</blockquote>
+<p>Retrieve information about the VPN connection running on the device.</p>
+<p>From an application container:</p>
+<div class="highlight"><pre><span></span><code>$ curl <span class="s2">&quot;</span><span class="nv">$BALENA_SUPERVISOR_ADDRESS</span><span class="s2">/v2/device/vpn?apikey=</span><span class="nv">$BALENA_SUPERVISOR_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Response:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;vpn&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;connected&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="v2-utilities">V2 Utilities<a class="headerlink" href="#v2-utilities" title="Permanent link">&para;</a></h3>
+<h4 id="cleanup-volumes-with-no-references">Cleanup volumes with no references<a class="headerlink" href="#cleanup-volumes-with-no-references" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Introduced in supervisor v10.0</strong></p>
+</blockquote>
+<p>Starting with balena-supervisor v10.0.0, volumes which have no
+references are no longer automatically removed as part of
+the standard update flow. To cleanup up any orphaned
+volumes, use this supervisor endpoint:</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl &quot;$BALENA_SUPERVISOR_ADDRESS/v2/cleanup-volumes?apikey=$BALENA_SUPERVISOR_API_KEY&quot;
+</code></pre></div></p>
+<p>Successful response:
+<div class="highlight"><pre><span></span><code>{
+       &quot;status&quot;: &quot;success&quot;
+}
+</code></pre></div></p>
+<p>Unsuccessful response:
+<div class="highlight"><pre><span></span><code>{
+       &quot;status&quot;: &quot;failed&quot;,
+       &quot;message&quot;: &quot;the error message&quot;
+}
+</code></pre></div></p>
+<h4 id="journald-logs">Journald logs<a class="headerlink" href="#journald-logs" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Introduced in supervisor v10.2</strong></p>
+</blockquote>
+<p>Retrieve a stream to the journald logs on device. This is
+equivalent to running <code>journalctl --no-pager</code>. Options
+supported are:</p>
+<h5 id="all-boolean">all: boolean<a class="headerlink" href="#all-boolean" title="Permanent link">&para;</a></h5>
+<p>Show all fields in full, equivalent to <code>journalctl --all</code>.</p>
+<h5 id="follow-boolean">follow: boolean<a class="headerlink" href="#follow-boolean" title="Permanent link">&para;</a></h5>
+<p>Continuously stream logs as they are generated, equivalent
+to <code>journalctl --follow</code>.</p>
+<h5 id="count-integer">count: integer<a class="headerlink" href="#count-integer" title="Permanent link">&para;</a></h5>
+<p>Show the most recent <code>count</code> events, equivalent to
+<code>journalctl --line=&lt;count&gt;</code>.</p>
+<h5 id="unit">unit<a class="headerlink" href="#unit" title="Permanent link">&para;</a></h5>
+<p>Show journal logs from <code>unit</code> only, equivalent to
+<code>journalctl --unit=&lt;unit&gt;</code>.</p>
+<h5 id="format">format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p><strong>Introduced in supervisor v10.3</strong></p>
+</blockquote>
+<p>The format which will be streamed from journalctl, formats
+are described here:
+https://www.freedesktop.org/software/systemd/man/journalctl.html#-o</p>
+<p>Fields should be provided via POST body in JSON format.</p>
+<p>From an application container:
+<div class="highlight"><pre><span></span><code>$ curl -X POST -H &quot;Content-Type: application/json&quot; --data &#39;{&quot;follow&quot;:true,&quot;all&quot;:true}&#39; &quot;$BALENA_SUPERVISOR_ADDRESS/v2/journal-logs?apikey=$BALENA_SUPERVISOR_API_KEY&quot; &gt; log.journal
+</code></pre></div></p>
+<p>An example project using this endpoint can be found
+<a href="https://github.com/balena-io-playground/device-cloud-logging">in this repository</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../balena-cli/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Balena-Cli
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../openedx/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                引言
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/xavierchan" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hub.docker.com/u/xavierchan" target="_blank" rel="noopener" title="hub.docker.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
