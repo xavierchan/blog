@@ -347,13 +347,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    参考
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -389,7 +382,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     参考
   </a>
   
@@ -484,15 +477,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    题目
+  </a>
   
 </li>
       
@@ -946,13 +946,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    参考
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -988,7 +981,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     参考
   </a>
   
@@ -1083,15 +1076,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    题目
+  </a>
   
 </li>
       
@@ -1110,6 +1110,9 @@
                 
                 <h1 id="25">集群架构，安装和配置(25%)<a class="headerlink" href="#25" title="Permanent link">&para;</a></h1>
 <h2 id="1-rbac">1. 管理基于角色的访问控制（RBAC）<a class="headerlink" href="#1-rbac" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Manage role based access control (RBAC)</p>
+</blockquote>
 <h3 id="11">1.1 介绍<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Role 和 ClusterRole：
@@ -1124,20 +1127,16 @@
 <h3 id="12">1.2 命令<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>kubectl api-resources <span class="p">|</span> grep rbac  <span class="c1"># 查看资源</span>
 kubectl get roles/clusterroles/rolebindings/clusterrolebindings  <span class="c1"># 查看权限</span>
+kubectl describe role redis-ha -n default  <span class="c1"># 查看详情</span>
 kubectl create xxx  <span class="c1"># 创建</span>
 kubectl delete xxx  <span class="c1"># 删除</span>
 kubectl apply -f xxx  <span class="c1"># 更新</span>
 </code></pre></div>
-<h3 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<blockquote>
-<ul>
-<li><a href="http://docs.kubernetes.org.cn/31.html">Kubernetes API 概述</a></li>
-<li><a href="http://docs.kubernetes.org.cn/51.html">Kubernetes 认证</a></li>
-<li><a href="http://docs.kubernetes.org.cn/148.html">Kubernetes中使用RBAC授权</a></li>
-</ul>
-</blockquote>
 <hr />
 <h2 id="2-kubeadm">2. 使用 Kubeadm 安装基本集群<a class="headerlink" href="#2-kubeadm" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Use Kubeadm to install a basic cluster</p>
+</blockquote>
 <h3 id="21">2.1 硬件要求<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <ul>
 <li>服务器：2C+、2G+、Linux、关闭 swap</li>
@@ -1240,7 +1239,7 @@ drwxr-xr-x <span class="m">2</span> root root <span class="m">4096</span> Feb <s
 <div class="highlight"><pre><span></span><code>kubeadm init
 kubeadm join
 </code></pre></div>
-<h3 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <ul>
 <li><a href="https://kubernetes.io/zh/docs/reference/setup-tools/kubeadm/implementation-details/">kubeadm 实现细节</a></li>
@@ -1251,6 +1250,9 @@ kubeadm join
 </ul>
 </blockquote>
 <h2 id="3-kubernetes">3. 管理高可用性的 Kubernetes 集群<a class="headerlink" href="#3-kubernetes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Manage a highly-available Kubernetes cluster</p>
+</blockquote>
 <h3 id="31">3.1 名词解释<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
 <p>（1）集群节点</p>
 <p>集群存在所有主机都称为节点，每个HA集群最低要求需有2个节点；正常来说，节点数最好为奇数。在生产环境中，HA集群的节点数至少为3个，可以降低发生脑裂的概率。</p>
@@ -1269,7 +1271,13 @@ kubeadm join
 <p>（3）多机方式</p>
 <p>这种集群包含多个节点和多个服务。每一个节点都可能运行和不运行服务，每台服务器都监视着几个指定的服务，当其中的一个节点发生故障时，会自动切换到这组服务器中的一个节点上去。</p>
 <h2 id="4-kubernetes">4. 设置基础架构以部署 Kubernetes 集群<a class="headerlink" href="#4-kubernetes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Provision underlying infrastructure to deploy a Kubernetes cluster</p>
+</blockquote>
 <h2 id="5-kubeadm-kubernetes">5. 使用 Kubeadm 在 Kubernetes 集群上执行版本升级<a class="headerlink" href="#5-kubeadm-kubernetes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Perform a version upgrade on a Kubernetes cluster using Kubeadm</p>
+</blockquote>
 <div class="highlight"><pre><span></span><code>kubeadm version <span class="c1"># 查看版本</span>
 kubectl drain &lt;cp-node-name&gt; --ignore-daemonsets <span class="c1"># 腾空节点</span>
 sudo kubeadm upgrade plan <span class="c1"># 查看升级计划</span>
@@ -1277,13 +1285,10 @@ sudo kubeadm upgrade apply v1.18.x <span class="c1"># 升级到对应版本</spa
 kubectl uncordon &lt;cp-node-name&gt; <span class="c1"># 取消节点保护</span>
 sudo kubeadm upgrade node
 </code></pre></div>
-<ol>
-<li>参考</li>
-</ol>
-<blockquote>
-<p><a href="https://kubernetes.io/zh/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/">升级 kubeadm 集群</a></p>
-</blockquote>
 <h2 id="6-etcd">6. 实施 etcd 备份和还原<a class="headerlink" href="#6-etcd" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Implement etcd backup and restore</p>
+</blockquote>
 <h3 id="61">6.1 介绍<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://link.jianshu.com/?t=https://github.com/coreos/etcd">etcd</a></strong> 是一款基于 Raft 开源的分布式一致性键值存储，由 CoreOS 公司进行维护。</p>
 <p>etcd = unix “/etc” + 分布式系统”d”istibuted，大规模分布式系统的配置信息存储系统；</p>
@@ -1359,13 +1364,21 @@ $ etcd <span class="se">\</span>
   --advertise-client-urls http://host3:2379 <span class="se">\</span>
   --listen-peer-urls http://host3:2380 <span class="p">&amp;</span>
 </code></pre></div>
-<h3 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p><a href="https://www.bookstack.cn/read/etcd/README.md">Etcd官方文档中文版</a>
-<a href="https://www.jianshu.com/p/c60c08effaaa">etcd 备份与恢复</a>
-<a href="https://zhuanlan.zhihu.com/p/73659512">【深入浅出etcd系列】1. 架构概览</a>
-<a href="https://jimmysong.io/blog/post-kubernetes-era/">Kubernetes 次世代的云原生应用</a></p>
+<ul>
+<li><a href="https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/" target="_blank">使用 RBAC 鉴权</a></li>
+<li><a href="https://kubernetes.io/zh/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/" target="_blank">升级 kubeadm 集群</a></li>
+<li><a href="http://docs.kubernetes.org.cn/31.html">Kubernetes API 概述</a></li>
+<li><a href="http://docs.kubernetes.org.cn/51.html">Kubernetes 认证</a></li>
+<li><a href="http://docs.kubernetes.org.cn/148.html">Kubernetes中使用RBAC授权</a></li>
+<li><a href="https://www.bookstack.cn/read/etcd/README.md">Etcd官方文档中文版</a></li>
+<li><a href="https://www.jianshu.com/p/c60c08effaaa">etcd 备份与恢复</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/73659512">【深入浅出etcd系列】1. 架构概览</a></li>
+<li><a href="https://jimmysong.io/blog/post-kubernetes-era/">Kubernetes 次世代的云原生应用</a></li>
+</ul>
 </blockquote>
+<h2 id="_3">题目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
                 
               
               

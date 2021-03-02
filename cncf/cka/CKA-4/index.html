@@ -362,50 +362,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    指令
+  <a href="#1" class="md-nav__link">
+    1. 了解存储类、持久卷
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-10_1" class="md-nav__link">
-    4. 存储：10%
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 存储：10%">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    4.1 了解存储类、持久卷
+  <a href="#2" class="md-nav__link">
+    2. 了解卷模式、访问模式和卷回收策略
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    4.2 了解卷模式、访问模式和卷回收策略
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 理解持久容量声明原语
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
-    4.3 理解持久容量声明原语
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 了解如何配置具有持久性存储的应用程序
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
-    4.4 了解如何配置具有持久性存储的应用程序
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题目
+  </a>
   
 </li>
       
@@ -802,50 +796,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    指令
+  <a href="#1" class="md-nav__link">
+    1. 了解存储类、持久卷
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-10_1" class="md-nav__link">
-    4. 存储：10%
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 存储：10%">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    4.1 了解存储类、持久卷
+  <a href="#2" class="md-nav__link">
+    2. 了解卷模式、访问模式和卷回收策略
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    4.2 了解卷模式、访问模式和卷回收策略
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 理解持久容量声明原语
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
-    4.3 理解持久容量声明原语
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 了解如何配置具有持久性存储的应用程序
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
-    4.4 了解如何配置具有持久性存储的应用程序
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题目
+  </a>
   
 </li>
       
@@ -863,18 +851,110 @@
                 
                 
                 <h1 id="4-10">4. 存储 10%<a class="headerlink" href="#4-10" title="Permanent link">&para;</a></h1>
-<h3 id="_1">指令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>kubectl xxx -h</li>
-<li>source &lt;(kubectl completion zsh)</li>
+<h2 id="1">1. 了解存储类、持久卷<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand storage classes, persistent volumes</p>
+</blockquote>
+<ol>
+<li>PV<br />
+    集群中的一块存储</li>
+<li>PVC<br />
+    用户对存储的请求</li>
+<li>StorageClass<br />
+    存储 "类"的描述方法，通过描述存储类，提供动态分配存储的能力</li>
+</ol>
+<h2 id="2">2. 了解卷模式、访问模式和卷回收策略<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand volume mode, access modes and reclaim policies for volumes</p>
+</blockquote>
+<ol>
+<li>volume mode<ul>
+<li>Filesystem（文件系统）</li>
+<li>Block（块）</li>
 </ul>
-<hr />
-<h2 id="4-10_1">4. 存储：10%<a class="headerlink" href="#4-10_1" title="Permanent link">&para;</a></h2>
-<h3 id="41">4.1 了解存储类、持久卷<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
-<h3 id="42">4.2 了解卷模式、访问模式和卷回收策略<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<h3 id="43">4.3 理解持久容量声明原语<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
-<h3 id="44">4.4 了解如何配置具有持久性存储的应用程序<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
-<hr />
+</li>
+<li>access modes<ul>
+<li>ReadWriteOnce -- 卷可以被一个节点以读写方式挂载；</li>
+<li>ReadOnlyMany -- 卷可以被多个节点以只读方式挂载；</li>
+<li>ReadWriteMany -- 卷可以被多个节点以读写方式挂载。</li>
+</ul>
+</li>
+<li>reclaim policies<ul>
+<li>Retain -- 手动回收</li>
+<li>Recycle -- 基本擦除 (rm -rf /thevolume/*)</li>
+<li>Delete -- 诸如 AWS EBS、GCE PD、Azure Disk 或 OpenStack Cinder 卷这类关联存储资产也被删除</li>
+</ul>
+</li>
+</ol>
+<h2 id="3">3. 理解持久容量声明原语<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand persistent volume claims primitive</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+<span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pv0003</span>
+<span class="nt">spec</span><span class="p">:</span>
+    <span class="nt">volumeMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
+    <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+    <span class="nt">capacity</span><span class="p">:</span>
+    <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+    <span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Recycle</span>
+    <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slow</span>
+    <span class="nt">mountOptions</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hard</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">nfsvers=4.1</span>
+    <span class="nt">nfs</span><span class="p">:</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp</span>
+    <span class="nt">server</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">172.17.0.2</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myclaim</span>
+<span class="nt">spec</span><span class="p">:</span>
+    <span class="nt">volumeMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
+    <span class="nt">accessModes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+    <span class="nt">storageClassName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slow</span>
+    <span class="nt">resources</span><span class="p">:</span>
+    <span class="nt">requests</span><span class="p">:</span>
+        <span class="nt">storage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8Gi</span>
+    <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+        <span class="nt">release</span><span class="p">:</span> <span class="s">&quot;stable&quot;</span>
+    <span class="nt">matchExpressions</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">key</span><span class="p">:</span> <span class="nv">environment</span><span class="p p-Indicator">,</span><span class="nt"> operator</span><span class="p">:</span> <span class="nv">In</span><span class="p p-Indicator">,</span><span class="nt"> values</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">dev</span><span class="p p-Indicator">]}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
+<span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">standard</span>
+<span class="nt">provisioner</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kubernetes.io/aws-ebs</span>
+<span class="nt">parameters</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gp2</span>
+<span class="nt">reclaimPolicy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Retain</span>
+<span class="nt">allowVolumeExpansion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">mountOptions</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">debug</span>
+<span class="nt">volumeBindingMode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Immediate</span>
+</code></pre></div>
+<h2 id="4">4. 了解如何配置具有持久性存储的应用程序<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Know how to configure applications with persistent storage</p>
+</blockquote>
+<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ul>
+<li><a href="https://kubernetes.io/zh/docs/concepts/storage/persistent-volumes/" target="_blank">PV</a></li>
+<li><a href="https://kubernetes.io/zh/docs/concepts/storage/storage-classes/" target="_blank">StorageClass</a></li>
+</ul>
+</blockquote>
+<h2 id="_2">题目<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>列出环境内所有的pv 并以 name字段排序（使用kubectl自带排序功能）</li>
+</ol>
                 
               
               

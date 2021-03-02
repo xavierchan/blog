@@ -352,8 +352,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 了解如何扩展应用程序
+  <a href="#3" class="md-nav__link">
+    3. 了解如何扩展应用程序
   </a>
   
 </li>
@@ -375,6 +375,13 @@
         <li class="md-nav__item">
   <a href="#6" class="md-nav__link">
     6. 了解清单管理和通用模板工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -810,8 +817,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 了解如何扩展应用程序
+  <a href="#3" class="md-nav__link">
+    3. 了解如何扩展应用程序
   </a>
   
 </li>
@@ -837,6 +844,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -852,6 +866,9 @@
                 
                 <h1 id="2-15">2. 工作负载和调度 15%<a class="headerlink" href="#2-15" title="Permanent link">&para;</a></h1>
 <h2 id="1">1. 了解部署以及如何执行滚动更新和回滚<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand deployments and how to perform rolling update and rollbacks</p>
+</blockquote>
 <ol>
 <li>
 <p>部署</p>
@@ -880,6 +897,9 @@ kubectl rollout <span class="nb">history</span> deployment/nginx-deployment
 kubectl rollout undo deployment/nginx-deployment
 </code></pre></div>
 <h2 id="2-configmaps-secrets">2. 使用 ConfigMaps 和 Secrets 配置应用程序<a class="headerlink" href="#2-configmaps-secrets" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Use ConfigMaps and Secrets to configure applications</p>
+</blockquote>
 <p>都是 key-value ，区别在于是否存储机密信息，Secrets 内容都需要 base64 编码；</p>
 <ol>
 <li>ConfigMaps</li>
@@ -889,6 +909,7 @@ kubectl create configmap game-config --from-file<span class="o">=</span>docs/use
 --from-file  <span class="c1">#  目录、文件</span>
 --from-literal  <span class="c1"># k-v</span>
 --from-env-file  <span class="c1"># .env 文件</span>
+kubectl get secret secret-docker -o <span class="nv">jsonpath</span><span class="o">=</span><span class="err">&#39;</span><span class="o">{</span>.data
 </code></pre></div>
 <ol>
 <li>
@@ -903,11 +924,29 @@ kubectl create configmap game-config --from-file<span class="o">=</span>docs/use
 <div class="highlight"><pre><span></span><code>kubectl create secret docker-registry NAME --docker-username<span class="o">=</span>user --docker-password<span class="o">=</span>password --docker-email<span class="o">=</span>email
 <span class="o">[</span>--docker-server<span class="o">=</span>string<span class="o">]</span> <span class="o">[</span>--from-literal<span class="o">=</span><span class="nv">key1</span><span class="o">=</span>value1<span class="o">]</span> <span class="o">[</span>--dry-run<span class="o">]</span> <span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
-<h2 id="23">2.3 了解如何扩展应用程序<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<h2 id="3">3. 了解如何扩展应用程序<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Know how to scale applications</p>
+</blockquote>
 <h2 id="4">4. 了解用于创建健壮的、自修复的应用程序部署的原语<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand the primitives used to create robust, self-healing, application deployments</p>
+</blockquote>
 <h2 id="5-pod">5. 了解资源限制如何影响Pod调度<a class="headerlink" href="#5-pod" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Understand how resource limits can affect Pod scheduling</p>
+</blockquote>
 <h2 id="6">6. 了解清单管理和通用模板工具<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<hr />
+<blockquote>
+<p>Awareness of manifest management and common templating tools</p>
+</blockquote>
+<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ul>
+<li><a href="https://kubernetes.io/zh/docs/concepts/configuration/configmap/" target="_blank">ConfigMap</a></li>
+<li><a href="https://kubernetes.io/zh/docs/concepts/configuration/secret/" target="_blank">Secret</a></li>
+</ul>
+</blockquote>
                 
               
               

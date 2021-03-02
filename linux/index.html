@@ -924,6 +924,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    进程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    内存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    监控
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1420,6 +1441,25 @@ rpm -qa|grep mysql</p>
     #make distclean
 </code></pre>
 <p>ｐｓ：如果你的包是二进制包，解压后可以直接使用，３、４、５、６步可以省略。</p>
+<p>nohup command &amp;</p>
+<p>指定输出实例
+nohup command &gt; myout.file 2&gt;&amp;1 &amp;</p>
+<p>其他相关命令
+ctrl + z #可以将一个正在前台执行的命令放到后台，并且处于暂停状态。
+fg #将后台任务切换到前台执行
+bg #将一个在后台暂停的命令，变成在后台继续执行。如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出
+jobs #查看后台运行的状态，jobs -l选项可显示所有任务的PID
+ps -ef | grep command 或者 ps aux | grep command #查看进程
+kill -9 进程id #杀掉对应的进程，
+更高级的用法如下：
+ps aux | grep command | grep -v grep | awk '{print $1}' | xargs kill -9 #这个表示直接通过command获取进程id并直接kill掉</p>
+<h2 id="_17">进程<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>ps</p>
+<h2 id="_18">内存<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>free</p>
+<h2 id="_19">监控<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p>top</p>
+<p>https://man.linuxde.net/ulimit</p>
                 
                   
                 
