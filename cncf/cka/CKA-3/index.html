@@ -411,6 +411,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -877,6 +884,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -957,8 +971,8 @@ linux process micro_process</p>
    Ingress Controller 和之前所讲的DaemonSet 、Deployment等不同，Ingress Controller不是Controller Manager中的一部分，他只是一个或一组独立的Pod资源，他通常就是一个运行着有七层代理能力或调度能力的应用，比如：NGINX、HAproxy、Traefik、Envoy</p>
 </li>
 <li>
-<p>Ingress Resource
-    <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<p>Ingress Resource</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ingress</span>
 <span class="nt">metadata</span><span class="p">:</span>
   <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">minimal-ingress</span>
@@ -975,7 +989,7 @@ linux process micro_process</p>
             <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
             <span class="nt">port</span><span class="p">:</span>
             <span class="nt">number</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-</code></pre></div></p>
+</code></pre></div>
 </li>
 </ol>
 <p>参考</p>
@@ -990,7 +1004,10 @@ linux process micro_process</p>
 <blockquote>
 <p>Know how to configure and use CoreDNS</p>
 </blockquote>
-<p>参考</p>
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+kubectl get pods dnsutils
+kubectl <span class="nb">exec</span> -i -t dnsutils -- nslookup kubernetes.default
+</code></pre></div>
 <blockquote>
 <ul>
 <li><a href="https://jimmysong.io/kubernetes-handbook/practice/coredns.html?h=coredns">安装配置CoreDNS</a></li>
@@ -1008,6 +1025,14 @@ linux process micro_process</p>
 <li><a href="https://jimmysong.io/kubernetes-handbook/concepts/service.html">Service</a></li>
 </ul>
 </blockquote>
+<h2 id="_2">题目<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>创建一个Pod名称为nginx-app，镜像为nginx，并根据pod创建名为nginx-app的Service，type为NodePort</li>
+<li>根据已有的一个nginx的pod、创建名为nginx的svc、并使用nslookup查找出service dns记录，pod的dns记录并分别写入到指定的文件中</li>
+<li>创建pod，再创建一个service</li>
+<li>使用ns lookup 查看service 和pod的dns</li>
+<li>给pod创建service</li>
+</ol>
                 
               
               

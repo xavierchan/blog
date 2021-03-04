@@ -484,14 +484,28 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    参考
+    考点
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    最佳实践
   </a>
   
 </li>
@@ -1083,14 +1097,28 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    参考
+    考点
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    最佳实践
   </a>
   
 </li>
@@ -1136,6 +1164,12 @@ kubectl apply -f xxx  <span class="c1"># 更新</span>
 <h2 id="2-kubeadm">2. 使用 Kubeadm 安装基本集群<a class="headerlink" href="#2-kubeadm" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Use Kubeadm to install a basic cluster</p>
+</blockquote>
+<ol>
+<li>kubeadm 过程</li>
+</ol>
+<blockquote>
+<p><a href="https://kubernetes.io/zh/docs/reference/setup-tools/kubeadm/kubeadm-init/" target="_blank">kubeadm init</a></p>
 </blockquote>
 <h3 id="21">2.1 硬件要求<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1364,7 +1398,17 @@ $ etcd <span class="se">\</span>
   --advertise-client-urls http://host3:2379 <span class="se">\</span>
   --listen-peer-urls http://host3:2380 <span class="p">&amp;</span>
 </code></pre></div>
-<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">考点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>node 维护（驱逐）</p>
+<div class="highlight"><pre><span></span><code>kubectl cordon nodename  <span class="c1"># 设为不可调度，防止新 Pod 调度过来</span>
+kubectl drain nodename  <span class="c1"># 驱逐运行的 Pod ，自动调度到可用的 node 上</span>
+kubectl uncordon nodename  <span class="c1"># 设为可调度，新的可以调度过来</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
 <li><a href="https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/" target="_blank">使用 RBAC 鉴权</a></li>
@@ -1378,7 +1422,13 @@ $ etcd <span class="se">\</span>
 <li><a href="https://jimmysong.io/blog/post-kubernetes-era/">Kubernetes 次世代的云原生应用</a></li>
 </ul>
 </blockquote>
-<h2 id="_3">题目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">题目<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>使用etcd 备份功能备份etcd（提供enpoints，ca、cert、key）</li>
+<li>给出一个集群，将节点node1添加到集群中，并使用TLS bootstrapping</li>
+<li>etcdctl 来 备份etcd</li>
+</ol>
+<h2 id="_5">最佳实践<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
                 
               
               
