@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#etcd" class="md-skip">
           Skip to content
         </a>
       
@@ -177,10 +177,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       CNCF
       <span class="md-nav__icon md-icon"></span>
@@ -269,16 +271,100 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Etcd
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Etcd
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 术语
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 架构
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    常用指令
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7" >
-    <label class="md-nav__link" for="nav-2-7">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8" >
+    <label class="md-nav__link" for="nav-2-8">
       CKA
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="CKA" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-7">
+      <label class="md-nav__title" for="nav-2-8">
         <span class="md-nav__icon md-icon"></span>
         CKA
       </label>
@@ -341,6 +427,18 @@
   <li class="md-nav__item">
     <a href="../cka/CKA-5/" class="md-nav__link">
       5. 故障排除：30%
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cka/exam/" class="md-nav__link">
+      真题
     </a>
   </li>
 
@@ -709,6 +807,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -717,8 +817,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 术语
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 架构
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     常用指令
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -736,15 +870,115 @@
               
                 
                 
-                  <h1>Etcd</h1>
-                
-                <h3 id="_1">常用指令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="etcd">Etcd<a class="headerlink" href="#etcd" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><strong><a href="https://link.jianshu.com/?t=https://github.com/coreos/etcd">etcd</a></strong> 是一款基于 Raft 开源的分布式一致性键值存储，由 CoreOS 公司进行维护。</p>
+<p>etcd = unix “/etc” + 分布式系统”d”istibuted，大规模分布式系统的配置信息存储系统；</p>
+<p>最新版本为 v3.1.1，但 API 有 v3 和 v2 之分，通常指 API 版本号，主要是存储引擎、命令不一样；</p>
+<p>数据存储：/var/lib/etcd</p>
+<h2 id="2">2. 术语<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raft</td>
+<td>分布式一算法</td>
+<td></td>
+</tr>
+<tr>
+<td>Leader</td>
+<td>Raft 的领导节点</td>
+<td></td>
+</tr>
+<tr>
+<td>Follower</td>
+<td>Raft 的从属节点</td>
+<td></td>
+</tr>
+<tr>
+<td>Candidate 候选节点</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Node 节点</td>
+<td>raft 状态机的一个实例，有唯一标识，并内部记录其他节点的发展，如果它是 leader</td>
+<td></td>
+</tr>
+<tr>
+<td>Member 成员</td>
+<td>etcd 的一个实例。它承载一个 node/节点，并为client/客户端提供服务</td>
+<td></td>
+</tr>
+<tr>
+<td>Peer 同伴</td>
+<td>同一个集群中的其他成员</td>
+<td></td>
+</tr>
+<tr>
+<td>Cluster 集群</td>
+<td>由多个　member/成员组成，每个成员的节点遵循 raft 一致性协议来复制日志。集群从成员中接收提案，提交他们并应用到本地存储</td>
+<td></td>
+</tr>
+<tr>
+<td>Proposal 提议</td>
+<td>一个需要完成 raft 协议的请求（例如写请求，配置修改请求）</td>
+<td></td>
+</tr>
+<tr>
+<td>Lease</td>
+<td>租期</td>
+<td></td>
+</tr>
+<tr>
+<td>Watch</td>
+<td>检测机制</td>
+<td></td>
+</tr>
+<tr>
+<td>Term</td>
+<td>任期</td>
+<td></td>
+</tr>
+<tr>
+<td>WAL</td>
+<td>预写式日志</td>
+<td></td>
+</tr>
+<tr>
+<td>Client 客户端</td>
+<td>集群 HTTP API 的调用者</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 架构<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://user-gold-cdn.xitu.io/2019/10/20/16de6f9b9563c22d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" /></p>
+<ul>
+<li>HTTP Server：用于处理用户发送的 API 请求以及其它 etcd 节点的同步与心跳信息请求。</li>
+<li>Store：用于处理 etcd 支持的各类功能的事务，包括数据索引、节点状态变更、监控与反馈、事件处理与执行等等，是 etcd 对用户提供的大多数 API 功能的具体实现。</li>
+<li>Raft：Raft 强一致性算法的具体实现，是 etcd 的核心。</li>
+<li>WAL：Write Ahead Log（预写式日志），是 etcd 的数据存储方式。除了在内存中存有所有数据的状态以及节点的索引以外，etcd 就通过 WAL 进行持久化存储。WAL 中，所有的数据提交前都会事先记录日志。- - Snapshot 是为了防止数据过多而进行的状态快照；Entry 表示存储的具体日志内容。</li>
+</ul>
+<h3 id="_1">常用指令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># v2</span>
 <span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">2</span> etcdctl ls /
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># v3</span>
 <span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span> etcdctl get /
 </code></pre></div>
+<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ul>
+<li><a href="https://etcd.io/" target="_blank"></a></li>
+</ul>
+</blockquote>
                 
               
               
@@ -759,6 +993,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../grafana/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Grafana
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../cka/CKA-1/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                集群架构，安装和配置(25%)
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
